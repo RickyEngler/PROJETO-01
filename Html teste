@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>NOME DA ABA AQUI</title>
+</head>
+<body>
+    
+<style>
+   h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30pt;
+        color: black;
+        text-shadow: 6cm 6cm 10cm color black;
+/* Não está dando certo colocar a sombra, testar outros comandos */
+        
+   }
+   h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15pt;
+        color: blueviolet;
+
+   }
+</style>
+
+<h1>TÍTULO PRINCIPAL</h1>
+<h2>Subtitulo (secundario)</h2>
+<h3> Nesta área irei utilizar para digitar os textos de teste,para assim testar a formatação de cada 
+tendo em conta que todos eles devam caber neste quadrado
+</h3>
+
+</body>
+
+</html>
