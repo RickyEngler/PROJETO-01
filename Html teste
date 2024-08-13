@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 
-<head>
-    <meta charset="UTF-8"/>
-    <title>FRONT-END TEST</title>
-</head>
-<body>
-
-     <hgroup>
-      <div id="interface">
-    
-<style>
-   h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 50pt;
-        color: black;
-        text-shadow: 6cm 6cm 10cm color black;
-/* Não está dando certo colocar a sombra, testar outros comandos */
-        
-   }
-   h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 10;
-        color: rgb(0, 89, 255);
+     <head>
+          <meta charset="UTF-8"/>
+          <title>FRONT-END TEST</title>
      
-   }
+<style>
+              body{ 
+               background-color: rgb(24, 27, 29);
+               color: rgb(221, 221, 221);
+
+
+              }
+               
 </style>
 
-          </hgroup>
+     </head>
 
-     <header id="cabecalho">
-
-           <hgroup>
-
-     <h1>Front-End APIs</h1>
-     <h1>OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO</h1>
-     <h3>Criando todo o front-end em css, java e html</h2>
-
-&nbsp; - Menu Principal <br/>
-&nbsp; - VRV SIGA <br/> <br/>
-
-     </hgroup>
-          
-          </header>
-
-               </div>
-
- <div id="Corpo">
-     <img src="FOTO 1.png"
+<body>
 
 <hgroup>
 
+      <div id="interface">
+    
+          <style>
+                h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 50pt;
+                    color: rgb(255, 255, 255);
+                    text-shadow: 6cm 6cm 10cm color black;
+
+                    /* Não está dando certo colocar a sombra, testar outros comandos */
+        
+     }
+               h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 10;
+                    color: rgb(0, 89, 255);
+     
+     }
+          </style>
+
+     
+     <header id="cabecalho">
+
+          <h1 style="text-align: center;">Front-End APIs</h1>
+          <h1 style="text-align: center;"> &Rarr; OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO &Larr; </h1>
+          <h3>** Criando todo o front-end em css, java e html **</h3>
+
+</hgroup>
+
+          &nbsp; &rarr; Menu Principal <br/>
+          &nbsp; &rarr; VRV SIGA (Indisponível) <br/> 
+          &nbsp; &rarr; ROBO Richard (Indisponível) <br/><br/><br/>
+          
+
+     </header>
+
+     </div>
+
+          <img src="_img/FOTO_1.png"/>
+
+<hgroup>
+
+     <div id="Corpo">
+               
      <style>
-          h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-               font-size: 15pt;
-               color: black;
+                h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 15pt;
+                    color: rgb(255, 255, 255);
                
           }
-          h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-               font-size: 10pt;
-               color: rgb(226, 43, 43);
+                h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 10pt;
+                    color: rgb(226, 43, 43);
        
           }
-       </style>
-     <h1> Tarefas à realizar e aperfeiçoar. </h1>
-</hgroup> 
 
-  &nbsp;   1º - Automação API SIGA com o Version Release Verify com SGHX <br/>
-  &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>
-  &nbsp;   3º- ... <br/>
+     </style>   
+       
+          <h1 style="text-align: center;"> <i><br/>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h1>
+    
+
+     &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
+     &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>
+     &nbsp;   3º- Realizar inclusão do VRV e Robozinho do Richard <br/>
 
 
-</div>
-</body>
+                         </hgroup>
+
+                    </div>
+          </body>
 
 </html>
