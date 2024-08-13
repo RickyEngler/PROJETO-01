@@ -5,38 +5,68 @@
     <title>FRONT-END TEST</title>
 </head>
 <body>
-     <div id="interface">
+
+     <hgroup>
+      <div id="interface">
     
 <style>
    h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 30pt;
+        font-size: 50pt;
         color: black;
         text-shadow: 6cm 6cm 10cm color black;
 /* Não está dando certo colocar a sombra, testar outros comandos */
         
    }
-   h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 15pt;
-        color: blueviolet;
-
+   h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 10;
+        color: rgb(0, 89, 255);
+     
    }
 </style>
 
-<header id="cabecalho">
-     <hgroup>
-<h1>Front-End APIs</h1>
-<h2>Criando todo o front-end em css, java e html</h2>
+          </hgroup>
 
-- Menu Principal
-- VRV SIGA
+     <header id="cabecalho">
+
+           <hgroup>
+
+     <h1>Front-End APIs</h1>
+     <h1>OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO</h1>
+     <h3>Criando todo o front-end em css, java e html</h2>
+
+&nbsp; - Menu Principal <br/>
+&nbsp; - VRV SIGA <br/> <br/>
+
      </hgroup>
+          
           </header>
 
+               </div>
+
+ <div id="Corpo">
      <img src="FOTO 1.png"
 
-     --> 1º - Automação API SIGA com o Version Release Verify com SGHX 
-          2º- Desenvolver o Front-End para o mesmo.
-           3º- ...
+<hgroup>
+
+     <style>
+          h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               font-size: 15pt;
+               color: black;
+               
+          }
+          h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               font-size: 10pt;
+               color: rgb(226, 43, 43);
+       
+          }
+       </style>
+     <h1> Tarefas à realizar e aperfeiçoar. </h1>
+</hgroup> 
+
+  &nbsp;   1º - Automação API SIGA com o Version Release Verify com SGHX <br/>
+  &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>
+  &nbsp;   3º- ... <br/>
+
 
 </div>
 </body>
