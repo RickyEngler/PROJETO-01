@@ -52,11 +52,11 @@
           &nbsp; &rarr; ROBO Richard (Indisponível) <br/><br/><br/>
           
 
+          <img src="FOTO 1.png"/>
+
      </header>
 
      </div>
-
-          <img src="_img/FOTO_1.png"/>
 
 <hgroup>
 
@@ -69,19 +69,21 @@
                
           }
                 h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 10pt;
+                    font-size: 20pt;
                     color: rgb(226, 43, 43);
        
           }
 
      </style>   
        
-          <h1 style="text-align: center;"> <i><br/>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h1>
+          <h2 style="text-align: center;"> <i><br/>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h2>
     
 
      &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
      &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>
      &nbsp;   3º- Realizar inclusão do VRV e Robozinho do Richard <br/>
+     &nbsp;   4º- Adcionar menus de interação <br/>
+     &nbsp;   5º- Adcionar links de ação e redirecionamento <br/>
 
 
                          </hgroup>
