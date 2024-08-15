@@ -4,19 +4,11 @@
           <meta charset="UTF-8"/>
           <title>FRONT-END TEST</title>
      
-<style>
-              body{ 
-               background-color: rgb(24, 27, 29);
-               color: rgb(221, 221, 221);
-
-
-              }
-               
-</style>
+          <link rel="stylesheet" type="text/css" href="Estilo.CSS"/>
 
      </head>
 
-<body>
+<body class="corpo">
 
 <hgroup>
 
@@ -40,7 +32,8 @@
 
      
      <header id="cabecalho">
-
+          
+          <br/>
           <h1 style="text-align: center;">Front-End APIs</h1>
           <h1 style="text-align: center;"> &Rarr; OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO &Larr; </h1>
           <h3>** Criando todo o front-end em css, java e html **</h3>
@@ -50,14 +43,19 @@
           &nbsp; &rarr; Menu Principal <br/>
           &nbsp; &rarr; VRV SIGA (Indisponível) <br/> 
           &nbsp; &rarr; ROBO Richard (Indisponível) <br/><br/><br/>
+
           
+<figure class="foto-borda">
+     
+     <img src="FOTO 1.png"/>
+          <figcaption>
 
-          <img src="FOTO 1.png"/>
-
+          <h1>SEJA BEM-VINDO AO PORTAL LIBERTY</h1>
+       
+          </figcaption>
+          </figure>
      </header>
-
      </div>
-
 <hgroup>
 
      <div id="Corpo">
@@ -78,12 +76,15 @@
        
           <h2 style="text-align: center;"> <i><br/>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h2>
     
-
-     &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
+<P>  &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
      &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>
      &nbsp;   3º- Realizar inclusão do VRV e Robozinho do Richard <br/>
      &nbsp;   4º- Adcionar menus de interação <br/>
      &nbsp;   5º- Adcionar links de ação e redirecionamento <br/>
+     <br/>
+     <br/>
+     <br/>
+</P>
 
 
                          </hgroup>

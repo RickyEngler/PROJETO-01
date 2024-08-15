@@ -1,0 +1,58 @@
+
+body {
+    background-color: rgba(53, 59, 63,0.9);
+
+}
+p {
+    text-align: center;
+    text-indent: ;
+}
+
+
+body.corpo { 
+    color: rgb(232, 232, 232);
+    box-shadow: 5px 5px 20px black;
+    text-align: center;
+
+}
+
+
+
+figure.foto-borda {
+    border: 5px solid rgb(0, 255, 110);
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 20px black;
+
+
+}
+
+figure.foto-borda img {
+    position: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+figure.foto-borda figcaption {
+    opacity: 0;
+    position: center;
+    top: 10px;
+    background-color: rgba(0, 255, 136,0.4);
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: opacity 1.8s;
+
+}
+
+figure.foto-borda:hover figcaption {
+    opacity: 1;
+    
+
+
+
+}
