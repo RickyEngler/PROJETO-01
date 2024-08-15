@@ -4,8 +4,8 @@
           <meta charset="UTF-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>PORTAL LIBERTY TI</title>
-          <link rel="stylesheet" type="text/css" href="_css-styles/Estilo.CSS"/>
-          <link rel="stylesheet" type="text/css" href="_css-styles/Links clicaveis"/>
+          <link rel="stylesheet" type="text/css" href="css-styles/Estilo.CSS">
+          <link rel="stylesheet" type="text/css" href="css-styles/Links clicaveis">
 
      </head>
 
@@ -37,8 +37,8 @@
           <br/>
           <h1 style="text-align: center;">Front-End APIs</h1>
           <h1 style="text-align: center;"> &Rarr; OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO &Larr; </h1>
-          <a href="ttps://github.com/RickyEngler" class="meus-links"></a>
-          <h3>** ACESSE O GITHUB DO DESENVOLVEDOR **</h3>
+          <a href="https://github.com/RickyEngler" class="meus-links">** ACESSE O GITHUB DO DESENVOLVEDOR **</a>
+          <br/><br/>
 
 </hgroup>
 
@@ -80,7 +80,7 @@
 
      </style>   
        
-          <h2 style="text-align: center;"> <i><br/>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h2>
+          <h2 style="text-align: center;"> <i>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h2>
     
 <P>  &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
      &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>

@@ -1,10 +1,12 @@
-.meu-link {
-    color: #007bff; /* Cor do texto */
+.meus-links {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10;
+    color: rgb(0, 255, 166); /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
 }
 
-.meu-link:hover {
-    color: #0056b3; /* Cor do texto quando o mouse passa sobre o link */
+.meus-links:hover {
+    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
