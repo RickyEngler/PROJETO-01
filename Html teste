@@ -2,9 +2,10 @@
 
      <head>
           <meta charset="UTF-8"/>
-          <title>FRONT-END TEST</title>
-     
-          <link rel="stylesheet" type="text/css" href="Estilo.CSS"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>PORTAL LIBERTY TI</title>
+          <link rel="stylesheet" type="text/css" href="_css-styles/Estilo.CSS"/>
+          <link rel="stylesheet" type="text/css" href="_css-styles/Links clicaveis"/>
 
      </head>
 
@@ -25,7 +26,7 @@
      }
                h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                     font-size: 10;
-                    color: rgb(0, 89, 255);
+                    color: rgb(0, 255, 166);
      
      }
           </style>
@@ -36,7 +37,8 @@
           <br/>
           <h1 style="text-align: center;">Front-End APIs</h1>
           <h1 style="text-align: center;"> &Rarr; OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO &Larr; </h1>
-          <h3>** Criando todo o front-end em css, java e html **</h3>
+          <a href="ttps://github.com/RickyEngler" class="meus-links"></a>
+          <h3>** ACESSE O GITHUB DO DESENVOLVEDOR **</h3>
 
 </hgroup>
 
@@ -44,16 +46,20 @@
           &nbsp; &rarr; VRV SIGA (Indisponível) <br/> 
           &nbsp; &rarr; ROBO Richard (Indisponível) <br/><br/><br/>
 
-          
+          <div class="container">
+               
 <figure class="foto-borda">
+
+      
      
-     <img src="FOTO 1.png"/>
+     <img src="FOTO 1.png" alt="Imagem Centralizada" class="imagem">
           <figcaption>
 
           <h1>SEJA BEM-VINDO AO PORTAL LIBERTY</h1>
        
-          </figcaption>
-          </figure>
+                </figcaption>
+           </figure>
+          </div>
      </header>
      </div>
 <hgroup>

@@ -1,0 +1,10 @@
+.meu-link {
+    color: #007bff; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+}
+
+.meu-link:hover {
+    color: #0056b3; /* Cor do texto quando o mouse passa sobre o link */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
