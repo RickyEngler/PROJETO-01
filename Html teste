@@ -16,30 +16,25 @@
       <div id="interface">
     
           <style>
-                h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 50pt;
-                    color: rgb(255, 255, 255);
-                    text-shadow: 6cm 6cm 10cm color black;
-
-                    /* Não está dando certo colocar a sombra, testar outros comandos */
-        
-     }
-               h3{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 10;
-                    color: rgb(0, 255, 166);
+                
      
-     }
+     
           </style>
 
      
      <header id="cabecalho">
           
           <br/>
-          <h1 style="text-align: center;">Front-End APIs</h1>
+          <br/>
+          <br/>
+          <img src="images/logo-liberty.png">
+          <br/>
+          <br/>
+          <br/>
+          <h1 style="text-align: center;">PORTAL LIBERTY TI</h1>
           <h1 style="text-align: center;"> &Rarr; OBS: ESTE SITE ESTÁ EM DESENVOLVIMENTO &Larr; </h1>
           <a href="https://github.com/RickyEngler" class="meus-links">** ACESSE O GITHUB DO DESENVOLVEDOR **</a>
           <br/><br/>
-
 </hgroup>
 
           &nbsp; &rarr; Menu Principal <br/>
@@ -49,13 +44,13 @@
           <div class="container">
                
 <figure class="foto-borda">
-
-      
      
-     <img src="FOTO 1.png" alt="Imagem Centralizada" class="imagem">
+     <img src="FOTO 1.png" alt="Imagem Centralizada"/>
+
           <figcaption>
 
           <h1>SEJA BEM-VINDO AO PORTAL LIBERTY</h1>
+          <p>Portal destinado à facilitar o acessor dos links internos e juntar todas as automações aprovadas e testadas em open sorce por colaboradores da LIBERTY HEALTH ©</p>
        
                 </figcaption>
            </figure>
@@ -67,20 +62,15 @@
      <div id="Corpo">
                
      <style>
-                h1{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 15pt;
-                    color: rgb(255, 255, 255);
-               
-          }
-                h2{ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 20pt;
-                    color: rgb(226, 43, 43);
-       
-          }
+
+          h3 { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: rgb(226, 43, 43);
+     }
 
      </style>   
        
-          <h2 style="text-align: center;"> <i>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h2>
+          <h3> <i>Tarefas à realizar</i> e <i>aperfeiçoar</i>. </h3>
     
 <P>  &nbsp;   1º- Automação API SIGA com o Version Release Verify com SGHX <br/>
      &nbsp;   2º- Desenvolver o Front-End para o mesmo. <br/>

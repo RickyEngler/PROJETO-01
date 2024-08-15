@@ -8,5 +8,5 @@
 
 .meus-links:hover {
     color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    
 }
