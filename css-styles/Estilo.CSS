@@ -10,9 +10,36 @@ body.corpo, html {
 
 }
 
+/* Formatação do menu */
+
+nav#menu ul {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #000000;
+    list-style-type: none;
+    
+}
+
+nav#menu li {
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    transition: background-color 0.1s;
+}
+
+nav#menu li:hover {
+    background-color: #00b98e;
+}
+
+/* FORMATAÇÃO DE TEXTO - Estilo para h1,h2,h3 */
 
 body {
-/* Estilo para h1,h2,h3 */
+h5 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 255, 166);
+    text-shadow: 6cm 6cm 10cm color black;
+    text-align: left;
+
+}
 
 h1 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
@@ -30,6 +57,9 @@ h4 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
 
+
+/* FORMATAÇÃO DE IMAGENS */
+
 figure.foto-borda {
     border: 5px solid rgb(0, 255, 110);
     width: 500px;
@@ -44,7 +74,6 @@ figure.foto-borda {
 figure.foto-borda figcaption {
     opacity: 0;
     position: absolute;
-    margin-top: 0px;
     top: 1px;
     background-color: rgba(0, 255, 136,0.4);
     color: aliceblue;
@@ -60,17 +89,10 @@ figure.foto-borda:hover figcaption {
 
 }
 
-/* Container para centralização imagem */
-.container {
+.container { /* Container para centralização imagem */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Altura total da janela de visualização */
 
-}
-
-/* Estilo para a imagem */
-.imagem {
-    width: 500px;
-    height: 500px;
 }
