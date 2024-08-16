@@ -15,7 +15,8 @@ a#link-git {
     color: rgb(0, 255, 166); /* Cor do texto quando o mouse passa sobre o link */
     text-decoration: none; 
 
+}
 
-
-
+a#link-git:hover {
+    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
 }
