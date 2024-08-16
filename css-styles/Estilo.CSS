@@ -1,12 +1,31 @@
 body.corpo, html { 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgba(53, 59, 63,0.9);
-    color: rgb(232, 232, 232);
+    background-color: rgba(243, 243, 243, 0.9);
     box-shadow: 5px 5px 20px black;
     text-align: center;
-    /* Reseta margens e preenchimentos padrão */
     margin: 0;
-    padding: 0;
+    
+
+}
+
+div#interface {
+width: 1920px;
+margin-top: -20px;
+
+}
+
+
+header#cabecalho {
+    background-color: rgb(0, 0, 0);
+    
+
+}
+
+header#cabecalho img {
+position: absolute;
+left: 25px;
+top: 117px;
+width: 15%;
 
 }
 
@@ -16,6 +35,7 @@ nav#menu ul {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #000000;
     list-style-type: none;
+    margin: 0px;
     
 }
 
@@ -43,7 +63,7 @@ h5 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 h1 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(36, 36, 36);
     text-shadow: 6cm 6cm 10cm color black;
     
     }
@@ -79,7 +99,8 @@ figure.foto-borda figcaption {
     color: aliceblue;
     width: 100%;
     height: 100%;
-    transition: opacity 1.8s;
+    padding: 15px;
+    transition: opacity 0.5s;
     box-sizing: border-box;
 
 }
