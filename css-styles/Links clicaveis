@@ -20,3 +20,14 @@ a#link-git {
 a#link-git:hover {
     color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
 }
+
+a#link-portal {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10;
+    color: rgb(0, 0, 0); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+
+
+
+}
