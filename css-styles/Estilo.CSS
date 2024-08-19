@@ -1,22 +1,52 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body { 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Noto Sans',sans-serif;
+    background-color: #201b2c;
     text-align: center;
-    margin: -70px;
-    padding: 0px;
+    
+        h1 {font-family: 'Noto Sans',sans-serif;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        text-shadow: 6cm 6cm 10cm color black;
+        
+        }
+
+        h4 {font-family: 'Noto Sans',sans-serif;
+            font-size: 10;
+            color: rgb(0, 255, 166);
+        
+        }
+
+        h5 {font-family: 'Noto Sans',sans-serif;
+            font-size: 20px;
+            color: rgb(0, 255, 166);
+            text-shadow: 6cm 6cm 10cm color black;
+            text-align: left;
+        
+        }
+
+        h6 {font-family: 'Noto Sans',sans-serif;
+            font-size: 5;
+            color: rgb(255, 255, 255);       
+        }
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 main {
-height: 81.5vh;
-
-
+height: 80vh;
+flex: 1;
 }
 
 header {
-background-color: black;
+background-color: #2f2841;
 align-items: center;
 height: 13vh;
 
@@ -28,26 +58,23 @@ width: 100%;
 
 
 header#cabecalho {
-    background-color: rgb(0, 0, 0);
-    
+    background-color: #2f2841;
 }
 
 header#cabecalho img {
 position: absolute;
 left: 15px;
-top: 35px;
+top: 15px;
 width: 15%;
-
 }
 
 /* Formatação do menu */
 
 nav#menu ul {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #000000;
+    background-color: #2f2841;
     list-style-type: none;
-    margin: 0px;
-    
+    margin: 0px;  
 }
 
 nav#menu li {
@@ -65,15 +92,18 @@ nav#menu li:hover {
 
 nav#portal ul {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #828282;
+    background-color: #2f2841;
     list-style-type:none;
     margin: 0px;
+    box-shadow: 1px 10px 40px -12 black;
 }
 
 nav#portal li {
+    color: aliceblue;
     display: inline-block;
     padding: 15px;
     margin: 15px;
+    border-radius: 5px;
     transition: background-color 0.1s;
 }
 
@@ -81,74 +111,47 @@ nav#portal li:hover {
     background-color: #00b98e;
 }
 
-/* FORMATAÇÃO DE TEXTO - Estilo para h1,h2,h3 */
-
-body 
-h5 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: rgb(0, 255, 166);
-    text-shadow: 6cm 6cm 10cm color black;
-    text-align: left;
-
-}
-
-h1 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: rgb(36, 36, 36);
-    text-shadow: 6cm 6cm 10cm color black;
-    
-    }
-
-    /* Não está dando certo colocar a sombra, testar outros comandos */
-
-h4 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10;
-    color: rgb(0, 255, 166);
-
-}
-
-h6 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5;
-    color: rgb(255, 255, 255);
-
-}
 
 /* FORMATAÇÃO DE IMAGENS */
 
+.imagem-2 {
+    width: 30vw;
+    border-radius: 10px;
+    background-color: black;
+}
+
 figure.foto-borda {
-    border: 5px solid rgb(0, 255, 110);
-    height: 100%;
-    box-shadow: 5px 5px 20px black;
+    border: 5px solid #2f2841;
+    border-radius: 10px;
+   
+    box-shadow: 0px 10px 40px black;
     position: relative;
-
-
+    display: inline-flex;
 }
 
 figure.foto-borda figcaption {
     opacity: 0;
     position: absolute;
+    border-radius: 5px;
     top: 1px;
-    background-color: rgba(0, 255, 136,0.4);
+    background-color: rgba(0, 255, 136, 0.548);
     color: aliceblue;
     width: 100%;
     height: 100%;
-    padding: 1px;
+    padding: 20px;
     transition: opacity 0.5s;
     box-sizing: border-box;
-
 }
 
 figure.foto-borda:hover figcaption {
     opacity: 1;
-
 }
 
-.container { /* Container para centralização imagem */
+.container { /* Container para centralização imagem 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 54.5vh; /* Altura total da janela de visualização */
-
 }
 
 
@@ -156,6 +159,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    height: 5vh;
+    background-color: #2f2841;
+    height: 7vh;
+    padding: 1rem;
 }
+

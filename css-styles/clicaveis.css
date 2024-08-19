@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.meus-links {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 15px;
+    color: rgb(236, 236, 236); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+}
+
+.meus-links:hover {
+    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
+    
+}
+
+a#link-git {
+    color: rgb(0, 255, 166); /* Cor do texto quando o mouse passa sobre o link */
+    text-decoration: none; 
+
+}
+
+a#link-git:hover {
+    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
+}
+
+a#jira {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 10;
+    color: rgb(249, 249, 249); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#tolife {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 10;
+    color: rgb(249, 249, 249); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#vault {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 10;
+    color: rgb(249, 249, 249); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
