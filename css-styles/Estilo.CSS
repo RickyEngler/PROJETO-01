@@ -10,7 +10,7 @@ body {
 }
 
 main {
-height: 80vh;
+height: 81.5vh;
 
 
 }
@@ -117,8 +117,7 @@ h6 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 figure.foto-borda {
     border: 5px solid rgb(0, 255, 110);
-    width: 500px;
-    height: 500px;
+    height: 100%;
     box-shadow: 5px 5px 20px black;
     position: relative;
 
@@ -148,7 +147,7 @@ figure.foto-borda:hover figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55vh; /* Altura total da janela de visualização */
+    height: 54.5vh; /* Altura total da janela de visualização */
 
 }
 
