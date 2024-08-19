@@ -15,13 +15,15 @@
 }
 
 a#link-git {
-    color: rgb(0, 255, 166); /* Cor do texto quando o mouse passa sobre o link */
+    font-family: 'Noto Sans',sans-serif;
+    font-weight: 900;
+    color: rgb(0, 188, 94); /* Cor do texto quando o mouse passa sobre o link */
     text-decoration: none; 
 
 }
 
 a#link-git:hover {
-    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
+    color: rgb(131, 255, 172); /* Cor do texto quando o mouse passa sobre o link */
 }
 
 a#jira {
