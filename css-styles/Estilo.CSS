@@ -87,18 +87,22 @@ nav#menu li:hover {
 /* Formatação pagina de links */
 
 nav#portal ul {
+    margin-left: 450px;
+    float: center;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
     font-family: 'Noto Sans',sans-serif;
     background-color: #2f2841;
     list-style-type:none;
-    margin: 0px;
-    box-shadow: 1px 10px 40px black;
+    align-items: center;
+    text-align: center;
 }
 
 nav#portal li {
     color: aliceblue;
-    display: inline-block;
-    padding: 15px;
-    margin: 15px;
+    padding: 10px;
+    margin: 0px;
     border-radius: 5px;
     transition: background-color 0.1s;
 }
@@ -172,11 +176,39 @@ footer {
 }
 
 div#title-portal h1 {
+    display: inline-flex;
     justify-content: center;
+    padding: 15px;
     width: 400px;
     align-items: center;
     background-color: #2f2841;
     border-radius: 15px;
-    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 50px black;
+}
+
+div#vrs-rls {
+    font-size: 10pt;
+    font-family: 'Noto Sans',sans-serif;
+    width: 600px;
     margin: auto;
+    text-align: left;
+    padding: 10px;
+    color: aliceblue;
+}
+
+div#vrs-rls h1{
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 12pt;
+    font-weight: 800;
+    text-align: left;
+    padding: 0px;
+    color: aliceblue;
+}
+
+iframe#frame-home {
+    border: none;
+    margin: 40px -45px;
+    width: 700px;
+    height: 300px;
 }
