@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css-styles/style-login.css">
-    <link rel="stylesheet" href="css-styles/style-cadastro.css">
-
     <title>LOGIN</title>
+    
 </head>
 
 <body>
@@ -28,45 +27,58 @@
                 <input type="password" name="senha" placeholder="Senha">
             </div>
             <button type="submit" class="btn-login">Entrar</button>
-                <p>Não tem uma conta? <a href="#" id="open-register">Cadastre-se</a></p>
+                <p><a href="#" id="open-register">Esqueci a senha</a></p>
+                <div>
+                    <input type="checkbox" id="Lembrar de mim">
+                    <label for="lembrar-senha">Lembrar de mim</label>
+                            </div>
+                            <button id="openPopupBtn">Cadastrar</button>
             </form>
+            
         </div>
         </div>      
-        <div id="register-popup" class="popup">
-            <div class="popup-content">
-                <span class="close-btn" id="close-popup">&times;</span>
-                <h2>Cadastro</h2>
-                <form id="register-form">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="registrar-nome" name="registrar-nome" required>
 
-                    <label for="nome">Nome da Mãe</label>
-                    <input type="text" id="registrar-nome-mae" name="registrar-nome-mae" required>
+                                        <!-- Pop-up de cadastro -->
 
-                    <label for="nome">Sexo</label>
-                    <input type="text" id="registrar-sexo" name="registrar-sexo" required>
-
-                    <label for="nome">Email</label>
-                    <input type="text" id="registrar-email" name="registrar-email" required>
-
-                    <label for="nome">RG</label>
-                    <input type="text" id="registrar-rg" name="registrar-rg" required>
-
-                    <label for="nome">CPF</label>
-                    <input type="text" id="registrar-cpf" name="registrar-cpf" required>
-
-                    <label for="nome">Data de Nascimento</label>
-                    <input type="text" id="registrar-dt-ncto" name="registrar-dt-ncto" required>
-
-                    <label for="registrar-senha">Senha</label>
-                    <input type="password" id="registrar-senha" name="registrar-senha" required>
-
-                    <button type="submit">Cadastrar</button>
-                </form>
-            </div>
+                                        <div id="popupForm" class="popup">
+                                            <div class="popup-content">
+                                                <span id="closePopupBtn" class="close">&times;</span>
+                                                <h2>Cadastro</h2>
+                                                <form>
+                                                    <label for="nomeCompleto">Nome Completo:</label>
+                                                    <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+                                    
+                                                    <label for="nomeMae">Nome da Mãe:</label>
+                                                    <input type="text" id="nomeMae" name="nomeMae" required>
+                                    
+                                                    <label for="sexo">Sexo:</label>
+                                                    <select id="sexo" name="sexo" required>
+                                                        <option value="masculino">Masculino</option>
+                                                        <option value="feminino">Feminino</option>                                                       
+                                                    </select>
+                                    
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" id="email" name="email" required>
+                                    
+                                                    <label for="rg">RG:</label>
+                                                    <input type="text" id="rg" name="rg" required>
+                                    
+                                                    <label for="cpf">CPF:</label>
+                                                    <input type="text" id="cpf" name="cpf" required>
+                                    
+                                                    <label for="dataNascimento">Data de Nascimento:</label>
+                                                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                                    
+                                                    <label for="senha">Senha:</label>
+                                                    <input type="password" id="senha" name="senha" required>
+                                    
+                                                    <button type="submit">Cadastrar</button>
+                                                </form>
+                                            </div>
+                                        </div>
         </div>
-    
-        <script src="java-script/login.js"></script>
     </div>
+</div>
+<script src="java-script/login.js"></script>
 </body>
 </html>
