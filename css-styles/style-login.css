@@ -149,14 +149,45 @@ form{
         }
 
 
-a {
-color: aliceblue;
-text-decoration: none;
+/* Estilizar o rótulo */
+label[for="rememberMe"] {
+    font-family: 'Noto Sans',sans-serif;
+    text-transform: uppercase;
+    font-size: 16px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    font-weight: 650; /* Peso da fonte (negrito) */
+    margin-left: 5px; /* Espaçamento à esquerda do rótulo */
+}
 
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 
 }
 
+input[type="checkbox"] {
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    appearance: none; /* Remove o estilo padrão */
+    background-color: #514869; /* Cor de fundo */
+    border: 2px solid #00ff6a; /* Borda do checkbox */
+    border-radius: 10px; /* Cantos arredondados (opcional) */
+}
 
+input[type="checkbox"]:checked {
+    background-color: #95ffc6; /* Cor de fundo quando marcado */
+    border-color: #00ff6a; /* Borda quando marcado */
+}
+
+input[type="checkbox"]:checked::after {
+    font-size: 16px;
+    color: white; /* Cor da marca de verificação */
+    display: block;
+    text-align: center;
+}
         /* POP-UP */
 
 body {
@@ -174,18 +205,21 @@ body {
 }
 
 button {
+    font-family: 'Noto Sans',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #00ff77;
+    color: #2b134b;
     border: none;
     border-radius: 5px;
     margin-top: 20px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #95ffc6;
 }
 
 .popup {
@@ -202,6 +236,7 @@ button:hover {
 }
 
 .popup-content {
+    margin-top: 5%;
     background-color: #2f2841;
     color: aliceblue;
     padding: 50px;
@@ -240,8 +275,8 @@ button:hover {
 .popup-content button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #00ff77;
+    color: #2b134b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -249,7 +284,7 @@ button:hover {
 }
 
 .popup-content button:hover {
-    background-color: #45a049;
+    background-color: #95ffc6;
 }
 
 .close {
@@ -261,3 +296,5 @@ button:hover {
     cursor: pointer;
     box-shadow: 2px 0px 15px 0.5px rgba(0, 0, 0, 0.25)
 }
+
+
