@@ -200,10 +200,6 @@ body {
     height: 100vh;
 }
 
-.container {
-    text-align: ri;
-}
-
 button {
     font-family: 'Noto Sans',sans-serif;
     text-transform: uppercase;
@@ -232,7 +228,6 @@ button:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
-    align-items: right;
 }
 
 .popup-content {

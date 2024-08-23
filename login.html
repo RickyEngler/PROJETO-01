@@ -24,7 +24,7 @@
             </div>
             <div class="textfield">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" autocomplete="senha" placeholder="Senha">
+                <input type="password" name="senha" autocomplete="current-password" placeholder="Senha">
             </div>
             <div>
                 <input type="checkbox" id="rememberMe" name="rememberMe">
@@ -35,9 +35,9 @@
                 <p><a href="#" id="open-register"></a></p>
                
                             <button type="button" id="openPopupBtn">Cadastre-se</button>
-            </form>
-        </div>
-        </div>      
+                        </div>
+                    </div>
+    </form>     
 
                                         <!-- Pop-up de cadastro -->
 
@@ -54,8 +54,9 @@
                                     
 <label for="sexo">Sexo:</label>
 <select id="sexo" name="sexo" required>
-   <option value="masculino">Masculino</option>
-   <option value="feminino">Feminino</option>                                                       
+   <option value="" disabled selected>Selecione seu gênero</option>
+   <option value= "masculino">Masculino</option>
+   <option value= "feminino">Feminino</option>                                                       
    </select>
                                     
    <label for="email">Email</label>
@@ -71,16 +72,13 @@
    <input type="date" id="dataNascimento" name="dataNascimento" required>
                                     
    <label for="senha">Senha</label>
-   <input type="password" id="senha" name="senha" autocomplete="senha" required>
+   <input type="password" id="senha" name="senha" required>
 
    <button type="submit">Cadastrar</button>
                                                
 </form>
    </div>
       </div>
-        </div>
-    </div>
-</div>
 <script src="java-script/login.js"></script>
 </body>
 </html>
