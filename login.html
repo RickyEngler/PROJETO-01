@@ -24,10 +24,10 @@
             </div>
             <div class="textfield">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" autocomplete="current-password" placeholder="Senha">
+                <input type="password" name="senha" autocomplete="current-password" placeholder="Senha" minlength="4">
             </div>
             <div>
-                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
                 <label for="rememberMe">Lembrar de mim</label>
             </div>
             <button type="submit" class="btn-login">Entrar</button>
@@ -72,7 +72,7 @@
    <input type="date" id="dataNascimento" name="dataNascimento" required>
                                     
    <label for="senha">Senha</label>
-   <input type="password" id="senha" name="senha" required>
+   <input type="password" id="senha" name="senha" required minlength="4">
 
    <button type="submit">Cadastrar</button>
                                                
