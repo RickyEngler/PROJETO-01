@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>PORTAL LIBERTY TI</title>
-     <link rel="stylesheet" href="css-styles/Estilo.css">
+     <link rel="stylesheet" href="css-styles/style-geral.CSS">
      <link rel="stylesheet" href="css-styles/clicaveis.css">
 </head>
 
@@ -27,23 +27,37 @@
      <section>
      <div>  
            <h4>----------- TEMPORARIAMENTE INDISPONÍVEL -----------</h4> 
+           <br>
+           <br>
+           <br>
      </div>
 </section>
 <section>
      <p>
           Por favor, atente-se aos procedimentos solicitados. Caso tenha alguma dúvida, consulte o manual de uso disponível abaixo. <br>
           <br>
-          <a href="">Manual de uso do usuário</a>
+          <a href="">&Rarr; Manual de uso do usuário &Larr;</a>
+          <br>
+          <br>
      </p>
 </section>
-
-<section id="unidades">
-     <label for="unidade">Unidade</label>
-<select id="unidade" name="unidade" required>
-   <option value="" disabled selected>Selecione a unidade</option>
-   <option value= "n1">Null</option>
-   <option value= "n2">Null</option>                                                     
    </select>
+
+   <p><label for="unidades" class="unidades">Unidade:</label>
+     <input type="text" name="unidade" id="unidade" placeholder="Digite a unidade na qual deseja se cadastrar..." list="unidades">
+          <datalist id="unidades">
+                    <option value="UPA Santo Amaro"></option>
+                    <option value="UPA Jardim Peri"></option>
+                    <option value="Crst Lapa"></option>
+                    <option value="HM Zaio"></option>
+                    <option value="AMA Zaio"></option>
+                    <option value="UPA Pedreira"></option>
+                    <option value="HM Campo Limpo"></option>
+                    <option value="HM Benedicto Montenegro"></option>
+          </datalist>
+
+   </p>
+
    <button type="submit" id="btn-cadastrar">Cadastrar</button>  
 </section>
 </main>

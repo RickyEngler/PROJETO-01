@@ -67,6 +67,7 @@ border-radius: 20px;
 form{
     display: flex;
     flex-direction: column;
+    outline: none;
 }
 
 .textfield{
@@ -76,6 +77,7 @@ form{
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
+    outline: none;
 }
 
 .textfield > input{
@@ -89,11 +91,13 @@ form{
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
+    outline: none;
 }
 
 .textfield > label{
     color: aliceblue;
     margin-bottom: 10px;
+    outline: none;
 }
 
 .textfield > input::placeholder{
@@ -158,6 +162,7 @@ label[for="rememberMe"] {
     color: white; /* Cor do texto */
     font-weight: 650; /* Peso da fonte (negrito) */
     margin-left: 5px; /* Espaçamento à esquerda do rótulo */
+    outline: none;
 }
 
 input[type="checkbox"] {
@@ -199,6 +204,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    outline: none;
 }
 
 button {
@@ -229,6 +235,7 @@ button:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
+    outline: none;
 }
 
 .popup-content {
@@ -245,20 +252,24 @@ button:hover {
     position: relative;
     text-align: left;
     overflow-y: auto;
+    outline: none;
 }
 
 .popup-content h2 {
     margin-top: 0;
+    outline: none;
 }
 
 .popup-content label {
     display: block;
     margin: 10px 0 5px;
+    outline: none;
 }
 
 .popup-content input,
 .popup-content select {
     color: white;
+    outline: none;
     background: #514869;
     width: 100%;
     padding: 12px;
@@ -277,6 +288,7 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    outline: none;
 }
 
 .popup-content button:hover {
