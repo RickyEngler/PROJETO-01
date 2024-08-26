@@ -16,10 +16,9 @@ function logar() {
     var usuario = document.getElementById('usuario').value.trim();
     var senha = document.getElementById('senha').value.trim();
 
-    console.log("Email", usuario); // Verifica o valor do usuário
-    console.log("Senha", senha); // Verifica o valor da senha
 
-    if(usuario === "teste@gmail.com" && senha === "admin") {
+
+    if(usuario == "" && senha == "") {
         location.href = "../home.html"; // Redireciona para a página home.html
     } 
     else{
