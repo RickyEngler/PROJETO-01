@@ -19,15 +19,16 @@
      <ul>
           <li> <a href="home.html" class="meus-links">HOME</a></li>
           <li> <a href="vrv-siga.html" class="meus-links">VRV SIGA (INDISPONÍVEL)</a></li>
-          <li> <a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX (INDISPONÍVEL)</a></li>
+          <li> <a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX</a></li>
           <li> <a href="portal.html" class="meus-links">PORTAL DE LINKS INTERNOS</a></li>
+          <li> <a href="info.html" class="meus-links">SOBRE</a></li>
      </ul>
 </NAV>     
 <main>
      <section>
      <div> 
           <br> 
-           <h4>----------- TEMPORARIAMENTE INDISPONÍVEL -----------</h4> 
+           <h4>----------- WORKING -----------</h4> 
            <br>
            <br>
      </div>
@@ -42,11 +43,13 @@
      </p>
 </section>
    </select>
-<form id="UnidadesForm"></form>
-   <p><label for="unidades" class="unidade">Unidade </label>
-     <input type="text" name="unidade" id="unidade" placeholder="Digite a unidade na qual deseja se cadastrar..." list="unidades">
+   <form id="UnidadesForm" onsubmit="return redirecionarParaDownload()">
+     <p>
+         <label for="unidade" class="unidade">Unidade:</label>
+         <input type="text" name="unidade" id="unidade" placeholder="Digite ou selecione a unidade..." list="unidades" required>
+     </p>
      <datalist id="unidades">
-<option value="Alipio"></option>
+<option value="Alipio">Alipio</option>
 <option value="Ama Zaio"></option>
 <option value="Amaro"></option>
 <option value="Balneario São Jose"></option>
@@ -199,7 +202,7 @@
 <option value="UPA Julio Tupy"></option>
 <option value="UPA Mooca 3 Dom Paulo Evaristo Arns"></option>
 <option value="UPA Parelheiros"></option>
-<option value="UPA Parque Doroteia"></option>
+<option href="UPA Dorotéia">UPA Dorotéia</option>
 <option value="UPA Pedreira"></option>
 <option value="UPA Perus Dr Luiz Antônio de Abreu Sampaio Doria"></option>
 <option value="UPA Pirituba"></option>
@@ -215,6 +218,29 @@
           <button type="submit" id="btn-baixar">Baixar</button> 
    </p>
 </form>
+<script>
+     function redirecionarParaDownload() {
+         // Obtém o valor do campo de entrada
+         var unidadeInput = document.getElementById('unidade').value;
+
+         // Mapeia os valores das unidades para URLs de download
+         var downloadLinks = {
+
+'UPA Dorotéia':'https://drive.google.com/file/d/1cXGpmIzC11O8sHgSkhOn_mfpf3gtpCGh/view?usp=sharing',
+
+         };
+
+         // Verifica se o valor do input corresponde a algum link de download
+         if (downloadLinks[unidadeInput]) {
+             // Redireciona o usuário para o link de download
+             window.location.href = downloadLinks[unidadeInput];
+             return false; // Impede o envio do formulário padrão
+         } else {
+             alert('Por favor, selecione uma unidade válida.');
+             return false;
+         }
+     }
+ </script>
      </section>
 </main>
     <footer>
