@@ -13,12 +13,12 @@ window.addEventListener("click", function(event) {
 });
 
 function logar() {
-    var usuario = document.getElementById('usuario').value.trim();
-    var senha = document.getElementById('senha').value.trim();
+    var usuario = document.getElementById('usuario').value;
+    var senha = document.getElementById('senha').value;
 
 
 
-    if(usuario == "" && senha == "") {
+    if(usuario === "admin@admin.com.br" && senha === "admin") {
         location.href = "../home.html"; // Redireciona para a página home.html
     } 
     else{

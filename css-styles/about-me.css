@@ -1,0 +1,9 @@
+@charset "utf8";
+
+header {
+    background-color: black;
+}
+
+.about-me-img {
+width: 10%;
+}
