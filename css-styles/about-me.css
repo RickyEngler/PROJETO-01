@@ -4,6 +4,7 @@ header {
     background-color: black;
 }
 
-.about-me-img {
-width: 10%;
+.image-ame {
+    display: flex;
+width: 10wh;
 }
