@@ -4,7 +4,11 @@ header {
     background-color: black;
 }
 
-.image-ame {
-    display: flex;
-width: 10wh;
+aboutme#img {
+    border-radius: 20px;
+    margin: 10px;
+    display: block;
+    width: 10wh;
+    height: 10vh;
+    
 }
