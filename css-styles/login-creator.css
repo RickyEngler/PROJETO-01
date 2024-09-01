@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+label#unidade {
+    font-size: 160px;
+}
+
+input#unidade {
+    font-family: 'Noto Sans',sans-serif;
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #2f2841;
+    width: 50%;
+    font-weight: 400; 
+    font-size: 15px;
+    color: white;
+    text-shadow: 6cm 6cm 10cm color black;
+}
+
+button#btn-baixar {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Noto Sans',sans-serif;
+    background-color: #00ff77;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button#btn-baixar :hover {
+    background-color: #95ffc6;
+}
+
+
+p {
+    font-family: 'Noto Sans',sans-serif;
+    font-weight: 400;    
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 6cm 6cm 10cm color black; 
+    
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Noto Sans',sans-serif;
+    font-weight: 700;    
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: 6cm 6cm 10cm color black; 
+    
+}
