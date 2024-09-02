@@ -7,6 +7,8 @@
      <link rel="stylesheet" href="css-styles/style-geral.CSS">
      <link rel="stylesheet" href="css-styles/login-creator.css">
      <link rel="stylesheet" href="css-styles/links-portal.css">
+     <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+     <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
 </head>
 
 <body>
@@ -28,18 +30,19 @@
 <main>
 <section>
      <p>
-          Por favor, atente-se aos procedimentos solicitados. Caso tenha alguma dúvida, consulte o manual de uso disponível abaixo. <br>
+          Por favor, atente-se aos procedimentos solicitados. Caso tenha alguma dúvida, consulte o manual de uso disponível abaixo. 
+          <br>
           <br>
           <a href="PDF/MANUAL DE USABILIDADE RPA (ROBOTIC PROCESS AUTOMATION) 1.pdf" target="_blank">&Rarr; Manual do usuário &Larr;</a>
-          <br>
-          <br>
+
      </p>
 </section>
    </select>
    <form id="UnidadesForm" onsubmit="return redirecionarParaDownload()">
-     <p>
+     <p id="unidades-form">
          <label for="unidade" class="unidade">Unidade:</label>
          <input type="text" name="unidade" id="unidade" placeholder="Digite ou selecione a unidade..." list="unidades" required>
+         <button type="submit" id="btn-baixar">Baixar</button> 
      </p>
      <datalist id="unidades">
 <option value="Alipio">Alipio</option>
@@ -208,8 +211,6 @@
 <option value="UPA Vila Santa Catarina"></option>
 <option value="Vila Mariana"></option>
           </datalist>
-          <button type="submit" id="btn-baixar">Baixar</button> 
-   </p>
 </form>
 <script>
      function redirecionarParaDownload() {

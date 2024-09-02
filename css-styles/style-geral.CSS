@@ -43,7 +43,7 @@ flex: 1;
 header {
 background-color: #2f2841;
 align-items: center;
-height: 10vh;
+height: 12vh;
 }
 
 div#interface {
@@ -57,7 +57,7 @@ header#cabecalho {
 header#cabecalho img {
 position: absolute;
 left: 15px;
-top: 5px;
+top: 9px;
 width: 15%;
 }
 
