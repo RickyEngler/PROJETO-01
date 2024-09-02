@@ -33,7 +33,8 @@ body {
 }
 
 main {
-height: 75vh;
+    min-height: 74vh;
+height: 100%;
 flex: 1;
 }
 
@@ -57,7 +58,7 @@ header#cabecalho {
 header#cabecalho img {
 position: absolute;
 left: 15px;
-top: 9px;
+top: 2.5%;
 width: 15%;
 }
 
@@ -68,6 +69,7 @@ nav#menu ul {
     background-color: #2f2841;
     list-style-type: none;
     margin: 0px;  
+    margin-bottom: 40px;
 }
 
 nav#menu li {
@@ -86,7 +88,10 @@ nav#menu li:hover {
 
 /* FORMATAÇÃO DE IMAGENS */
 
-
+img {
+   
+    width: 10%;
+}
 
 
 
@@ -98,5 +103,5 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #2f2841;
-    height: 100%;
+    margin-bottom: 0px;
 }

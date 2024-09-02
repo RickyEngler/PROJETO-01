@@ -227,7 +227,7 @@
          // Verifica se o valor do input corresponde a algum link de download
          if (downloadLinks[unidadeInput]) {
              // Redireciona o usuário para o link de download
-             window.location.href = downloadLinks[unidadeInput];
+             window.open(downloadLinks[unidadeInput], '_blank');
              return false; // Impede o envio do formulário padrão
          } else {
              alert('Por favor, selecione uma unidade válida.');
