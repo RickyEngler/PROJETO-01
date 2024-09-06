@@ -3,6 +3,18 @@
 
 
 /* Formatação pagina de links */
+body { 
+    font-family: 'Noto Sans',sans-serif;
+    background-color: #201b2c;
+    text-align: center;
+    margin: 0;
+
+    h1 {font-family: 'Noto Sans',sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 6px 10px 0.5px color black;     
+        }
+    }
 
 .meus-links {
     font-family: 'Noto Sans',sans-serif;
@@ -20,7 +32,7 @@
 a#link-git {
     font-family: 'Noto Sans',sans-serif;
     font-weight: 900;
-    color: rgb(0, 188, 94); /* Cor do texto quando o mouse passa sobre o link */
+    color: #77ffc0; /* Cor do texto quando o mouse passa sobre o link */
     text-decoration: none; 
 
 }
@@ -73,6 +85,16 @@ a#contatos-emerg {
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
 }
+
+a#GLPI {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 10;
+    color: rgb(249, 249, 249); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
 
 div#title-portal h1 {
     display: inline-flex;
