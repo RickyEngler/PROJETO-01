@@ -37,6 +37,12 @@ h3 {font-family: 'Noto Sans',sans-serif;
     
 }
 
+.container{
+    display: flex;
+    margin: 10px;
+}
+
+/* Registro de Ponto */
 .ponto-tangerino{
     border-radius: 10px;
     width: 100px;
@@ -49,6 +55,27 @@ h3 {font-family: 'Noto Sans',sans-serif;
 }
 
 #ponto-icon{
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* Email */
+
+.email{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: rgb(0, 255, 166);
+    cursor: pointer;
+    box-shadow: 10px 10px 40px black;
+}
+
+#email-icon{
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;

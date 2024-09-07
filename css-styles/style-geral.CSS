@@ -3,33 +3,32 @@
 
 
 /* FORMATAÇÃO DO HEADER */
+.perfil-icon{
+    margin-left: 195vh;
+    width: 2%;
+    cursor: pointer;
+}
 
 header {
+    display: flex;
     background-color: #2f2841;
     align-items: center;
-    height: 12vh;
+    height: 8vh;
 }
 
-div#interface {
+#interface {
     width: 100%;
 }
-.icon-perfil{
-    padding: 0%;
-    box-sizing: border-box;
-    margin-left: 80%;
-    margin-right: 80%;
-    width: 30%;
+
+#cabecalho {
+    background-color: #0e0c11;
 }
 
-header#cabecalho {
-    background-color: #1f1830;
-}
-
-header#cabecalho img {
+#cabecalho_1 {
     position: absolute;
     left: 15px;
-    top: 2.3%;
-    width: 15%;
+    top: 1.5%;
+    width: 10%;
 }
 
 /* FORMATAÇÃO DO BODY */
@@ -42,7 +41,7 @@ body {
 }
 
 main {
-    min-height: 74vh;
+    min-height: 72vh;
     height: 100%;
     flex: 1;
 }
@@ -52,7 +51,7 @@ main {
 
 nav#menu ul {
     font-family: 'Noto Sans',sans-serif;
-    background-color: #2f2841;
+    background-color: #322b44;
     list-style-type: none;
     margin: 0px;  
     margin-bottom: 40px;
@@ -84,6 +83,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2f2841;
+    background-color: #0e0c11;
     margin-bottom: 0px;
 }

@@ -45,7 +45,7 @@ p {
     border-radius: 10px;
     background-color: #2f2841;
     font-family: 'Noto Sans',sans-serif;
-    font-weight: 400;    
+    font-weight: 600;    
     font-size: 14px;
     color: rgb(255, 255, 255);
     text-shadow: 6cm 6cm 10cm color black; 
@@ -63,17 +63,6 @@ p#unidades-form {
     font-family: 'Noto Sans',sans-serif;
     font-weight: 800;    
     font-size: 14px;
-    color: rgb(255, 255, 255);
-    text-shadow: 6cm 6cm 10cm color black; 
-    
-}
-
-a {  /* LISTA DE UNIDADES */
-    text-decoration: none;
-    font-family: 'Noto Sans',sans-serif;
-    font-weight: 700;    
-    text-transform: uppercase;
-    font-size: 12px;
     color: rgb(255, 255, 255);
     text-shadow: 6cm 6cm 10cm color black; 
     
