@@ -1,32 +1,36 @@
 <?php
-// Dados de conexão com o banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "cadastro_db";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Criar a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "cadastros";
 
-// Verificar a conexão
+// Conexão com o banco de dados
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+// Verifica a conexão
 if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
+    die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Receber os dados do formulário
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografar a senha
+// Processa o cadastro
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nomeCompleto = $conn->real_escape_string($_POST['nomeCompleto']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $cpf = $conn->real_escape_string($_POST['cpf']);
+    $senha = password_hash($_POST['senhaCadastro'], PASSWORD_BCRYPT);
 
-// Inserir os dados no banco de dados
-$sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+    $sql = "INSERT INTO usuarios (nomeCompleto, email, cpf, senha) VALUES ('$nomeCompleto', '$email', '$cpf', '$senha')";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Novo cadastro criado com sucesso";
-} else {
-    echo "Erro: " . $sql . "<br>" . $conn->error;
+    if ($conn->query($sql) === TRUE) {
+        echo "Cadastro realizado com sucesso!";
+        // Redirecionar ou exibir mensagem de sucesso
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
 }
 
-// Fechar a conexão
 $conn->close();
 ?>

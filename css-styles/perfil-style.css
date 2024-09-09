@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+h2{
+    color: #00ff77;
+    font-size: 10px;
+}
+
 .title-1{
     margin-left: 70px;
     background-color: #412861;
@@ -59,7 +64,7 @@ label{
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     color: #2b134b;
     background: #00ff77;
     cursor: pointer;

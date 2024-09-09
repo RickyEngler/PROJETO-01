@@ -134,11 +134,3 @@ nav#portal li:hover {
 }
 
 
-a#unidades {
-    font-family: 'Noto Sans',sans-serif;
-    font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    font-weight: bold; /* Torna o texto negrito */
-    text-transform: uppercase;
-}
