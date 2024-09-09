@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Meu Perfil</title>
+     <link rel="stylesheet" href="css-styles/style-geral.css">
+     <link rel="stylesheet" href="css-styles/links-portal.css">
+     <link rel="stylesheet" href="css-styles/perfil-style.css">
+     <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+     <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+</head>
+
+<!-- CABEÇALHO -->
+<body>
+     <div id="interface">
+          <header id="cabecalho">
+               <img id="cabecalho_1" src="images/Logo-01.webp" href="home.html" alt="logo-liberty">             
+               <button class="profile-button" onclick="toggleMenu()">MENU</button>
+
+<!-- MENU FLUTUANTE -->
+          <div class="profile-menu" id="profileMenu">
+          <a href="perfil.html">Meu Perfil</a>
+          <a href="configurações.html">Configurações</a>
+          <a href="#">Suporte</a>
+          <a href="login.html">Sair</a>
+          </div>
+          </div>
+          </header>
+     </div>
+
+<!-- MENU FIXO -->
+          
+<NAV id="menu">
+     <ul>
+          <li> <a href="home.html" class="meus-links">HOME</a></li>
+          <li> <a href="vrv-siga.html" class="meus-links">VRV SIGA</a></li>
+          <li> <a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX</a></li>
+          <li> <a href="portal.html" class="meus-links">PORTAL DE LINKS INTERNOS</a></li>
+          <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
+     </ul>
+</NAV>     
+
+<!-- Área de Código -->
+
+<div class="title-1">
+<h1>Dados cadastrados</h1>
+
+<form method="get" id="cadastro">
+     <label for="nomeCompleto">Nome Completo</label>
+     <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="*Nome Completo Cadastrado*" required>
+                                     
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="email" placeholder="*Email cadastrado*" required>
+                                     
+    <label for="cpf">CPF</label>
+    <input type="text" id="cpf" name="cpf" placeholder="*CPF Cadastrado*" required>
+    </form>
+</div>
+
+<div class="title-2">
+    <h1>Alterar senha</h1>
+
+                          <form>           
+    <label for="senha">Senha atual</label>
+    <input type="password" id="senha" name="senha" placeholder="Insira sua senha atual..." required minlength="4">
+
+    <label for="senha">Nova senha</label>
+    <input type="password" id="senha" name="senha" placeholder="Insira sua nova senha..." required minlength="4">
+
+    <label for="senha">Confirme sua senha</label>
+    <input type="password" id="senha" name="senha" placeholder="Insira sua nova senha..." required minlength="4">                                                
+ </form>
+
+ <button type="submit" class="save-btn"> Salvar</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Área de Código -->
+
+<!-- Footer -->
+<footer>
+   <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
+</footer>      
+
+<script>
+    // Função para alternar a exibição do menu
+    function toggleMenu() {
+        var menu = document.getElementById('profileMenu');
+        menu.classList.toggle('active');
+    }
+
+    // Fecha o menu se clicar fora dele
+    window.onclick = function(event) {
+        if (!event.target.matches('.profile-button')) {
+            var menu = document.getElementById('profileMenu');
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        }
+    }
+</script>
+
+      </body>       
+        </html>

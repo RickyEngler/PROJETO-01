@@ -3,7 +3,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>PORTAL LIBERTY TI</title>
+     <title>Página Inicial</title>
      <link rel="stylesheet" href="css-styles/style-geral.css">
      <link rel="stylesheet" href="css-styles/links-portal.css">
      <link rel="stylesheet" href="css-styles/home-style.css">
@@ -14,10 +14,15 @@
 <body>
      <div id="interface">
           <header id="cabecalho">
-               <img id="cabecalho_1" src="images/Logo-01.webp" alt="logo-liberty">
-          
-          <div class="icon-perfil">
-               <img class="perfil-icon" src="ICONS/do-utilizador-white.png">
+               <img id="cabecalho_1" src="images/Logo-01.webp" href="home.html" alt="logo-liberty">             
+               <button class="profile-button" onclick="toggleMenu()">MENU</button>
+               <!-- Menu Flutuante -->
+          <div class="profile-menu" id="profileMenu">
+          <a href="perfil.html">Meu Perfil</a>
+          <a href="configurações.html">Configurações</a>
+          <a href="#">Suporte</a>
+          <a href="login.html">Sair</a>
+          </div>
           </div>
           </header>
      </div>
@@ -28,13 +33,13 @@
           <li> <a href="vrv-siga.html" class="meus-links">VRV SIGA</a></li>
           <li> <a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX</a></li>
           <li> <a href="portal.html" class="meus-links">PORTAL DE LINKS INTERNOS</a></li>
-          <li> <a href="info.html" class="meus-links">SOBRE</a></li>
+          <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
      </ul>
 </NAV>     
 <main>
      <section class="title">
         <div>
-          <h4>Bem-vindo ao Portal Liberty!</h4>
+          <h4>Bem-vindo, **user** ao Portal Liberty!</h4>
           <p>
                <br> Aqui você encontrará as ferramentas e recursos necessários para facilitar suas atividades diárias. 
                <br> Utilize as opções abaixo para acessar sistemas, relatórios e serviços.
@@ -52,8 +57,26 @@
           <h3>EMAIL CORPORATIVO</h3>
 </div>
 </main>
+<script>
+     // Função para alternar a exibição do menu
+     function toggleMenu() {
+         var menu = document.getElementById('profileMenu');
+         menu.classList.toggle('active');
+     }
+ 
+     // Fecha o menu se clicar fora dele
+     window.onclick = function(event) {
+         if (!event.target.matches('.profile-button')) {
+             var menu = document.getElementById('profileMenu');
+             if (menu.classList.contains('active')) {
+                 menu.classList.remove('active');
+             }
+         }
+     }
+ </script>
+ 
     <footer>
-<h6>TODOS DIREITOS RESERVADOS <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER </a> ©</h6>
+<h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
 </footer>           
           </body>
 

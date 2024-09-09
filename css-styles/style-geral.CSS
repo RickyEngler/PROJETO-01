@@ -3,11 +3,63 @@
 
 
 /* FORMATAÇÃO DO HEADER */
-.perfil-icon{
-    margin-left: 195vh;
-    width: 2%;
+
+  /* Estilo básico para o botão de perfil */
+  .profile-button {
+    font-family: 'Noto Sans',sans-serif;
+    font-weight: 600;
+    position: absolute;
+    background-color: rgb(0, 255, 166);
+    color: rgb(0, 0, 0);
+    padding: 3px 20px;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 88%;
+    width: 7%;
+   
 }
+
+/* Container do menu flutuante */
+.profile-menu {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    right: 15px;
+    top: 50px; /* Ajuste conforme necessário */
+    background-color: #41384e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+}
+
+/* Estilo dos itens do menu */
+.profile-menu a {
+    border-radius: 5px;
+    font-weight: 700;
+    display: block;
+    padding: 10px 15px;
+    color: #e1e1e1;
+    text-decoration: none;
+    border-bottom: 1px solid #767676;
+}
+
+.profile-menu a:hover {
+    color: #2f2841;
+    background-color: rgb(0, 255, 166);
+}
+
+.profile-menu a:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+/* Para exibir o menu quando ativo */
+.profile-menu.active {
+    display: block;
+}
+
+/* FORMATAÇÃO DO HEADER */
 
 header {
     display: flex;
