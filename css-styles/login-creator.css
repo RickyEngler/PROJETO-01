@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-a#unidades {
+a#unidades-manual {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
     color: rgb(249, 249, 249); /* Cor do texto */
@@ -10,7 +10,8 @@ a#unidades {
     text-transform: uppercase;
 }
 
-a#unidades:hover{
+
+a#unidades-manual:hover{
     color: #00ff77;
 }
 

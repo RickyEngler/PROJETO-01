@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Criar Cadastro</title>
-     <link rel="stylesheet" href="css-styles/style-geral.css">
-     <link rel="stylesheet" href="css-styles/login-creator.css">
-     <link rel="stylesheet" href="css-styles/links-portal.css">
-     <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
-     <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Cadastro</title>
+    <link rel="stylesheet" href="css-styles/style-geral.css">
+    <link rel="stylesheet" href="css-styles/login-creator.css">
+    <link rel="stylesheet" href="css-styles/links-portal.css">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
 </head>
 
-<div id="interface">
-     <header id="cabecalho">
-          <img id="cabecalho_1" src="images/Logo-01.webp" href="home.html" alt="logo-liberty">             
-          <button class="profile-button" onclick="toggleMenu()">MENU</button>
-          <!-- Menu Flutuante -->
-     <div class="profile-menu" id="profileMenu">
-     <a href="perfil.html">Meu Perfil</a>
-     <a href="configurações.html">Configurações</a>
-     <a href="error404.html">Suporte</a>
-     <a href="login.html">Sair</a>
-     </div>
-     </div>
-     </header>
-</div>
-          
-<NAV id="menu">
-     <ul>
-          <li> <a href="home.html" class="meus-links">HOME</a></li>
-          <li> <a href="vrv-siga.html" class="meus-links">VRV SIGA</a></li>
-          <li> <a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX</a></li>
-          <li> <a href="portal.html" class="meus-links">PORTAL DE LINKS INTERNOS</a></li>
-          <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
-     </ul>
-</NAV>     
-<main>
-<section>
-     <p>
-          Por favor, atente-se aos procedimentos solicitados. Caso tenha alguma dúvida, consulte o manual de uso disponível abaixo. 
-          <br>
-          <br>
-          <a id="unidades" href="PDF/MANUAL DE USABILIDADE RPA (ROBOTIC PROCESS AUTOMATION) 1.pdf" target="_blank">&Rarr; Manual do usuário &Larr;</a>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <img id="cabecalho_1" src="images/Logo-01.webp" href="home.html" alt="logo-liberty">             
+            <button class="profile-button" onclick="toggleMenu()">MENU</button>
+            <!-- Menu Flutuante -->
+            <div class="profile-menu" id="profileMenu">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="configurações.html">Configurações</a>
+                <a href="error404.html">Suporte</a>
+                <a href="login.html">Sair</a>
+            </div>
+        </header>
+    </div>
 
-     </p>
-</section>
-   </select>
-   <form id="UnidadesForm" onsubmit="return redirecionarParaDownload()">
-     <p id="unidades-form">
-         <label for="unidade" class="unidade">Unidade:</label>
-         <input type="text" name="unidade" id="unidade" placeholder="Digite ou selecione a unidade..." list="unidades" required>
-         <button type="submit" id="btn-baixar">Baixar</button> 
-     </p>
-     <datalist id="unidades">
+    <nav id="menu">
+        <ul>
+            <li><a href="home.html" class="meus-links">HOME</a></li>
+            <li><a href="vrv-siga.html" class="meus-links">VRV SIGA</a></li>
+            <li><a href="login-creator.html" class="meus-links">CRIADOR DE LOGIN SGHX</a></li>
+            <li><a href="portal.html" class="meus-links">PORTAL DE LINKS INTERNOS</a></li>
+            <li><a href="about-me.html" class="meus-links">SOBRE</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <p>
+                Por favor, atente-se aos procedimentos solicitados. Caso tenha alguma dúvida, consulte o manual de uso disponível abaixo.
+                <br><br>
+                <a id="unidades-manual" href="PDF/MANUAL DE USABILIDADE RPA (ROBOTIC PROCESS AUTOMATION) 1.pdf" target="_blank">
+                    &Rarr; Manual do usuário &Larr;
+                </a>
+            </p>
+        </section>
+
+        <form id="UnidadesForm" onsubmit="return redirecionarParaDownload()">
+            <p id="unidades-form">
+                <label for="unidade" class="unidade">Unidade:</label>
+                <input type="text" name="unidade" id="unidade" placeholder="Digite ou selecione a unidade..." list="unidades" autocomplete="off" required>
+                <button type="submit" id="btn-baixar">Baixar</button>
+            </p>
+
+            <datalist id="unidades">
 <option value="Alipio">Alipio</option>
 <option value="Ama Zaio"></option>
 <option value="Amaro"></option>
@@ -206,7 +208,7 @@
 <option value="UPA Julio Tupy"></option>
 <option value="UPA Mooca 3 Dom Paulo Evaristo Arns"></option>
 <option value="UPA Parelheiros"></option>
-<option href="UPA Dorotéia">UPA Dorotéia</option>
+<option value="UPA Dorotéia">UPA Dorotéia</option>
 <option value="UPA Pedreira"></option>
 <option value="UPA Perus Dr Luiz Antônio de Abreu Sampaio Doria"></option>
 <option value="UPA Pirituba"></option>
@@ -218,53 +220,34 @@
 <option value="UPA Vila Mariana"></option>
 <option value="UPA Vila Santa Catarina"></option>
 <option value="Vila Mariana"></option>
-          </datalist>
+</datalist>
 </form>
-<script>
-     function redirecionarParaDownload() {
-         // Obtém o valor do campo de entrada
-         var unidadeInput = document.getElementById('unidade').value;
-
-         // Mapeia os valores das unidades para URLs de download
-         var downloadLinks = {
-
-'UPA Dorotéia':'https://drive.google.com/file/d/1cXGpmIzC11O8sHgSkhOn_mfpf3gtpCGh/view?usp=sharing',
-
-         };
-
-         // Verifica se o valor do input corresponde a algum link de download
-         if (downloadLinks[unidadeInput]) {
-             // Redireciona o usuário para o link de download
-             window.open(downloadLinks[unidadeInput], '_blank');
-             return false; // Impede o envio do formulário padrão
-         } else {
-             alert('Por favor, selecione uma unidade válida.');
-             return false;
-         }
-     }
- </script>
- <script>
-     // Função para alternar a exibição do menu
-     function toggleMenu() {
-         var menu = document.getElementById('profileMenu');
-         menu.classList.toggle('active');
-     }
- 
-     // Fecha o menu se clicar fora dele
-     window.onclick = function(event) {
-         if (!event.target.matches('.profile-button')) {
-             var menu = document.getElementById('profileMenu');
-             if (menu.classList.contains('active')) {
-                 menu.classList.remove('active');
-             }
-         }
-     }
- </script>
-     </section>
 </main>
-<footer>
-     <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
-     </footer>          
-          </body>
 
+<footer>
+<h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. Todos os direitos reservados.</h6>
+</footer>
+
+<script src="java-script/login-creator.js">
+    function redirecionarParaDownload() {
+    // Obtém o valor do campo de entrada
+    var unidadeInput = document.getElementById('unidade').value;
+
+    // Mapeia os valores das unidades para URLs de download
+    var downloadLinks = {
+        'UPA Dorotéia': 'https://drive.google.com/file/d/1cXGpmIzC11O8sHgSkhOn_mfpf3gtpCGh/view?usp=sharing'
+    };
+
+    // Verifica se o valor do input corresponde a algum link de download
+    if (downloadLinks[unidadeInput]) {
+        // Redireciona o usuário para o link de download
+        window.open(downloadLinks[unidadeInput], '_blank');
+        return false; // Impede o envio do formulário padrão
+    } else {
+        alert('Por favor, selecione uma unidade válida.');
+        return false;
+    }
+}
+</script>
+</body>
 </html>
