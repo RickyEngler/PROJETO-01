@@ -2,17 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 h2{
-    color: #00ff77;
+    color: #3affbc;
     font-size: 10px;
+}
+
+.main-dados {
+    display: flex;
+    gap: 20px; /* Espaço entre os blocos */
+}
+form{
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
 }
 
 .title-1{
     margin-left: 70px;
     background-color: #412861;
     padding: 50px;
-    width: 80%;
+    width: 30%;
     border-radius: 15px;
-    flex-direction: column;
     margin-bottom: 50px;
 }
 
@@ -20,9 +31,8 @@ h2{
     margin-left: 70px;
     background-color: #412861;
     padding: 50px;
-    width: 80%;
+    width: 30%;
     border-radius: 15px;
-    flex-direction: column;
     margin-bottom: 70px;
 }
 
@@ -32,7 +42,7 @@ input{
     color: white;
     outline: none;
     background: #514869;
-    width: 50%;
+    width: 90%;
     padding: 12px;
     margin-bottom: 10px;
     border: none;
@@ -66,7 +76,7 @@ label{
     font-weight: 800;
     letter-spacing: 1px;
     color: #2b134b;
-    background: #00ff77;
+    background: #3affbc;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px black;
 }

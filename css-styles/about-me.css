@@ -99,9 +99,21 @@ header {
 @media screen and (max-width: 845px){
 
     /* Classes gerais */
-        .flex{
-            flex-direction: column;
-        }
+    .about-me-left{
+        margin: 5px;
+        padding: 20px;
+        margin-bottom: 50px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .about-me-right{
+        margin: 5px;
+        padding: 20px;
+        margin-bottom: 50px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
     
     /* Cabeçalho */
         .menu, .profile-button{

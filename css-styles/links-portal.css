@@ -11,7 +11,7 @@ body {
 
     h1 {font-family: 'Noto Sans',sans-serif;
     font-size: 15px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-shadow: 6px 6px 10px 0.5px color black;     
         }
     }
@@ -19,32 +19,32 @@ body {
 .meus-links {
     font-family: 'Noto Sans',sans-serif;
     font-size: 15px;
-    color: rgb(236, 236, 236); /* Cor do texto */
+    color: #ececec; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
 }
 
 .meus-links:hover {
-    color: rgb(174, 255, 227); /* Cor do texto quando o mouse passa sobre o link */
+    color: #adffc8; /* Cor do texto quando o mouse passa sobre o link */
     
 }
 
 a#link-git {
     font-family: 'Noto Sans',sans-serif;
     font-weight: 900;
-    color: #77ffc0; /* Cor do texto quando o mouse passa sobre o link */
+    color: #3affbc; /* Cor do texto quando o mouse passa sobre o link */
     text-decoration: none; 
 
 }
 
 a#link-git:hover {
-    color: rgb(131, 255, 172); /* Cor do texto quando o mouse passa sobre o link */
+    color: #adffc8; /* Cor do texto quando o mouse passa sobre o link */
 }
 
 a#jira {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -53,7 +53,7 @@ a#jira {
 a#tolife {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -62,7 +62,7 @@ a#tolife {
 a#vault {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -71,7 +71,7 @@ a#vault {
 a#confluence {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -80,7 +80,7 @@ a#confluence {
 a#contatos-emerg {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -89,7 +89,7 @@ a#contatos-emerg {
 a#GLPI {
     font-family: 'Noto Sans',sans-serif;
     font-size: 10;
-    color: rgb(249, 249, 249); /* Cor do texto */
+    color: #f9f9f9; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: bold; /* Torna o texto negrito */
     text-transform: uppercase;
@@ -105,7 +105,7 @@ div#title-portal h1 {
     background-color: #2f2841;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.459);
+    box-shadow: 0px 2px 50px #00000075;
 }
 
 .portal ul {
@@ -122,14 +122,14 @@ div#title-portal h1 {
 }
 
 .portal li {
-    color: aliceblue;
+    color: #f0f8ff;
     padding: 10px;
     margin: 0px;
     border-radius: 5px;
     transition: background-color 0.1s;
 }
 
-nav#portal li:hover {
+.portal li:hover {
     background-color: #00b98e;
 }
 

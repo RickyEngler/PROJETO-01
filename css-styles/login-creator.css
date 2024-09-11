@@ -12,7 +12,7 @@ a#unidades-manual {
 
 
 a#unidades-manual:hover{
-    color: #00ff77;
+    color: #3affbc;
 }
 
 label#unidade {
@@ -38,7 +38,7 @@ button#btn-baixar {
     text-transform: uppercase;
     font-weight: 600;
     font-family: 'Noto Sans',sans-serif;
-    background-color: #00ff77;
+    background-color: #3affbc;
     border: none;
     padding: 10px 30px;
     border-radius: 6px;
@@ -46,7 +46,7 @@ button#btn-baixar {
 }
 
 button#btn-baixar :hover {
-    background-color: #95ffc6;
+    background-color: #c0ffd5;
 }
 
 
@@ -83,8 +83,18 @@ p#unidades-form {
 @media screen and (max-width: 845px){
 
     /* Classes gerais */
-        .flex{
-            flex-direction: column;
+
+        p#unidades-form {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 30px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        p {
+            padding-top: 30px;
+            padding-bottom: 40px;
+            margin-top: 50px;
         }
     
     /* Cabeçalho */

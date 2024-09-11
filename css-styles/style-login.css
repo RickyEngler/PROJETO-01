@@ -34,8 +34,9 @@ border-radius: 20px;
 }
 
 .left-login > h1{
-    font-size: 3vw;
+    font-size: 28px;
     color: #77ffc0;
+    margin-bottom: 20px;
 }
 
 .right-login{
@@ -312,9 +313,11 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #0e0c11;
+    margin-top: 10px;
     margin-bottom: 0px;
+    padding: 10px;
 }
-
+ 
 
 @media screen and (max-width: 845px){
 
