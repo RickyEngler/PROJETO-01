@@ -52,7 +52,6 @@ header {
 }
 
 
-
 .right-about-image {
     border-radius: 20px;
     margin: 10px;
@@ -79,7 +78,6 @@ header {
     font-family: 'Noto Sans',sans-serif;
     color: aliceblue;
     font-size: 35px;
-
 }
 
 .about-me-right h2 {
@@ -96,12 +94,13 @@ header {
     font-size: 17px;
 }
 
-@media screen and (max-width: 845px){
+@media screen and (max-width: 955px){
 
     /* Classes gerais */
     .about-me-left{
         margin: 5px;
         padding: 20px;
+        margin-top: 5%;
         margin-bottom: 50px;
         margin-right: 5%;
         margin-left: 5%;
