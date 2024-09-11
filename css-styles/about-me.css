@@ -95,3 +95,17 @@ header {
     color: rgb(17, 17, 17);
     font-size: 17px;
 }
+
+@media screen and (max-width: 845px){
+
+    /* Classes gerais */
+        .flex{
+            flex-direction: column;
+        }
+    
+    /* Cabeçalho */
+        .menu, .profile-button{
+            display: none;
+        }
+    
+    }

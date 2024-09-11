@@ -108,7 +108,7 @@ div#title-portal h1 {
     box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.459);
 }
 
-nav#portal ul {
+.portal ul {
     margin-left: 34%;
     margin-top: 10px;
     padding: 15px;
@@ -121,7 +121,7 @@ nav#portal ul {
     text-align: center;
 }
 
-nav#portal li {
+.portal li {
     color: aliceblue;
     padding: 10px;
     margin: 0px;
@@ -134,3 +134,24 @@ nav#portal li:hover {
 }
 
 
+@media screen and (max-width: 845px){
+
+    /* Classes gerais */
+    
+    .portal li{
+        padding: 20px;
+    
+    }
+    .portal ul{
+        margin-top: 10%;
+        padding: 10px;
+        width: 70%;
+        margin-left: 13%;
+    }
+    
+    /* Cabeçalho */
+        .menu, .profile-button{
+            display: none;
+        }
+    
+    }

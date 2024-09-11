@@ -305,4 +305,33 @@ button:hover {
     box-shadow: 2px 0px 15px 0.5px rgba(0, 0, 0, 0.25)
 }
 
+footer {
+    color: rgb(255, 255, 255);  
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0c11;
+    margin-bottom: 0px;
+}
 
+
+@media screen and (max-width: 845px){
+
+    /* Classes gerais */
+        #login-form{
+            flex-direction: column;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .left-image{
+            display: none;
+        }
+    
+    /* Cabeçalho */
+        .menu, .profile-button{
+            display: none;
+        }
+    
+    }

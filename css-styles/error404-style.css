@@ -36,3 +36,17 @@ a{
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 845px){
+
+    /* Classes gerais */
+        .flex{
+            flex-direction: column;
+        }
+    
+    /* Cabeçalho */
+        .menu, .profile-button{
+            display: none;
+        }
+    
+    }
