@@ -6,9 +6,7 @@
      <title>Página Inicial</title>
      <link rel="stylesheet" href="css-styles/style-geral.css">
      <link rel="stylesheet" href="css-styles/links-portal.css">
-     <link rel="stylesheet" href="css-styles/home-style.css">
-     <link rel="stylesheet" href="css-styles/supote-style.css">
-     
+     <link rel="stylesheet" href="css-styles/suporte-style.css">
      <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
      <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -64,20 +62,24 @@
 
 <!-- CONTEÚDO DA PÁGINA -->
 
-<div class="suporte">
-
-     <div class="title-1">
-     <h1>Precisa de ajuda? Entre em contato com um de nossos desenvolvedores!</h1>
-     <h2>Digite suas dúvidas</h2>
-     
-     <form method="get" id="suporte">
-          <label for="nome">Desenvolvedor</label>
-          <input type="text" id="nomeCompleto" name="nome" placeholder="Escolha um Desenvolvedor." required>
-                                   
-         <label for="texto">Solicitação</label>
-         <input type="text" id="texto" name="texto" placeholder="Digite em poucas palavras sua dúvidas ou solicitações." required>                         
+<div class="card">
+     <div class="suporte">
+         <h3>Precisa de ajuda? Entre em contato com um de nossos desenvolvedores!</h3>     
+         <form method="get" class="suporte-form">
+             <label for="nome">Desenvolvedor responsável</label>
+             <!-- Input com lista de desenvolvedores usando datalist -->
+             <input list="desenvolvedores" id="desenvolvedor" name="nome" placeholder="Escolha um Desenvolvedor." required>
+             <datalist id="desenvolvedores">
+                 <option value="augusto.engler@libertyti.com.br"> Augusto Engler </option>
+                 <option value="richard.silva@libertyti.com.br"> Richard Berto </option>
+             </datalist>
+ 
+             <label for="texto">Solicitação</label>
+             <input type="text" id="texto" name="texto" placeholder="Digite em poucas palavras sua dúvida ou solicitação." required>                          
          </form>
+         <button type="submit" class="btn-sup">Enviar</button>
      </div>
+ </div>
 
 
 <!-- RODAPÉ -->

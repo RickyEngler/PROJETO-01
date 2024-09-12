@@ -19,7 +19,7 @@ header {
 }
 
 #cabecalho_1 {
-    position: fixed;
+    position: absolute;
     left: 15px;
     top: 1.5vh;
     width: 10vw;
@@ -42,7 +42,6 @@ main {
 
 
 /* FORMATAÇÃO DO MENU PRINCIPAL */
-
 .menu ul {
     font-family: 'Noto Sans',sans-serif;
     background-color: #322b44;
@@ -68,7 +67,7 @@ main {
 .menu-flutuante i{
     color: #ffffff;
     font-size: 25px;
-    position: fixed;
+    position: absolute;
     right: 5%;
     top: 1.9%;
 }
@@ -122,7 +121,7 @@ display: none;
     border-radius: 5px;
     font-weight: 700;
     display: block;
-    padding: 15px 10%;
+    padding: 9px 10%;
     text-decoration: none; 
 }
 
