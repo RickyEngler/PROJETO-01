@@ -13,7 +13,7 @@ font-size: 20px;
 }
 
 .suporte{
-    background-color: #412861;
+    background-color: #2f2841;
     border-radius: 15px;
     padding: 10%;
     padding-top: 4%;
@@ -22,12 +22,13 @@ font-size: 20px;
     margin-bottom: 5%;
     margin-left: 10%;
     margin-right: 10%;
+    box-shadow: 10px 10px 20px #000000bd;
 }
 
 input{
     padding: 12px;
     outline: none;
-    background-color: #514869;
+    background-color: #2f2841;
     color: aliceblue;
     border-radius: 5px;
     font-weight: 800;
@@ -56,7 +57,7 @@ label{
 
 #desenvolvedor{
     outline: none;
-    background-color: #514869;
+    background-color: #4c4363;
     color: aliceblue;
     border-radius: 5px;
     border: none;
@@ -64,8 +65,9 @@ label{
 
 #texto{
     margin-bottom: 5%;
-    border: none;
     padding-bottom: 50%;
+    background-color: #4c4363;
+    border: none;
 }
 
 .btn-sup{
