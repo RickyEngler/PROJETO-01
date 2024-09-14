@@ -31,7 +31,7 @@ header {
     font-weight: 600px;
     text-transform: uppercase;
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: aliceblue;
     font-size: 35px;
 
@@ -39,14 +39,14 @@ header {
 
 .about-me-left h2 {
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: rgb(17, 17, 17);
     font-size: 25px;
 }
 
 .about-me-left p {
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: rgb(17, 17, 17);
     font-size: 17px;
 }
@@ -75,21 +75,21 @@ header {
     font-weight: 600px;
     text-transform: uppercase;
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: aliceblue;
     font-size: 35px;
 }
 
 .about-me-right h2 {
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: rgb(17, 17, 17);
     font-size: 25px;
 }
 
 .about-me-right p {
     text-align: left;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     color: rgb(17, 17, 17);
     font-size: 17px;
 }

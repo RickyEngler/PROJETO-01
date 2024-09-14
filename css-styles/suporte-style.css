@@ -43,7 +43,7 @@ input{
 }
 
 label{
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     font-weight: 600;
     color: aliceblue;
     flex-direction: column;
@@ -71,7 +71,7 @@ label{
 }
 
 .btn-sup{
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 800;

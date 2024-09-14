@@ -4,7 +4,7 @@
 body *{
     margin: 0;
     padding: 0px;
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     box-sizing: border-box;
 }
 
@@ -157,7 +157,7 @@ form{
 
 /* Estilizar o rótulo */
 label[for="rememberMe"] {
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     text-transform: uppercase;
     font-size: 16px; /* Tamanho da fonte */
     color: white; /* Cor do texto */
@@ -198,7 +198,7 @@ input[type="checkbox"]:checked::after {
         /* POP-UP */
 
 body {
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     margin: 0;
     padding: 0;
     display: block;
@@ -209,7 +209,7 @@ body {
 }
 
 button {
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     padding: 10px 20px;

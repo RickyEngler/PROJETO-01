@@ -28,7 +28,7 @@ header {
 /* FORMATAÇÃO DO BODY */
 
 body { 
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #201b2c;
     text-align: center;
     margin: 0;
@@ -43,11 +43,15 @@ main {
 
 /* FORMATAÇÃO DO MENU PRINCIPAL */
 .menu ul {
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #322b44;
     list-style-type: none;
     margin: 0px;  
     margin-bottom: 40px;
+}
+
+.menu ul a{
+    display: block; /* Torna o link clicável em toda a área */
 }
 
 .menu li {
@@ -62,6 +66,35 @@ main {
     background-color: #000000a1;
 }
 
+.menu ul ul {
+    display: none; /* Esconde os submenus por padrão */
+    position: absolute; /* Para colocar os submenus como dropdowns */
+    background-color: #322b44; /* Cor de fundo opcional */
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+   
+}
+
+.menu ul li:hover > ul {
+    display: block; /* Mostra os submenus quando o mouse passa por cima */
+}
+
+.menu ul ul li {
+    list-style: none; /* Remove os bullets (marcadores) */
+}
+
+.menu ul ul li a {
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    text-decoration: none;
+}
+
+.menu ul li {
+    margin: 10px 0; /* Espaçamento vertical entre os itens */
+    position: relative; /* Necessário para posicionar o submenu */
+}
+
 /* FORMATAÇÃO MENU MOBILE */
 
 .menu-flutuante i{
@@ -70,10 +103,16 @@ main {
     position: absolute;
     right: 5%;
     top: 1.9%;
+    opacity: 0;
+}
+
+.menu-mobile ul ul {
+    display: none; /* Esconde os submenus por padrão */
+    position: absolute; /* Para colocar os submenus como dropdowns */
 }
 
 .menu-mobile{
-    font-family: 'Noto Sans',sans-serif;
+    font-family: 'Wix MadeFor Text',sans-serif;
     text-transform: uppercase;
     background: black;
     height: 100vh;
@@ -173,6 +212,7 @@ footer {
         position: fixed;
         right: 5%;
         top: 3.3%;
+        opacity: 1;
     }
         header{
             height: 10vh;
