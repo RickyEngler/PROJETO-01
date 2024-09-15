@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
 
 /* FORMATAÇÃO DO HEADER */
@@ -43,6 +43,14 @@ main {
 
 /* FORMATAÇÃO DO MENU PRINCIPAL */
 .menu ul {
+    justify-content: center;
+    right: -15px;
+    left: -15px;
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.393);
+    top: 40px;
+}
+
+.menu ul {
     font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #322b44;
     list-style-type: none;
@@ -57,7 +65,6 @@ main {
 .menu li {
     display: inline-block;
     padding: 15px;
-    margin: 5px;
     transition: background-color 0.1s;
     border-radius: 5px;
 }
@@ -85,13 +92,13 @@ main {
 }
 
 .menu ul ul li a {
-    padding: 10px;
+
     display: block; /* Torna o link clicável em toda a área */
     text-decoration: none;
 }
 
 .menu ul li {
-    margin: 10px 0; /* Espaçamento vertical entre os itens */
+    margin: 5px 0; /* Espaçamento vertical entre os itens */
     position: relative; /* Necessário para posicionar o submenu */
 }
 
