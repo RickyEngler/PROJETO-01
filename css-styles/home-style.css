@@ -53,7 +53,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     border-radius: 10px;
     width: 70px;
     height: 70px;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 10px;
     background-color: #3affbc;
     cursor: pointer;
@@ -83,6 +83,50 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 }
 
 #email-icon{
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* Confluence */
+
+.confluence{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+}
+
+#conflu-icon{
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* GoTO */
+
+.GoTO{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+}
+
+#goto-icon{
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
