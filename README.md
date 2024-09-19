@@ -14,7 +14,7 @@ O **Portal de Integração da Empresa** é uma solução desenvolvida para otimi
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** MySQL, PHP, Python
-- **Integrações:** Logi Creator, VRV SIGA
+- **Integrações:** Logi Creator, LILY
 
 ## Instalação e Configuração
 
