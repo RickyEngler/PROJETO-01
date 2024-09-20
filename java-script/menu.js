@@ -13,3 +13,13 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 });
+
+
+// Seleciona o item do menu que contém o submenu
+document.getElementById("hovermenu").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do link
+  
+    // Alterna a classe 'active' no elemento pai (li)
+    const parentLi = this.parentElement;
+    parentLi.classList.toggle("active");
+  });
