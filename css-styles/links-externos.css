@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+.unidades-selects{
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    border: none;
+    color: aliceblue;
+}
+
+.hidden {
+    display: none;
+}
