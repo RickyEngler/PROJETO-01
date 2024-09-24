@@ -1,5 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
@@ -16,15 +17,32 @@ db.connect(err => {
     if (err) {
         throw err;
     }
-    console.log('Conectado ao banco de dados MySQL!');
+    console.log('Conectado ao banco de dados!');
 });
 
-// Rota para buscar dados do banco
-app.get('/dados', (req, res) => {
-    let sql = 'SELECT * FROM pessoas'; // Substitua pelo nome da sua tabela
-    db.query(sql, (err, result) => {
-        if (err) throw err;
-        res.json(result);
+// Middleware para interpretar JSON
+app.use(bodyParser.json());
+
+// Rota de login
+app.post('/login', (req, res) => {
+    const { email, senha } = req.body;
+
+    // Consulta ao banco de dados para verificar se o usuário e a senha são válidos
+    const sql = 'SELECT * FROM pessoas WHERE email = ? AND senha = ?'; // Substitua 'usuarios' pelo nome da sua tabela
+    db.query(sql, [email, senha], (err, result) => {
+        if (err) {
+            console.error('Erro ao consultar o banco de dados:', err);
+            res.status(500).json({ success: false, message: 'Erro no servidor' });
+            return;
+        }
+
+        if (result.length > 0) {
+            // Se o usuário foi encontrado, sucesso no login
+            res.json({ success: true });
+        } else {
+            // Se o usuário não foi encontrado, falha no login
+            res.json({ success: false, message: 'Usuário ou senha incorretos' });
+        }
     });
 });
 
