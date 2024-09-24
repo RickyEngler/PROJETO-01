@@ -91,6 +91,54 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     padding: 10px;
 }
 
+/* JIRA */
+
+.jira{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+}
+
+#jira-icon{
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+
+/* Liberty */
+
+.liberty{
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+}
+
+#liberty-icon{
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
 /* Confluence */
 
 .confluence{
