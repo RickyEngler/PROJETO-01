@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+
+/* Formatação pagina de links */
+body { 
+    font-family: 'Wix MadeFor Text',sans-serif;
+    background-color: #201b2c;
+    text-align: center;
+    margin: 0;
+
+    h1 {font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: 6px 6px 10px 0.5px color black;     
+        }
+    }
+
+.meus-links {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 15px;
+    color: #ececec; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+}
+
+.meus-links:hover {
+    color: #adffc8; /* Cor do texto quando o mouse passa sobre o link */
+    
+}
+
+a#link-git {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-weight: 900;
+    color: #3affbc; /* Cor do texto quando o mouse passa sobre o link */
+    text-decoration: none; 
+
+}
+
+a#link-git:hover {
+    color: #adffc8; /* Cor do texto quando o mouse passa sobre o link */
+}
+
+a#jira {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#tolife {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#vault {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#confluence {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#contatos-emerg {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+a#GLPI {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-size: 10;
+    color: #f9f9f9; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: bold; /* Torna o texto negrito */
+    text-transform: uppercase;
+}
+
+
+div#title-portal h1 {
+    display: inline-flex;
+    justify-content: center;
+    padding: 15px;
+    width: 400px;
+    align-items: center;
+    background-color: #2f2841;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 50px #00000075;
+}
+
+.portal ul {
+    margin-left: 34%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    font-family: 'Wix MadeFor Text',sans-serif;
+    background-color: #2f2841;
+    list-style-type:none;
+    align-items: center;
+    text-align: center;
+}
+
+.portal li {
+    color: #f0f8ff;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+    transition: background-color 0.1s;
+}
+
+.portal li:hover {
+    background-color: #00b98e;
+}
+
+.conttent{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    border: solid;
+    color: aliceblue;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+
+.unidades-selects{
+    font-family: 'Wix MadeFor Text',sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    background-color: #2f2841;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    box-shadow: 5px 5px 15px #00000079;
+}
+
+.btn-send{
+    font-family: 'Wix MadeFor Text',sans-serif;
+    padding: 15px;
+    font-weight: 800;
+    background-color: #3affbc;
+    margin-top: 30px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #2f2841;
+}
+
+.btn-send:hover{
+    color: white;
+    background-color: #9fffdf;
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 845px){
+
+    /* Classes gerais */
+    
+    .portal li{
+        padding: 20px;
+    
+    }
+    .portal ul{
+        margin-top: 10%;
+        padding: 10px;
+        width: 70%;
+        margin-left: 13%;
+    }
+    
+    /* Cabeçalho */
+        .menu, .profile-button{
+            display: none;
+        }
+    
+    }

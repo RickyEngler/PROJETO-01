@@ -1,0 +1,19 @@
+{
+  "name": "portallibertyti",
+  "version": "1.0.0",
+  "description": "O **Portal de Integração da Empresa** é uma solução desenvolvida para otimizar o trabalho diário dos colaboradores, centralizando todos os links essenciais e as integrações/automação criadas pela equipe de desenvolvimento. Este portal visa melhorar a eficiência e a organização, oferecendo um ponto único de acesso a recursos e ferramentas indispensáveis no ambiente de trabalho.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "path": "^0.12.7",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module"
+}
