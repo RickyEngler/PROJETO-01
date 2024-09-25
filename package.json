@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.0",
+    "mongodb": "^6.9.0",
     "path": "^0.12.7",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
