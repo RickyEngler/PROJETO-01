@@ -10,11 +10,9 @@ const port = 3000;
 // Conexão com o MongoDB Atlas
 const uri = 'mongodb+srv://irickyengler:portalliberty@libertyportal.bn8xq.mongodb.net/LibertyPortal?retryWrites=true&w=majority';
 const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     ssl: true,
 });
-
+            
 // Obtenha o diretório atual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
