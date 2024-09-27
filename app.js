@@ -4,6 +4,12 @@ import { open } from 'sqlite';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import cors from 'cors';
+
+app.use(cors({
+    origin: 'https://libertyhealth.netlify.app/', // Substitua pelo seu domínio do Netlify
+    methods: ['GET', 'POST']
+}));
 
 const app = express();
 const port = 3000;
