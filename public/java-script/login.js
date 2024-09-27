@@ -61,3 +61,29 @@ function cadastrarUsuario() {
         alert('Erro no servidor. Tente novamente mais tarde.');
     });
 }
+
+
+
+document.getElementById('cadastro-cpf').addEventListener('input', function(e) {
+    // Remove todos os caracteres não numéricos
+    let cpf = e.target.value.replace(/\D/g, '');
+    
+    // Aplica a formatação do CPF
+    if (cpf.length > 11) {
+        cpf = cpf.substring(0, 11); // Limita a 11 caracteres
+    }
+
+    // Formata o CPF
+    if (cpf.length > 6) {
+        cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3'); // Adiciona pontos
+    } else if (cpf.length > 3) {
+        cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2'); // Adiciona primeiro ponto
+    }
+
+    if (cpf.length > 9) {
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o hífen
+    }
+
+    // Atualiza o valor do campo de CPF
+    e.target.value = cpf;
+});
