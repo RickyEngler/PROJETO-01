@@ -7,43 +7,31 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 const port = 3000;
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./banco.db');
 
-
-// Obtenha o diretório atual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Middleware para interpretar JSON no corpo da requisição
 app.use(bodyParser.json());
-
-// Middleware para servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota para o caminho raiz
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve o arquivo index.html
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Função para criar e popular a tabela de usuários
 async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
     const db = await open({
         filename: './banco.db',
         driver: sqlite3.Database,
     });
 
-    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL, cpf varchar(14) NOT NULL, cargo varchar(40) NOT NULL, senha varchar(30) NOT NULL)');
+    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(30) NOT NULL)');
     await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, senha]);
 
     console.log('Usuário inserido com sucesso!');
 }
 
-// Rota para cadastro de usuário
 app.post('/cadastrar', async (req, res) => {
     const { nome, email, cpf, cargo, senha } = req.body;
-
-    // Verifique se todos os campos foram recebidos
     if (!nome || !email || !cpf || !cargo || !senha) {
         return res.status(400).json({ success: false, message: 'Todos os campos são obrigatórios' });
     }
@@ -57,7 +45,6 @@ app.post('/cadastrar', async (req, res) => {
     }
 });
 
-// Rota para login
 app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
 
@@ -79,7 +66,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// Inicializa o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
