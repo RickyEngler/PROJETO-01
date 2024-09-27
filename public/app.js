@@ -7,6 +7,9 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 const port = 3000;
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('./banco.db');
+
 
 // Obtenha o diretório atual
 const __filename = fileURLToPath(import.meta.url);
