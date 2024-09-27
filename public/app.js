@@ -4,12 +4,9 @@ import { open } from 'sqlite';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cors from 'cors';
+import bcrypt from 'bcrypt';
 
-app.use(cors({
-    origin: 'https://libertyhealth.netlify.app/', // Substitua pelo seu domínio do Netlify
-    methods: ['GET', 'POST']
-}));
+
 
 const app = express();
 const port = 3000;
@@ -29,6 +26,10 @@ async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
         filename: './banco.db',
         driver: sqlite3.Database,
     });
+
+     // Hash a senha antes de armazená-la
+     const saltRounds = 10; // O número de rounds de salt
+     const hashedPassword = await bcrypt.hash(senha, saltRounds);
 
     await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(30) NOT NULL)');
     await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, senha]);
@@ -63,7 +64,16 @@ app.post('/login', async (req, res) => {
         driver: sqlite3.Database,
     });
 
-    const usuario = await db.get('SELECT * FROM usuarios WHERE email = ? AND senha = ?', [email, senha]);
+     // Busque o usuário pelo e-mail
+    const usuario = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
+
+    if (usuario) {
+        // Verifique a senha
+        const match = await bcrypt.compare(senha, usuario.senha);
+        if (match) {
+            return res.json({ success: true, message: 'Login bem-sucedido!' });
+        }
+    }
 
     if (usuario) {
         return res.json({ success: true, message: 'Login bem-sucedido!' });
