@@ -7,6 +7,7 @@
      <link rel="stylesheet" href="css-styles/style-geral.css">
      <link rel="stylesheet" href="css-styles/links-portal.css">
      <link rel="stylesheet" href="css-styles/links-externos.css">
+     <link rel="stylesheet" href="css-styles/hidden-class.css">
      <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
      <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -89,48 +90,20 @@
 
           <select class="unidades-selects">
                <option value="" disabled selected>Selecione a unidade desejada...</option>
-               <option>
-                    <li id="info-alipio">Alípio</li>
-                </option>
-                <option>
-                    <li id="info-amaZaio">Ama Zaio</li>
-                </option>
-                <option>
-                    <li id="info-amaro">Amaro</li>
-                </option>
-                <option>
-                    <li id="info-balneario">Balneário São Jose</li>
-                </option>
-                <option>
-                    <li id="info-brigadeiro">Brigadeiro</li>
-                </option>
-                <option>
-                    <li id="info-cachoeirinha">Cachoeirinha</li>
-                </option>
-                <option>
-                    <li id="info-campoLimpo">Campo Limpo</li>
-                </option>
-                <option>
-                    <li id="info-capelaSocorro">Capela Socorro</li>
-                </option>
-                <option>
-                    <li id="info-capsAricanduva">CAPS AD 2 Aricanduva Formosa</li>
-                </option>
-                <option>
-                    <li id="info-capsButanta">CAPS AD 2 Butantã</li>
-                </option>
-                <option>
-                    <li id="info-capsCachoeirinha">CAPS AD 2 Cachoeirinha</li>
-                </option>
-                <option>
-                    <li id="info-capsCangaiba">CAPS AD 2 Cangaíba</li>
-                </option>
-                <option>
-                    <li id="info-capsCasaVerde">CAPS AD 2 Casa Verde</li>
-                </option>
-                <option>
-                    <li id="info-capsCidadeAdemar">CAPS AD 2 Cidade Ademar</li>
-                </option>
+               <option><li id="info-alipio">Alípio</li></option>
+                <option><li id="info-amaZaio">Ama Zaio</li></option>
+                <option><li id="info-amaro">Amaro</li></option>
+                <option><li id="info-balneario">Balneário São Jose</li></option>
+                <option><li id="info-brigadeiro">Brigadeiro</li></option>
+                <option><li id="info-cachoeirinha">Cachoeirinha</li></option>
+                <option><li id="info-campoLimpo">Campo Limpo</li></option>
+                <option><li id="info-capelaSocorro">Capela Socorro</li></option>
+                <option><li id="info-capsAricanduva">CAPS AD 2 Aricanduva Formosa</li></option>
+                <option><li id="info-capsButanta">CAPS AD 2 Butantã</li></option>
+                <option><li id="info-capsCachoeirinha">CAPS AD 2 Cachoeirinha</li></option>
+                <option><li id="info-capsCangaiba">CAPS AD 2 Cangaíba</li>/option>
+                <option><li id="info-capsCasaVerde">CAPS AD 2 Casa Verde</li>/option>
+                <option><li id="info-capsCidadeAdemar">CAPS AD 2 Cidade Ademar</li></option>
                 <option>
                     <li id="info-capsCidadeTiradentes">CAPS AD 2 Cidade Tiradentes</li>
                 </option>
@@ -535,191 +508,104 @@
                 
 </select>
 
+<div class="container">
+    <button type="button" class="btn-send" onclick="showInfo('info-alipio')">MOSTRAR</button>
 </div>
-<button type="submit" class="btn-send">MOSTRAR</button>
-     </nav>
-     </div>
 
-     <div class="conttent"></div>
+<div class="content">
     <!-- Itens que aparecerão dinamicamente -->
+    <div id="info-alipio" class="hidden">
+        <h3>Informações sobre Alípio</h3>
+        <p>Link de acesso: <a href="//172.16.97.8/aghu/pages/casca/casca.xhtml" target="_blank">Sistema Alípio</a></p>
+    </div>
+    
+    <div id="info-amaZaio" class="hidden">
+        <h3>Informações sobre Ama Zaio</h3>
+        <p>Link de acesso: <a href="http://172.16.99.236/aghu/pages/casca/casca.xhtml" target="_blank">Sistema AMA Zaio</a></p></p>
+    </div>
+    
+    <div id="info-amaro" class="hidden">
+        <h3>Informações sobre Amaro</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-balneario" class="hidden">
+        <h3>Informações sobre Balneário São Jose</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-brigadeiro" class="hidden">
+        <h3>Informações sobre Brigadeiro</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-cachoeirinha" class="hidden">
+        <h3>Informações sobre Cachoeirinha</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-campoLimpo" class="hidden">
+        <h3>Informações sobre Campo Limpo</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capelaSocorro" class="hidden">
+        <h3>Informações sobre Capela Socorro</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capsAricanduva" class="hidden">
+        <h3>Informações sobre CAPS AD 2 Aricanduva Formosa</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capsButanta" class="hidden">
+        <h3>Informações sobre CAPS AD 2 Butantã</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capsCachoeirinha" class="hidden">
+        <h3>Informações sobre CAPS AD 2 Cachoeirinha</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capsCangaiba" class="hidden">
+        <h3>Informações sobre CAPS AD 2 Cangaíba</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <div id="info-capsCasaVerde" class="hidden">
+        <h3>Informações sobre CAPS AD 2 Casa Verde</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <!-- Continuação da formatação para as demais unidades -->
+    
+    <div id="info-upaDoroteia" class="hidden">
+        <h3>Informações sobre UPA Dorotéia</h3>
+        <p>Link de acesso: <a href="https://drive.google.com/file/d/1cXGpmIzC11O8sHgSkhOn_mfpf3gtpCGh/view?usp=sharing">UPA Dorotéia</a></p>
+    </div>
+    
+    <div id="info-upaPedreira" class="hidden">
+        <h3>Informações sobre UPA Pedreira</h3>
+        <p>Link de acesso: Não disponível</p>
+    </div>
+    
+    <!-- Repita o mesmo padrão para todas as unidades restantes -->
 
-<div id="info-alipio" class="hidden">
-    <h3>Informações sobre Alípio</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Alípio.</p>
-</div>
-
-<div id="info-amaZaio" class="hidden">
-    <h3>Informações sobre Ama Zaio</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Ama Zaio.</p>
-</div>
-
-<div id="info-amaro" class="hidden">
-    <h3>Informações sobre Amaro</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Amaro.</p>
-</div>
-
-<div id="info-balneario" class="hidden">
-    <h3>Informações sobre Balneário São Jose</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Balneário São Jose.</p>
-</div>
-
-<div id="info-brigadeiro" class="hidden">
-    <h3>Informações sobre Brigadeiro</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Brigadeiro.</p>
-</div>
-
-<div id="info-cachoeirinha" class="hidden">
-    <h3>Informações sobre Cachoeirinha</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Cachoeirinha.</p>
-</div>
-
-<div id="info-campoLimpo" class="hidden">
-    <h3>Informações sobre Campo Limpo</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Campo Limpo.</p>
-</div>
-
-<div id="info-capelaSocorro" class="hidden">
-    <h3>Informações sobre Capela Socorro</h3>
-    <p>Aqui estão mais detalhes sobre a unidade Capela Socorro.</p>
-</div>
-
-<div id="info-capsAricanduva" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Aricanduva Formosa</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Aricanduva Formosa.</p>
-</div>
-
-<div id="info-capsButanta" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Butantã</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Butantã.</p>
-</div>
-
-<div id="info-capsCachoeirinha" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Cachoeirinha</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Cachoeirinha.</p>
-</div>
-
-<div id="info-capsCangaiba" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Cangaíba</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Cangaíba.</p>
-</div>
-
-<div id="info-capsCasaVerde" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Casa Verde</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Casa Verde.</p>
-</div>
-
-<div id="info-capsCidadeAdemar" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Cidade Ademar</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Cidade Ademar.</p>
-</div>
-
-<div id="info-capsCidadeTiradentes" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Cidade Tiradentes</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Cidade Tiradentes.</p>
-</div>
-
-<div id="info-capsErmelinoMatarazzo" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Ermelino Matarazzo</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Ermelino Matarazzo.</p>
-</div>
-
-<div id="info-capsGuaianases" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Guaianases</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Guaianases.</p>
-</div>
-
-<div id="info-capsArturBispo" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Guaianases Artur Bispo do Rosário</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Guaianases Artur Bispo do Rosário.</p>
-</div>
-
-<div id="info-capsItaimPaulista" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Itaim Paulista</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Itaim Paulista.</p>
-</div>
-
-<div id="info-capsItaquera" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Itaquera</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Itaquera.</p>
-</div>
-
-<div id="info-capsJabaquara" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Jabaquara</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Jabaquara.</p>
-</div>
-
-<div id="info-capsJacana" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Jaçanã Dr. Leonídio Galvão dos Santos</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Jaçanã Dr. Leonídio Galvão dos Santos.</p>
-</div>
-
-<div id="info-capsJardimNelia" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Jardim Nélia</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Jardim Nélia.</p>
-</div>
-
-<div id="info-capsJardimLidia" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Jardim Lídia</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Jardim Lídia.</p>
-</div>
-
-<div id="info-capsMooca" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Mooca</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Mooca.</p>
-</div>
-
-<div id="info-capsPerdizes" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Perdizes Manoel Munhoz</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Perdizes Manoel Munhoz.</p>
-</div>
-
-<div id="info-capsPerus" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Perus</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Perus.</p>
-</div>
-
-<div id="info-capsPinheiros" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Pinheiros</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Pinheiros.</p>
-</div>
-
-<div id="info-capsSacomã" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Sacomã</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Sacomã.</p>
-</div>
-
-<div id="info-capsSantoAmaro" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Santo Amaro</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Santo Amaro.</p>
-</div>
-
-<div id="info-capsSapopemba" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Sapopemba</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Sapopemba.</p>
-</div>
-
-<div id="info-capsSaoMiguel" class="hidden">
-    <h3>Informações sobre CAPS AD 2 São Miguel</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 São Miguel.</p>
-</div>
-
-<div id="info-capsVilaMadalena" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Vila Madalena Prosam</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Vila Madalena Prosam.</p>
-</div>
-
-<div id="info-capsVilaMariana" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Vila Mariana</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Vila Mariana.</p>
-</div>
-
-<div id="info-capsVilaMonumento" class="hidden">
-    <h3>Informações sobre CAPS AD 2 Vila Monumento</h3>
-    <p>Aqui estão mais detalhes sobre a unidade CAPS AD 2 Vila Monumento.</p>
-</div>
-
-<div id="info-capsVilaPrudente" class="hidden">
-
+<script>
+    function showInfo(infoId) {
+        const infoElement = document.getElementById(infoId);
+        // Verifica se o elemento está oculto e alterna a classe
+        if (infoElement.classList.contains('hidden')) {
+            infoElement.classList.remove('hidden');
+            infoElement.classList.add('visible');
+        } else {
+            infoElement.classList.remove('visible');
+            infoElement.classList.add('hidden');
+        }
+    }
+</script>
 </section>
 </main>
  <footer>

@@ -1,6 +1,32 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
+h3{
+    font-family: 'Wix MadeFor Text',sans-serif;
+    color:aliceblue;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a{
+    color: #3affbc;
+    text-decoration: none;
+}
+
+a :hover{
+    color: #9fffdf;
+}
+
+
+
 .unidades-selects{
     font-family: 'Wix MadeFor Text',sans-serif;
     font-weight: 700;
@@ -10,10 +36,6 @@
     border: none;
     color: aliceblue;
     box-shadow: 5px 5px 15px #00000079;
-}
-
-.hidden {
-    display: none;
 }
 
 .conttent{
