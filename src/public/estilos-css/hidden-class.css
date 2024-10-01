@@ -1,0 +1,10 @@
+/* Classe para esconder dados das unidades na página de links */
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
