@@ -195,6 +195,27 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
     /* Classes gerais */
 
+    .jira{
+        margin: 30px;
+        margin-left: 10px;
+        margin-right: 0;
+       
+    }
+
+    .liberty{
+        margin: 30px;
+        margin-left: 10px;
+        margin-right: 0;
+       
+    }
+
+    .confluence{
+        margin: 30px;
+        margin-left: 10px;
+        margin-right: 0;
+       
+    }
+
     .ponto-tangerino{
         margin: 30px;
         margin-left: 10px;
