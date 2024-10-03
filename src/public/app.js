@@ -6,8 +6,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bcrypt from 'bcrypt';
 
-
-
 const app = express();
 const port = 3000;
 
@@ -21,18 +19,23 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', '../views/index.html'));
 });
 
-async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
-    const db = await open({
-        filename: './banco.db',
+// Função para abrir o banco de dados
+async function abrirBancoDeDados() {
+    return await open({
+        filename: path.join(__dirname, 'banco.db'),
         driver: sqlite3.Database,
     });
+}
 
-     // Hash a senha antes de armazená-la
-     const saltRounds = 10; // O número de rounds de salt
-     const hashedPassword = await bcrypt.hash(senha, saltRounds);
+async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
+    const db = await abrirBancoDeDados();
 
-    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(30) NOT NULL)');
-    await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, senha]);
+    // Hash a senha antes de armazená-la
+    const saltRounds = 10; // O número de rounds de salt
+    const hashedPassword = await bcrypt.hash(senha, saltRounds);
+
+    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(60) NOT NULL)');
+    await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, hashedPassword]);
 
     console.log('Usuário inserido com sucesso!');
 }
@@ -59,12 +62,9 @@ app.post('/login', async (req, res) => {
         return res.status(400).json({ success: false, message: 'Todos os campos são obrigatórios' });
     }
 
-    const db = await open({
-        filename: path.join(__dirname, 'database', 'banco.db'),
-        driver: sqlite3.Database,
-    });
+    const db = await abrirBancoDeDados();
 
-     // Busque o usuário pelo e-mail
+    // Busque o usuário pelo e-mail
     const usuario = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
 
     if (usuario) {
@@ -75,11 +75,40 @@ app.post('/login', async (req, res) => {
         }
     }
 
-    if (usuario) {
-        return res.json({ success: true, message: 'Login bem-sucedido!' });
-    } else {
-        return res.json({ success: false, message: 'Usuário e/ou senha incorretos' });
+    return res.status(401).json({ success: false, message: 'Usuário e/ou senha incorretos' });
+});
+
+app.post('/alterar-senha', async (req, res) => {
+    const { email, senhaAtual, novaSenha } = req.body;
+
+    // Verifique se todos os campos necessários estão presentes
+    if (!email || !senhaAtual || !novaSenha) {
+        return res.status(400).json({ success: false, message: 'Todos os campos são obrigatórios' });
     }
+
+    const db = await abrirBancoDeDados();
+
+    // Busque o usuário pelo e-mail
+    const usuario = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
+
+    if (!usuario) {
+        return res.status(404).json({ success: false, message: 'Usuário não encontrado' });
+    }
+
+    // Verifique a senha atual
+    const match = await bcrypt.compare(senhaAtual, usuario.senha);
+    if (!match) {
+        return res.status(400).json({ success: false, message: 'Senha atual incorreta' });
+    }
+
+    // Hash a nova senha
+    const saltRounds = 10; // O número de rounds de salt
+    const hashedPassword = await bcrypt.hash(novaSenha, saltRounds);
+
+    // Atualize a senha no banco de dados
+    await db.run('UPDATE usuarios SET senha = ? WHERE email = ?', [hashedPassword, email]);
+
+    return res.json({ success: true, message: 'Senha alterada com sucesso!' });
 });
 
 app.listen(port, () => {
