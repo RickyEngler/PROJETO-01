@@ -6,8 +6,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bcrypt from 'bcrypt';
 
-
-
 const app = express();
 const port = 3000;
 
@@ -23,16 +21,16 @@ app.get('/', (req, res) => {
 
 async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
     const db = await open({
-        filename: './banco.db',
+        filename: './public/database/banco.db',
         driver: sqlite3.Database,
     });
 
-     // Hash a senha antes de armazená-la
-     const saltRounds = 10; // O número de rounds de salt
-     const hashedPassword = await bcrypt.hash(senha, saltRounds);
+    // Hash a senha antes de armazená-la
+    const saltRounds = 10; // O número de rounds de salt
+    const hashedPassword = await bcrypt.hash(senha, saltRounds);
 
-    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(30) NOT NULL)');
-    await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, senha]);
+    await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(100) NOT NULL)');
+    await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, hashedPassword]);
 
     console.log('Usuário inserido com sucesso!');
 }
@@ -60,11 +58,11 @@ app.post('/login', async (req, res) => {
     }
 
     const db = await open({
-        filename: path.join(__dirname, 'database', 'banco.db'),
+        filename: path.join(__dirname,'public', 'database', 'banco.db'),
         driver: sqlite3.Database,
     });
 
-     // Busque o usuário pelo e-mail
+    // Busque o usuário pelo e-mail
     const usuario = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
 
     if (usuario) {
@@ -75,11 +73,7 @@ app.post('/login', async (req, res) => {
         }
     }
 
-    if (usuario) {
-        return res.json({ success: true, message: 'Login bem-sucedido!' });
-    } else {
-        return res.json({ success: false, message: 'Usuário e/ou senha incorretos' });
-    }
+    return res.json({ success: false, message: 'Usuário e/ou senha incorretos' });
 });
 
 app.listen(port, () => {
