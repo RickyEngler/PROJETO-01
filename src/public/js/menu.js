@@ -23,3 +23,31 @@ document.getElementById("hovermenu").addEventListener("click", function(event) {
     const parentLi = this.parentElement;
     parentLi.classList.toggle("active");
   });
+
+  //POP-UP EMAIL TODOS
+
+// Seleciona o item do menu que contém o submenu
+document.getElementById("hovermenu").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do link
+  
+    // Alterna a classe 'active' no elemento pai (li)
+    const parentLi = this.parentElement;
+    parentLi.classList.toggle("active");
+  });
+
+// Função para exibir o pop-up
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.remove('hidden');
+}
+
+// Função para fechar o pop-up
+document.getElementById('close-btn').addEventListener('click', function() {
+    const popup = document.getElementById('popup');
+    popup.classList.add('hidden');
+});
+
+// Exemplo de simulação de recebimento de mensagem
+// Aqui você pode integrar com a API do Outlook para detectar a mensagem e exibir o pop-up
+setTimeout(showPopup, 3000); // Simula a exibição após 3 segundos
+
