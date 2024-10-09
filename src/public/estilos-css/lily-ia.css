@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
-.page-c{
+/*.page-c{
     padding-left: 5%;
     padding-right: 9%;
     display: flex;
@@ -54,6 +54,18 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.525);
 }
 
 /* Modificação para suporte mobile */
+
+
+  /* Estilo para o iframe */
+  iframe {
+    width: 85%; /* Largura do iframe */
+    height: 600px; /* Altura do iframe */
+    border: none; /* Remove a borda do iframe */
+    border-radius: 10px;
+}
+
+
+
 
 @media screen and (max-width: 955px){
 
