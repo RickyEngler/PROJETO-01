@@ -235,7 +235,8 @@
     <option value="info-upaJaçanã">UPA Jaçanã</li></option>
     <option value="info-upaJardimAngela">UPA Jardim Ângela</li></option>
     <option value="info-upaJardimElisa">UPA Jardim Elisa</li></option>
-    <option value="info-upaJardimPeri">UPA Jardim Peri</li>        
+    <option value="info-upaJardimPeri">UPA Jardim Peri</li></option>     
+    <option value="info-upaDoroteia">UPA Dorotéia</option>   
 </select>
 
 <div class="container">
@@ -367,6 +368,27 @@
     </div>
 
     <script>
+
+// Função para ordenar as opções alfabeticamente
+function sortOptions() {
+            const select = document.getElementById('options');
+            const options = Array.from(select.options);
+
+            // Ordenar as opções
+            options.sort((a, b) => a.text.localeCompare(b.text, 'pt-BR'));
+
+            // Limpar o select e reinserir as opções ordenadas
+            select.innerHTML = '';
+            options.forEach(option => select.add(option));
+        }
+
+        // Ordenar as opções ao carregar a página
+        window.onload = sortOptions;
+
+        // Adicionar evento de input para filtrar as opções
+        document.getElementById('search').addEventListener('input', filterOptions);
+
+
         function showInfo() {
             // Obtenha o valor selecionado no dropdown
             const selectedUnit = document.getElementById('unit-select').value;
