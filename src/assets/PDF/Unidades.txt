@@ -1,0 +1,165 @@
+Alípio
+Ama Zaio
+Amaro
+Balneário São Jose
+Brigadeiro
+Cachoeirinha
+Campo Limpo
+Capela Socorro
+CAPS AD 2 Aricanduva Formosa
+CAPS AD 2 Butantã
+CAPS AD 2 Cachoeirinha
+CAPS AD 2 Cangaiba
+CAPS AD 2 Casa Verde
+CAPS AD 2 Cidade Ademar
+CAPS AD 2 Cidade Tiradentes
+CAPS AD 2 Ermelino Matarazzo
+CAPS AD 2 Guaianases
+CAPS AD 2 Guaianases Artur Bispo do Rosário
+CAPS AD 2 Itaim Paulista
+CAPS AD 2 Itaquera
+CAPS AD 2 Jabaquara
+CAPS AD 2 Jaçanã Dr Leonidio Galvão dos Santos
+CAPS AD 2 jardim Nélia
+CAPS AD 2 Jardim Lídia
+CAPS AD 2 Mooca
+CAPS AD 2 Perdizes Manoel Munhoz
+CAPS AD 2 Perus
+CAPS AD 2 pinheiros
+CAPS AD 2 Sacomã
+CAPS AD 2 Santo Amaro
+CAPS AD 2 Sapopemba
+CAPS AD 2 São Miguel
+CAPS AD 2 Vila Madalena Prosam
+CAPS AD 2 vila Mariana
+CAPS AD 2 Vila Monumento
+CAPS AD 2 Vila Prudente
+CAPS AD 3 Armênia
+CAPS AD 3 Boracea
+CAPS AD 3 Butantã
+CAPS AD 3 Campo Limpo
+CAPS AD 3 Capela do Socorro
+CAPS AD 3 Centro
+CAPS AD 3 Complexo Prates
+CAPS AD 3 Freguesia do o Brasilândia
+CAPS AD 3 Grajau
+CAPS AD 3 Heliópolis
+CAPS AD 3 Itaim Bibi
+CAPS AD 3 Itaquera
+CAPS AD 3 Jardim Ângela
+CAPS AD 3 Jardim São Luiz
+CAPS AD 3 Largo-13
+CAPS AD 3 Leopoldina
+CAPS AD 3 M Boi Mirim
+CAPS AD 3 Mandaqui
+CAPS AD 3 Mooca
+CAPS AD 3 Paraisópolis
+CAPS AD 3 Parelheiros
+CAPS AD 3 Penha
+CAPS AD 3 Pirituba Casa Azul
+CAPS AD 3 Pirituba Jaraguá
+CAPS AD 3 Santana
+CAPS AD 3 Sapopemba
+CAPS AD 3 São Mateus
+CAPS AD 3 São Mateus Liberdade de Escolha
+CAPS AD 3 São Miguel
+CAPS AD 3 Sé
+CAPS AD 3 Vila Matilde
+CAPS AD 4 Redenção
+CAPS IJ 2 Boi Mirim
+CAPS IJ 2 Butantã
+CAPS IJ 2 Campo Limpo
+CAPS IJ 2 Capela do Socorro Piração
+CAPS IJ 2 Casa Verde Nise da Silveira
+CAPS IJ 2 Cidade Ademar
+CAPS IJ 2 Cidade Lider
+CAPS IJ 2 Cidade Tiradentes
+CAPS IJ 2 Ermelino Matarazzo
+CAPS IJ 2 Freguesia do o Brasilândia
+CAPS IJ 2 Guaianases Coloridamente
+CAPS IJ 2 Ipiranga
+CAPS IJ 2 Itaim Paulista
+CAPS IJ 2 Itaquera
+CAPS IJ 2 Jabaquara Casinha
+CAPS IJ 2 Lapa
+CAPS IJ 2 Mooca
+CAPS IJ 2 Parelheiros Aquarela
+CAPS IJ 2 Perus
+CAPS IJ 2 Santo Amaro
+CAPS IJ 2 São Mateus
+CAPS IJ 2 Sapopemba
+CAPS IJ 2 Vila Maria Vila Guilherme
+CAPS IJ 2 Vila Mariana Quixote
+CAPS IJ 2 Vila Prudente
+CAPS IJ 3 Aricanduva
+CAPS IJ 3 Cidade Dutra
+CAPS IJ 3 Heliópolis
+CAPS IJ 3 Jardim São Luiz
+CAPS IJ 3 Penha
+CAPS IJ 3 Santana
+CAPS IJ 3 São Miguel
+CRST Freguesia
+CRST Lapa
+CRST Leste
+CRST Mooca
+CRST santo Amaro
+CRST Sé
+CRST Teste
+Demo
+Dona Maria
+HD Brasilândia
+HD Butantã
+HD Penha
+HD São Mateus
+HM Benedicto Montenegro
+HM Brasilândia
+HM Cantareira
+HM Sorocabana
+HM waldomiro
+HM Zaio
+Hungria
+Ignacio
+Jabaquara
+Lapa
+Mario Degni
+Medtrack
+Medtrack
+Mooca
+PA São Mateus
+rede Mario Gatti
+Saboya
+Santana
+Santo Amaro
+Servidor Público
+Tatuapé
+Tide
+Treinamento
+Universidade Liberty
+UPA 21 de junho
+UPA 26 de Agosto
+UPA 3 Carrão Masataka Ota
+UPA 3 Rio Pequeno
+UPA Campo Limpo Dr Fernando Pro
+UPA Cidade Tiradentes
+UPA City Jaraguá
+UPA Ermelino Matarazzo
+UPA Jabaquara
+UPA Jaçanã
+UPA jardim Ângela
+UPA jardim Elisa
+UPA Jardim Peri
+UPA Julio Tupy
+UPA Mooca 3 Dom Paulo Evaristo Arns
+UPA Parelheiros
+UPA Parque Doroteia
+UPA Pedreira
+UPA Perus Dr Luiz Antônio de Abreu Sampaio Doria
+UPA Pirituba
+UPA Santo Amaro
+UPA Tatuapé
+UPA Tito Lopes
+UPA Vera Cruz
+UPA Vergueiro
+UPA Vila Mariana
+UPA Vila Santa Catarina
+Vila Mariana
