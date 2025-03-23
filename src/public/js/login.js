@@ -27,7 +27,7 @@ function logar() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.href = "../views/home.html"; // Redireciona para a página ../views/home.html se o login for bem-sucedido
+            location.href = "../views/home.html";
         } else {
             alert('Usuário e/ou senha incorretos');
         }
@@ -64,25 +64,22 @@ function cadastrarUsuario() {
 
 
 document.getElementById('cadastro-cpf').addEventListener('input', function(e) {
-    // Remove todos os caracteres não numéricos
     let cpf = e.target.value.replace(/\D/g, '');
     
-    // Aplica a formatação do CPF
     if (cpf.length > 11) {
-        cpf = cpf.substring(0, 11); // Limita a 11 caracteres
+        cpf = cpf.substring(0, 11);
     }
 
     // Formata o CPF
     if (cpf.length > 6) {
-        cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3'); // Adiciona pontos
+        cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3');
     } else if (cpf.length > 3) {
-        cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2'); // Adiciona primeiro ponto
+        cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2');
     }
 
     if (cpf.length > 9) {
-        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o hífen
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
     }
 
-    // Atualiza o valor do campo de CPF
     e.target.value = cpf;
 });
