@@ -21,7 +21,7 @@
 
     async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
         const db = await open({
-            filename: './public/database/banco.db',
+            filename: 'src/public/database/banco.db',
             driver: sqlite3.Database,
         });
 
