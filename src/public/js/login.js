@@ -27,7 +27,7 @@ function logar() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.href = "../views/home.html";
+            location.href = "views/home.html";
         } else {
             alert('Usuário e/ou senha incorretos');
         }

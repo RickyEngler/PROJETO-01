@@ -1,8 +1,0 @@
-[build]
-  command = "node src/app.js"
-  publish = "public" # Ajuste conforme necessário
-
-[[redirects]]
-  from = "/*"
-  to = "/src/public/views/index.html"
-  status = 200
