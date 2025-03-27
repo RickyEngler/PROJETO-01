@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "env": {
+      "PYTHON": "/usr/bin/python3",
+      "NODE_GYP_FORCE_PYTHON": "3.12.2",
+        "src": "src/app.js",
+        "use": "@vercel/node"
+      }
+    }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "src/app.js"
+      }
+    ]
+  }
+  
