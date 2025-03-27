@@ -9,6 +9,10 @@
     const app = express();
     const port = 3000;
 
+    const Database = require('better-sqlite3');
+    const db = new Database('database.db');
+
+
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
