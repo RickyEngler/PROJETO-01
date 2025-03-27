@@ -76,25 +76,8 @@
 
 <!-- CONTEÚDO DA PÁGINA -->
 
-<iframe src="https://alb-chatbot-frontend-824303134.us-east-1.elb.amazonaws.com/" title="LILY-IA"></iframe>
+<script src="src/public/js/chatbox.js"></script>
 
-     <script>
-          // Função para alternar a exibição do menu
-          function toggleMenu() {
-              var menu = document.getElementById('profileMenu');
-              menu.classList.toggle('active');
-          }
-      
-          // Fecha o menu se clicar fora dele
-          window.onclick = function(event) {
-              if (!event.target.matches('.profile-button')) {
-                  var menu = document.getElementById('profileMenu');
-                  if (menu.classList.contains('active')) {
-                      menu.classList.remove('active');
-                  }
-              }
-          }
-      </script>
      <footer>
           <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
           </footer>               

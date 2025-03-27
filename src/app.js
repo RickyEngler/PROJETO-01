@@ -25,8 +25,7 @@
             driver: sqlite3.Database,
         });
 
-        // Hash a senha antes de armazená-la
-        const saltRounds = 10; // O número de rounds de salt
+        const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(senha, saltRounds);
 
         await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome varchar(30) NOT NULL, email varchar(100) NOT NULL UNIQUE, cpf varchar(14) NOT NULL PRIMARY KEY UNIQUE, cargo varchar(40) NOT NULL, senha varchar(100) NOT NULL)');

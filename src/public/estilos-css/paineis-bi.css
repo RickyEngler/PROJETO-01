@@ -11,12 +11,12 @@ body {
 p{
 color: #141414;
 font-weight: 600;
-font-size: 15pt;
+font-size: 10pt;
 text-decoration: none;
 }
 
 h8{
-    font-size: 20pt;
+    font-size: 15pt;
     font-weight: 600;
     color: #151515;
     text-decoration: none;
@@ -26,33 +26,41 @@ h8{
     text-decoration: none;
     color: #141414;
     font-weight: 800;
-    font-size: 15pt;
+    font-size: 5pt;
 }
 
 .painel-central-de-sup{
     display:inline-flex;
     border-radius: 10px;
-    width: 80%;
-    height: 10%;
+    width: 50%;
+    height: 5%;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
     text-align: left;
-    align-items: center;
+    align-items: left;
     margin-bottom: 25px;
     text-decoration: none;
     transition: 0.2s;
-    padding: 0px;
+    padding: 15px;
 }
 
 #img-n1{
-    padding: 10px;
-    padding-right: 0px;
+    padding: 5px;
     width: 30%;
     border-radius: 15px;
-    margin-left: 70px;
 }
 
 .painel-central-de-sup:hover {
     background-color: #1e946d;
+}
+
+#painel-frame{
+    border-radius: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    width: 80%;
+    height: 600px; 
+    border: none; 
+    display: none;
 }

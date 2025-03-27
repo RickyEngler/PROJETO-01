@@ -12,6 +12,7 @@
      <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icones@1.11.3/font/bootstrap-icones.min.css">
      <script src="../js/menu.js" defer></script>
+     <script src="../js/botão-bi.js"></script>
 </head>
 
 <body>
@@ -80,8 +81,7 @@
 
 <h1>Aqui você poderá realizar o acompanhamento dos painéis BI de cada equipe.</h1>
 
-<a class="text" href="https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5" target="_blank" id="link-ponto">
-<div class="painel-central-de-sup">
+<div class="painel-central-de-sup" onclick="togglePainel('https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5')">
     <div id="img-n1">
         <img id="img-n1" src="../assets/ícones/N1.png" alt="Email Corporativo">
     </div>
@@ -90,20 +90,18 @@
         <p>Realize o acompanhamento do painel BI da nossa Central de Atendimento.</p>
     </div>
 </div>
-</a>
 
-<a class="text" href="https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5" target="_blank" id="link-ponto">
-    <div class="painel-central-de-sup">
-        <div id="img-n1">
-            <img id="img-n1" src="../assets/ícones/N2.png" alt="Email Corporativo">
-        </div>
-        <div>
-            <h8> N2 - Operações </h8>
-            <p>Realize o acompanhamento do painel BI de Operações.</p>
-        </div>
+<iframe id="painel-frame"></iframe>
+
+<div class="painel-central-de-sup" onclick="togglePainel('https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5')">
+    <div id="img-n1">
+        <img id="img-n1" src="../assets/ícones/N2.png" alt="Email Corporativo">
     </div>
-    </a>
-
+    <div>
+        <h8> N2 - Operações </h8>
+        <p>Realize o acompanhamento do painel BI de Operações.</p>
+    </div>
+</div>
 
 <!-- RODAPÉ -->
 
