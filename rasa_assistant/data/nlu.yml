@@ -1,0 +1,89 @@
+version: "3.1"
+
+nlu:
+  - intent: search_confluence  # Corrigido para 'search_confluence' conforme o domínio
+    examples: |
+      - Procurar artigos sobre [python](programação)
+      - Quais são os melhores tutoriais sobre [Rasa](ferramentas)?
+      - Encontre informações sobre [integração](tecnologias) no Confluence
+
+  - intent: greet
+    examples: |
+      - oi
+      - olá
+      - e aí
+      - bom dia
+      - boa tarde
+      - boa noite
+      - como vai?
+      - salve
+      - alô
+      - oi, tudo bem?
+      - olá, como você está?
+
+  - intent: goodbye
+    examples: |
+      - tchau
+      - adeus
+      - até logo
+      - boa noite
+      - até mais
+      - vejo você por aí
+      - até mais tarde
+      - tchau tchau
+
+  - intent: affirm
+    examples: |
+      - sim
+      - claro
+      - com certeza
+      - com toda certeza
+      - sem dúvida
+      - pode crer
+      - isso mesmo
+
+  - intent: deny
+    examples: |
+      - não
+      - de jeito nenhum
+      - não quero
+      - não gosto disso
+      - não penso assim
+      - de forma alguma
+      - não é isso
+
+  - intent: mood_great
+    examples: |
+      - perfeito
+      - ótimo
+      - maravilhoso
+      - me sentindo incrível
+      - estou bem
+      - super feliz
+      - me sinto muito bem
+      - estou ótimo
+      - estou animado
+      - fantástico
+      - excelente
+
+  - intent: mood_unhappy
+    examples: |
+      - meu dia foi horrível
+      - estou triste
+      - não estou me sentindo bem
+      - estou decepcionado
+      - super triste
+      - estou mal
+      - muito triste
+      - infeliz
+      - não estou bem
+      - não me sinto bem
+      - muito mal
+      - triste demais
+
+  - intent: bot_challenge
+    examples: |
+      - você é um bot?
+      - você é um humano?
+      - estou falando com um bot?
+      - estou conversando com um bot?

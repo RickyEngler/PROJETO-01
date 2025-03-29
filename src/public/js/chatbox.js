@@ -11,44 +11,33 @@ document.addEventListener("DOMContentLoaded", function () {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Função para processar o texto da consulta utilizando compromise.js
-    function processQuery(query) {
-        let doc = nlp(query);  // Cria um objeto de análise linguística com o texto da consulta
-        let terms = doc.terms().out('array');  // Extrai as palavras-chave
-        return terms.join(" ");  // Retorna as palavras-chave em uma string
+    function sendMessageToRasa(message) {
+        fetch("http://localhost:5005/webhooks/rest/webhook", { // URL do Rasa
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ sender: "user", message: message }) // Enviando mensagem para o Rasa
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                data.forEach(msg => addMessage("LILY AI", msg.text));
+            } else {
+                addMessage("LILY AI", "Desculpe, não entendi sua pergunta.");
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao conectar com Rasa:", error);
+            addMessage("LILY AI", "❌ Erro na conexão com o chatbot.");
+        });
     }
-
-    function searchConfluence(query) {
-        fetch(`/api/confluence-search?q=${encodeURIComponent(query)}`)
-            .then(response => response.json())
-            .then(data => {
-                let result = "Nenhum artigo encontrado.";
-                if (data.results && data.results.length > 0) {
-                    result = "Encontrei isso no Confluence 🔍<br><br>";
-                    data.results.forEach(item => {
-                        result += `
-                        <div class="search-item">
-                            <a href="https://libertyti.atlassian.net/wiki${item._links.webui}" target="_blank">
-                                ${item.title}
-                            </a>
-                        </div>`;
-                    });
-                }
-                addMessage("LILY AI", result);
-            })
-            .catch(error => {
-                addMessage("LILY AI", "❌ Erro ao buscar no Confluence.");
-                console.error(error);
-            });
-    }
-
 
     sendBtn.addEventListener("click", function () {
         const query = chatInput.value.trim();
         if (query !== "") {
             addMessage("Você", query);
-            const processedQuery = processQuery(query); 
-            searchConfluence(processedQuery); 
+            sendMessageToRasa(query); // Enviar para o Rasa
             chatInput.value = "";
         }
     });
