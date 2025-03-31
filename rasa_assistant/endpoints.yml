@@ -40,3 +40,14 @@
 #  username: username
 #  password: password
 #  queue: queue
+
+rest:
+  url: "http://127.0.0.1:5005/webhooks/rest/webhook"
+
+
+cors:
+  enabled: true
+  allow_origins:
+    - "*"
+
+

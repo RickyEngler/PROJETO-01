@@ -12,12 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function sendMessageToRasa(message) {
-        fetch("http://localhost:5005/webhooks/rest/webhook", { // URL do Rasa
+        fetch("http://localhost:5005/webhooks/rest/webhook", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ sender: "user", message: message }) // Enviando mensagem para o Rasa
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ sender: "user", message: message })
         })
         .then(response => response.json())
         .then(data => {
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const query = chatInput.value.trim();
         if (query !== "") {
             addMessage("Você", query);
-            sendMessageToRasa(query); // Enviar para o Rasa
+            sendMessageToRasa(query);
             chatInput.value = "";
         }
     });

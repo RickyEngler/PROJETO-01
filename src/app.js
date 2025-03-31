@@ -25,6 +25,52 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'views', 'index.html'));
 });
 
+// Função para buscar no Confluence
+async function buscarNoConfluence(query) {
+    const CONFLUENCE_URL = process.env.CONFLUENCE_URL;
+    const USERNAME = process.env.CONFLUENCE_EMAIL;
+    const API_TOKEN = process.env.CONFLUENCE_TOKEN;
+
+    const headers = {
+        "Accept": "application/json",
+    };
+
+    const params = {
+        "cql": `title ~ "${query}" OR text ~ "${query}"`,
+        "expand": "body.storage",
+    };
+
+    try {
+        const response = await fetch(`${CONFLUENCE_URL}/rest/api/content/search?cql=${encodeURIComponent(params.cql)}&expand=${encodeURIComponent(params.expand)}`, {
+            method: "GET",
+            headers: headers,
+            auth: {
+                username: USERNAME,
+                password: API_TOKEN,
+            }
+        });
+
+        if (response.status === 200) {
+            const data = await response.json();
+            const results = data.results;
+
+            if (results.length > 0) {
+                const title = results[0].title;
+                const link = `${CONFLUENCE_URL}${results[0]._links.webui}`;
+                return `🔍 Encontrei um documento: **${title}**\n[Acesse aqui](${link})`;
+            } else {
+                return "Não encontrei nada relacionado no Confluence.";
+            }
+        } else {
+            return "Erro ao buscar no Confluence.";
+        }
+    } catch (error) {
+        console.error("Erro de requisição para Confluence:", error);
+        return "Desculpe, não consegui conectar ao Confluence.";
+    }
+}
+
+// Rota para cadastro de usuário
 async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
     const db = await open({
         filename: 'src/public/database/banco.db',
@@ -40,6 +86,7 @@ async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
     console.log('Usuário inserido com sucesso!');
 }
 
+// Rota para cadastro de usuário
 app.post('/cadastrar', async (req, res) => {
     const { nome, email, cpf, cargo, senha } = req.body;
     if (!nome || !email || !cpf || !cargo || !senha) {
@@ -55,6 +102,7 @@ app.post('/cadastrar', async (req, res) => {
     }
 });
 
+// Rota para login de usuário
 app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
 
@@ -77,6 +125,23 @@ app.post('/login', async (req, res) => {
     }
 
     return res.json({ success: false, message: 'Usuário e/ou senha incorretos' });
+});
+
+// Rota para buscar no Confluence (chamada diretamente do frontend)
+app.post('/buscar-confluence', async (req, res) => {
+    const { query } = req.body;
+
+    if (!query) {
+        return res.status(400).json({ success: false, message: 'A consulta não pode estar vazia.' });
+    }
+
+    try {
+        const result = await buscarNoConfluence(query);
+        return res.json({ success: true, message: result });
+    } catch (error) {
+        console.error('Erro ao buscar no Confluence:', error);
+        return res.json({ success: false, message: 'Erro ao realizar a busca no Confluence.' });
+    }
 });
 
 // Inicia o servidor
