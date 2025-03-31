@@ -19,7 +19,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+app.use(cors({ origin: '*', methods: ['GET', 'POST'] }));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'views', 'index.html'));
@@ -33,36 +33,24 @@ async function buscarNoConfluence(query) {
 
     const headers = {
         "Accept": "application/json",
+        "Authorization": `Basic ${Buffer.from(`${USERNAME}:${API_TOKEN}`).toString('base64')}`
     };
 
-    const params = {
-        "cql": `title ~ "${query}" OR text ~ "${query}"`,
-        "expand": "body.storage",
-    };
+    const url = `${CONFLUENCE_URL}/rest/api/content/search?cql=${encodeURIComponent(`title ~ "${query}" OR text ~ "${query}"`)}&expand=body.storage`;
 
     try {
-        const response = await fetch(`${CONFLUENCE_URL}/rest/api/content/search?cql=${encodeURIComponent(params.cql)}&expand=${encodeURIComponent(params.expand)}`, {
-            method: "GET",
-            headers: headers,
-            auth: {
-                username: USERNAME,
-                password: API_TOKEN,
-            }
-        });
+        const response = await fetch(url, { method: "GET", headers });
+        if (!response.ok) throw new Error("Erro ao buscar no Confluence");
+        
+        const data = await response.json();
+        const results = data.results;
 
-        if (response.status === 200) {
-            const data = await response.json();
-            const results = data.results;
-
-            if (results.length > 0) {
-                const title = results[0].title;
-                const link = `${CONFLUENCE_URL}${results[0]._links.webui}`;
-                return `🔍 Encontrei um documento: **${title}**\n[Acesse aqui](${link})`;
-            } else {
-                return "Não encontrei nada relacionado no Confluence.";
-            }
+        if (results.length > 0) {
+            const title = results[0].title;
+            const link = `${CONFLUENCE_URL}${results[0]._links.webui}`;
+            return `🔍 Encontrei um documento: **${title}**\n[Acesse aqui](${link})`;
         } else {
-            return "Erro ao buscar no Confluence.";
+            return "Não encontrei nada relacionado no Confluence.";
         }
     } catch (error) {
         console.error("Erro de requisição para Confluence:", error);
@@ -70,29 +58,20 @@ async function buscarNoConfluence(query) {
     }
 }
 
-// Rota para cadastro de usuário
 async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {
-    const db = await open({
-        filename: 'src/public/database/banco.db',
-        driver: sqlite3.Database,
-    });
-
+    const db = await open({ filename: 'src/public/database/banco.db', driver: sqlite3.Database });
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(senha, saltRounds);
-
     await db.run('CREATE TABLE IF NOT EXISTS usuarios (nome TEXT, email TEXT UNIQUE, cpf TEXT PRIMARY KEY, cargo TEXT, senha TEXT)');
     await db.run('INSERT INTO usuarios (nome, email, cpf, cargo, senha) VALUES (?,?,?,?,?)', [nome, email, cpf, cargo, hashedPassword]);
-
     console.log('Usuário inserido com sucesso!');
 }
 
-// Rota para cadastro de usuário
 app.post('/cadastrar', async (req, res) => {
     const { nome, email, cpf, cargo, senha } = req.body;
     if (!nome || !email || !cpf || !cargo || !senha) {
         return res.status(400).json({ success: false, message: 'Todos os campos são obrigatórios' });
     }
-
     try {
         await criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha);
         return res.json({ success: true, message: 'Usuário cadastrado com sucesso!' });
@@ -102,39 +81,24 @@ app.post('/cadastrar', async (req, res) => {
     }
 });
 
-// Rota para login de usuário
 app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
-
     if (!email || !senha) {
         return res.status(400).json({ success: false, message: 'Todos os campos são obrigatórios' });
     }
-
-    const db = await open({
-        filename: path.join(__dirname, 'public', 'database', 'banco.db'),
-        driver: sqlite3.Database,
-    });
-
+    const db = await open({ filename: path.join(__dirname, 'public', 'database', 'banco.db'), driver: sqlite3.Database });
     const usuario = await db.get('SELECT * FROM usuarios WHERE email = ?', [email]);
-
-    if (usuario) {
-        const match = await bcrypt.compare(senha, usuario.senha);
-        if (match) {
-            return res.json({ success: true, message: 'Login bem-sucedido!' });
-        }
+    if (usuario && await bcrypt.compare(senha, usuario.senha)) {
+        return res.json({ success: true, message: 'Login bem-sucedido!' });
     }
-
     return res.json({ success: false, message: 'Usuário e/ou senha incorretos' });
 });
 
-// Rota para buscar no Confluence (chamada diretamente do frontend)
 app.post('/buscar-confluence', async (req, res) => {
     const { query } = req.body;
-
     if (!query) {
         return res.status(400).json({ success: false, message: 'A consulta não pode estar vazia.' });
     }
-
     try {
         const result = await buscarNoConfluence(query);
         return res.json({ success: true, message: result });
@@ -144,7 +108,6 @@ app.post('/buscar-confluence', async (req, res) => {
     }
 });
 
-// Inicia o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });

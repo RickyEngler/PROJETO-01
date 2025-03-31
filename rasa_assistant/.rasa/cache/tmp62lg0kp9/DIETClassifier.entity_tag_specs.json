@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ferramentas",
+      "2": "I-ferramentas",
+      "3": "L-ferramentas",
+      "4": "U-ferramentas",
+      "5": "B-programação",
+      "6": "I-programação",
+      "7": "L-programação",
+      "8": "U-programação",
+      "9": "B-tecnologias",
+      "10": "I-tecnologias",
+      "11": "L-tecnologias",
+      "12": "U-tecnologias",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ferramentas": 1,
+      "I-ferramentas": 2,
+      "L-ferramentas": 3,
+      "U-ferramentas": 4,
+      "B-programação": 5,
+      "I-programação": 6,
+      "L-programação": 7,
+      "U-programação": 8,
+      "B-tecnologias": 9,
+      "I-tecnologias": 10,
+      "L-tecnologias": 11,
+      "U-tecnologias": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

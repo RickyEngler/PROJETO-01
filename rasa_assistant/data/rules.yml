@@ -2,14 +2,7 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Responder perguntas frequentes com FAQs do Confluence
   steps:
-  - intent: goodbye
-  - action: action_buscar_confluence
-
-- rule: Buscar informações no Confluence
-  steps:
-  - intent: buscar_confluence
-  - action: utter_iamabot
-
-  
+  - intent: faq
+  - action: action_buscar_faq_confluence

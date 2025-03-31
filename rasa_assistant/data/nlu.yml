@@ -1,7 +1,13 @@
 version: "3.1"
 
 nlu:
-  - intent: search_confluence  # Corrigido para 'search_confluence' conforme o domínio
+  - intent: buscar_confluence
+    examples: |
+      - Quero buscar um artigo no Confluence
+      - Como encontro documentos no Confluence?
+      - Buscar informações no Confluence
+
+  - intent: search_confluence
     examples: |
       - Procurar artigos sobre [python](programação)
       - Quais são os melhores tutoriais sobre [Rasa](ferramentas)?
@@ -87,3 +93,10 @@ nlu:
       - você é um humano?
       - estou falando com um bot?
       - estou conversando com um bot?
+
+  - intent: faq
+    examples: |
+     - Como faço para resetar minha senha?
+     - Onde encontro os documentos da empresa?
+     - Quais são os benefícios do plano de saúde?
+     - Como abrir um chamado no suporte?

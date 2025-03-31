@@ -1,10 +1,20 @@
 version: "3.1"
 
-actions:
-  - action_buscar_confluence
-
 intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
   - buscar_confluence
+  - search_confluence
+  - faq
+
+actions:
+  - action_buscar_faq_confluence
+  - action_search_confluence
 
 responses:
   utter_greet:
@@ -12,9 +22,18 @@ responses:
 
   utter_goodbye:
     - text: "Até logo!"
-    
-  utter_ask_query:
-    - text: "O que você gostaria de saber?"
+
+  utter_iamabot:
+    - text: "Eu sou um assistente virtual!"
+
+  utter_happy:
+    - text: "Que bom ouvir isso! 😊"
+
+  utter_cheer_up:
+    - text: "Aqui está algo para animar você! 🎉"
+
+  utter_did_that_help:
+    - text: "Isso ajudou você?"
 
 session_config:
   session_expiration_time: 60
