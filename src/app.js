@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'views/home.html'));
 });
 
 async function criarEpopularTabelaDeUsuarios(nome, email, cpf, cargo, senha) {

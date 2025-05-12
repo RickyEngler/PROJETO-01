@@ -3,45 +3,48 @@
 
 /* Corpo */
 
-body { 
-    font-family: 'Wix MadeFor Text',sans-serif;
+body {
+    font-family: 'Wix MadeFor Text', sans-serif;
     background-color: #201b2c;
     text-align: center;
 }
 
 /* Textos */
 
-h4 {font-family: 'Wix MadeFor Text',sans-serif;
+h4 {
+    font-family: 'Wix MadeFor Text', sans-serif;
     font-size: 10;
     color: #3affbc;
 }
-h3 {font-family: 'Wix MadeFor Text',sans-serif;
+
+h3 {
+    font-family: 'Wix MadeFor Text', sans-serif;
     font-size: 9px;
     color: rgb(255, 255, 255);
     font-weight: 900;
 }
 
-.title p{
+.title p {
     margin-left: 3%;
-    font-family: 'Wix MadeFor Text',sans-serif;
+    font-family: 'Wix MadeFor Text', sans-serif;
     font-weight: 500;
     font-size: 15px;
     color: rgb(255, 255, 255);
-    text-shadow: 6px 6px 10px 0.5px color black;  
-    text-align: left;  
+    text-shadow: 6px 6px 10px 0.5px color black;
+    text-align: left;
 }
 
-.title h4{
+.title h4 {
     margin-left: 3%;
-    font-family: 'Wix MadeFor Text',sans-serif;
+    font-family: 'Wix MadeFor Text', sans-serif;
     font-weight: 800;
     font-size: 20px;
-    text-shadow: 6px 6px 10px 0.5px color black;  
-    text-align: left;  
-    
+    text-shadow: 6px 6px 10px 0.5px color black;
+    text-align: left;
+
 }
 
-.container{
+.container {
     display: flex;
     margin: 40px;
     padding-top: 15px;
@@ -52,7 +55,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 }
 
 /* Registro de Ponto */
-.ponto-tangerino{
+.ponto-tangerino {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -61,9 +64,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#ponto-icon{
+.ponto-tangerino:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#ponto-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -74,7 +83,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
 /* Email */
 
-.email{
+.email {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -84,9 +93,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#email-icon{
+.email:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#email-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -96,7 +111,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
 /* JIRA */
 
-.jira{
+.jira {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -106,9 +121,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#jira-icon{
+.jira:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#jira-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -119,7 +140,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
 /* Liberty */
 
-.liberty{
+.liberty {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -129,9 +150,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#liberty-icon{
+.liberty:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#liberty-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -144,7 +171,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
 /* Confluence */
 
-.confluence{
+.confluence {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -154,9 +181,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#conflu-icon{
+.confluence:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#conflu-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -166,7 +199,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
 
 /* GoTO */
 
-.GoTO{
+.GoTO {
     border-radius: 10px;
     width: 70px;
     height: 70px;
@@ -176,9 +209,15 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #3affbc;
     cursor: pointer;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
 }
 
-#goto-icon{
+.GoTO:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#goto-icon {
     margin-top: 3px;
     align-items: center;
     box-sizing: border-box;
@@ -202,7 +241,7 @@ h3 {font-family: 'Wix MadeFor Text',sans-serif;
     padding: 20px;
     z-index: 1001;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,10,15,0.7);
+    box-shadow: 0 2px 10px rgba(0, 10, 15, 0.7);
 }
 
 button {
@@ -224,70 +263,71 @@ button:hover {
 
 /* Modificação para suporte mobile */
 
-@media screen and (max-width: 955px){
+@media screen and (max-width: 955px) {
 
     /* Classes gerais */
 
-    .jira{
+    .jira {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
 
-    .liberty{
+    .liberty {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
 
-    .confluence{
+    .confluence {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
 
-    .ponto-tangerino{
+    .ponto-tangerino {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
 
-    .GoTO{
+    .GoTO {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
 
-    .confluence{
+    .confluence {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
-       
+
     }
-    
-    .email{
+
+    .email {
         margin: 30px;
         margin-left: 10px;
         margin-right: 0;
     }
 
-     .container{
+    .container {
 
         padding: 50px;
         margin-right: 100px;
         margin-left: 100px;
         flex-direction: column;
-     }
-
-     
-    /* Cabeçalho */
-        .menu, .profile-button{
-            display: none;
-        }
-    
     }
+
+
+    /* Cabeçalho */
+    .menu,
+    .profile-button {
+        display: none;
+    }
+
+}
