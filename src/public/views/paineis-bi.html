@@ -3,14 +3,16 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Configurações</title>
+     <title>Painéis BI</title>
      <link rel="stylesheet" href="../estilos-css/style-geral.css">
      <link rel="stylesheet" href="../estilos-css/links-portal.css">
-     <link rel="stylesheet" href="../estilos-css/error404-style.css">
-
+     <link rel="stylesheet" href="../estilos-css/home-style.css">
+     <link rel="stylesheet" href="../estilos-css/paineis-bi.css">
      <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
      <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+
      <script src="../js/menu.js" defer></script>
+     <script src="../js/botão-bi.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
     <img id="cabecalho_1" src="../assets/images/logo-liberty.png" href="home.html" alt="logo-liberty">
     <div class="menu-flutuante" id="btn-menu-f">
      <i class="bi bi-list"></i>
-</div>                            
+    </div>                            
 </header>
 </div>
           
@@ -30,52 +32,32 @@
          <li> <a href="lily-ia.html" class="meus-links">LILY</a></li>
          <li> <a href="login-creator.html" class="meus-links">WALL-E</a></li>
          
-         <li> <a class="meus-links">PORTAL DE LINKS</a>
-                <ul>
-<li> <a href="links-externos.html" class="meus-links">UNIDADES</a></li>
+         <li> 
+             <a class="meus-links" id="hovermenu" href="#">PORTAL DE LINKS</a>
+             <ul>
+
+                  <li> <a href="links-externos.html" class="meus-links">UNIDADES</a></li>
                   <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
                   <li> <a href="links-internos.html" class="meus-links">ACESSO RÁPIDO</a></li>
-               </ul>
-          </li>
+                  
+             </ul>
+        </li>
          <li> <a class="meus-links">CONFIGURAÇÕES</a>
                <ul>
                <li> <a href="perfil.html" class="meus-links">MEU PERFIL</a></li>
                <li> <a href="cfg-page.html" class="meus-links">CONFIGURAÇÕES</a></li>
                <li> <a href="suporte.html" class="meus-links">SUPORTE</a></li>
-               <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
+               <li> <a href="bout-me.html" class="meus-links">SOBRE</a></li>
                <li> <a href="index.html" class="meus-links">SAIR</a></li>
                </ul>
-          </li>
+        </li>
      </ul>
  </NAV>
 
 <!-- MENU MOBILE -->
-
 <div class="menu-mobile" id="menu-mobile">
-     <div class="btn-fechar">
-          
-<NAV>
-          <ul>
-          <li> <a href="perfil.html">Meu Perfil</a></li>
-          <li> <a href="home.html" class="meus-links">HOME</a></li>
-          <li> <a href="lily-ia.html" class="meus-links">LILY</a></li>
-          <li> <a href="login-creator.html" class="meus-links">WALL-E</a></li>
-<li> <a href="links-externos.html" class="meus-links">UNIDADES</a></li>
-                  <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
-                  <li> <a href="links-internos.html" class="meus-links">ACESSO RÁPIDO</a></li>
-          <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
-          <li> <a href="suporte.html">SUPORTE</a></li>
-          <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
-          <li> <a href="index.html">SAIR</a></li>
-          </ul>
-</NAV>     
-
-<!-- MENU MOBILE -->
-
-<div class="menu-mobile" id="menu-mobile">
-     <div class="btn-fechar">
-          
-<NAV>
+     <div class="btn-fechar"> 
+<Nav>
           <ul>
           <li> <a href="perfil.html">Meu Perfil</a></li>
           <li> <a href="home.html" class="meus-links">HOME</a></li>
@@ -88,28 +70,56 @@
           <li> <a href="about-me.html" class="meus-links">SOBRE</a></li>
           <li> <a href="index.html">SAIR</a></li>
           </ul>
-</NAV>     
+</Nav>     
      </div>
           </div>
 
 <!-- ESTILO MENU MOBILE -->
 <div class="overlay-menu" id="menu-overlay"></div>
 
-
 <!-- CONTEÚDO DA PÁGINA -->
 
+<h1>Aqui você poderá realizar o acompanhamento dos painéis BI de cada equipe.</h1>
 
-        <div class="text-1">
-            ERRO 404<br>
-        </div>
-        <div class="text-2">
-            Página não encontrada.
-        </div>
+<div class="painel-central-de-sup" onclick="togglePainel('https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5')">
+    <div id="img-n1">
+        <img id="img-n1" src="../assets/ícones/N1.png" alt="Email Corporativo">
+    </div>
+    <div>
+        <h8> N1 - Central de Suporte </h8>
+        <p>Realize o acompanhamento do painel BI da nossa Central de Atendimento.</p>
+    </div>
+</div>
 
-            <button type="submit" class="return-ini"> <a href="home.html">VOLTAR A TELA INICIAL</a></button>
-        
-        <footer>
-            <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.
-         </footer> 
-        </body>       
-        </html>
+<iframe id="painel-frame"></iframe>
+
+<div class="painel-central-de-sup" onclick="togglePainel('https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/3897b43b-de37-4759-b27a-88e792b9ddc5')">
+    <div id="img-n1">
+        <img id="img-n1" src="../assets/ícones/N2.png" alt="Email Corporativo">
+    </div>
+    <div>
+        <h8> N2 - Operações </h8>
+        <p>Realize o acompanhamento do painel BI de Operações.</p>
+    </div>
+</div>
+
+<div class="painel-central-de-sup" onclick="togglePainel('https://bi.libertyti.com.br/Organization/7493a5dd-2dab-4282-9784-fc4a852306ce/Report/ab26ea86-a9c9-40e2-b85a-7b2145684999')">
+    <div id="img-n1">
+        <img id="img-n1" src="../assets/ícones/N2.png" alt="Email Corporativo">
+    </div>
+    <div>
+        <h8> N2 - Operações (Escala) </h8>
+        <p>Realize o acompanhamento da escala de técnicos da equipe de Operações.</p>
+    </div>
+</div>
+
+</iframe>
+
+<!-- RODAPÉ -->
+
+<footer>
+    <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
+    </footer>           
+          </body>
+                    </html>
+    
