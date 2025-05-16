@@ -43,11 +43,13 @@ main {
 
 /* FORMATAÇÃO DO MENU PRINCIPAL */
 .menu ul {
+    
     justify-content: center;
     right: -15px;
     left: -15px;
     box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.393);
     top: 40px;
+    z-index: 10;
 }
 
 .menu ul {
@@ -190,6 +192,79 @@ color: #000000;
 img {
     width: 10%;
 }
+
+/* FORMATAÇÃO DE BOTÕES*/
+
+/* Switch estilo iOS */
+/* Switch estilo iOS */
+.theme-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  z-index: 1000;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* THEMES */
+body.theme-dark {
+  background-color: #151322;
+  color: white;
+}
+
+body.theme-light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+/* Exemplo: cards */
+.card {
+  background-color: #1f1d2e; /* escuro padrão */
+  transition: background-color 0.3s;
+}
+
+body.theme-light .card {
+  background-color: white;
+  color: #111;
+}
+
 
 /* FORMATAÇÃO FOOTER */
 

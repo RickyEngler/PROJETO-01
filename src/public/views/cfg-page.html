@@ -4,10 +4,9 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>LILY AI</title>
+     <title>Liberty HUB - Configurações</title>
      <link rel="stylesheet" href="../estilos-css/style-geral.css">
      <link rel="stylesheet" href="../estilos-css/links-portal.css">
-     <link rel="stylesheet" href="../estilos-css/lily-ia.css">
      <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
      <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
 
@@ -29,14 +28,14 @@
      <NAV class="menu">
           <ul>
                <li> <a href="home.html" class="meus-links">HOME</a></li>
-               <li> <a href="lily-ia.html" class="meus-links">LILY</a></li>
-               <li> <a href="login-creator.html" class="meus-links">WALL-E</a></li>
+               <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
+               
 
                <li> <a class="meus-links">PORTAL DE ACESSOS</a>
                     <ul>
-                         <li> <a href="links-externos.html" class="meus-links">UNIDADES</a></li>
+                         <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
                          <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
-                         <li> <a href="links-internos.html" class="meus-links">ACESSO RÁPIDO</a></li>
+                         <li> <a href="acessos-rapidos.html" class="meus-links">ACESSO RÁPIDO</a></li>
                     </ul>
                </li>
                <li> <a class="meus-links">CONFIGURAÇÕES</a>
@@ -55,8 +54,8 @@
                <NAV>
                     <ul>
                          <li> <a href="home.html" class="meus-links">HOME</a></li>
-                         <li> <a href="lily-ia.html" class="meus-links">LILY</a></li>
-                         <li> <a href="login-creator.html" class="meus-links">WALL-E</a></li>
+                         <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
+                         
                          <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
                          <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
                          <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
@@ -73,8 +72,37 @@
 
      <!-- CONTEÚDO DA PÁGINA -->
 
+     <label class="theme-switch">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider"></span>
+</label>
 
-<!-- CONTEÚDO DA PÁGINA -->
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Checa se o usuário já tem tema salvo
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.classList.add(savedTheme);
+    toggle.checked = savedTheme === 'theme-light';
+  } else {
+    // padrão é dark
+    body.classList.add('theme-dark');
+  }
+
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      body.classList.replace('theme-dark', 'theme-light');
+      localStorage.setItem('theme', 'theme-light');
+    } else {
+      body.classList.replace('theme-light', 'theme-dark');
+      localStorage.setItem('theme', 'theme-dark');
+    }
+  });
+</script>
+
 
 
 

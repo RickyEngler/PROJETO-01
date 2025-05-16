@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty HUB - Unidades SMS</title>
+    <link rel="stylesheet" href="../estilos-css/style-geral.css">
+    <link rel="stylesheet" href="../estilos-css/links-portal.css">
+    <link rel="stylesheet" href="../estilos-css/unidades-sms.css">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/chatbox.js" defer></script>
+</head>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <img id="cabecalho_1" src="../assets/images/logo-liberty.png" href="home.html" alt="logo-liberty">
+            <div class="menu-flutuante" id="btn-menu-f">
+                <i class="bi bi-list"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <NAV class="menu">
+        <ul>
+            <li> <a href="home.html" class="meus-links">HOME</a></li>
+            <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
+
+            <li> <a class="meus-links">PORTAL DE ACESSOS</a>
+                <ul>
+                    <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
+                    <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
+                    <li> <a href="acessos-rapidos.html" class="meus-links">ACESSO RÁPIDO</a></li>
+                </ul>
+            </li>
+            <li> <a class="meus-links">CONFIGURAÇÕES</a>
+                <ul>
+                    <li> <a href="cfg-page.html" class="meus-links">CONFIGURAÇÕES</a></li>
+                    <li> <a href="suporte.html" class="meus-links">SUPORTE</a></li>
+                    <li> <a href="index.html" class="meus-links">SAIR</a></li>
+                </ul>
+            </li>
+        </ul>
+    </NAV>
+    <!-- MENU MOBILE -->
+    <div class="menu-mobile" id="menu-mobile">
+        <div class="btn-fechar">
+
+            <NAV>
+                <ul>
+                    <li> <a href="home.html" class="meus-links">HOME</a></li>
+                    <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
+
+                    <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
+                    <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
+                    <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
+                    <li> <a href="suporte.html">SUPORTE</a></li>
+                    <li> <a href="index.html">SAIR</a></li>
+                </ul>
+            </NAV>
+        </div>
+    </div>
+
+    <!-- ESTILO MENU MOBILE -->
+    <div class="overlay-menu" id="menu-overlay"></div>
+
+
+    <!-- CONTEÚDO DA PÁGINA -->
+
+
+    <main>
+        <section>
+            <div>
+                <div id="title-portal">
+                    <h1>QUAL UNIDADE DESEJA ACESSAR?</h1>
+                </div>
+                <nav class="portal">
+                    <div class="unidades-select">
+
+                        <select id="unit-select" onchange="showInfo()" class="unidades-selects">
+                            <option value="" disabled selected>Selecione a unidade desejada...</option>
+                            <!-- Lista completa de opções -->
+                            <option value="info-caps-ad-ii-cachoeirinha">CAPS AD II CACHOEIRINHA</option>
+                            <option value="info-caps-ad-ii-cangaiba">CAPS AD II CANGAIBA</option>
+                            <option value="info-caps-ad-ii-cidade-ademar">CAPS AD II CIDADE ADEMAR</option>
+                            <option value="info-caps-ad-ii-ermelino-matarazzo">CAPS AD II ERMELINO MATARAZZO</option>
+                            <option value="info-caps-ad-ii-jabaquara">CAPS AD II JABAQUARA</option>
+                            <option value="info-caps-ad-ii-mooca">CAPS AD II MOOCA</option>
+                            <option value="info-caps-ad-ii-pinheiros">CAPS AD II PINHEIROS</option>
+                            <option value="info-caps-ad-ii-sacoma">CAPS AD II SACOMA</option>
+                            <option value="info-caps-ad-ii-santo-amaro">CAPS AD II SANTO AMARO</option>
+                            <option value="info-caps-ad-ii-vila-madalena-prosam">CAPS AD II VILA MADALENA PROSAM
+                            </option>
+                            <option value="info-caps-ad-ii-vila-mariana">CAPS AD II VILA MARIANA</option>
+                            <option value="info-caps-ad-iii-armenia">CAPS AD III ARMENIA</option>
+                            <option value="info-caps-ad-iii-boracea">CAPS AD III BORACEA</option>
+                            <option value="info-caps-ad-iii-butanta">CAPS AD III BUTANTA</option>
+                            <option value="info-caps-ad-iii-capela-do-socorro">CAPS AD III CAPELA DO SOCORRO</option>
+                            <option value="info-caps-ad-iii-centro">CAPS AD III CENTRO</option>
+                            <option value="info-caps-ad-iii-complexo-prates">CAPS AD III COMPLEXO PRATES</option>
+                            <option value="info-caps-ad-iii-leopoldina">CAPS AD III LEOPOLDINA</option>
+                            <option value="info-caps-ad-iii-grajau">CAPS AD III GRAJAU</option>
+                            <option value="info-caps-ad-iii-itaquera">CAPS AD III ITAQUERA</option>
+                            <option value="info-caps-ad-iii-jardim-sao-luiz">CAPS AD III JARDIM SÃO LUIZ</option>
+                            <option value="info-caps-ad-iii-penha">CAPS AD III PENHA</option>
+                            <option value="info-caps-ad-iii-pirituba-casa-azul">CAPS AD III PIRITUBA CASA AZUL</option>
+                            <option value="info-caps-ad-iii-santana">CAPS AD III SANTANA</option>
+                            <option value="info-caps-ad-iii-sao-mateus-liberdade-de-escolha">CAPS AD III SAO MATEUS
+                                LIBERDADE DE ESCOLHA</option>
+                            <option value="info-caps-ad-iii-jardim-angela">CAPS AD III JARDIM ÂNGELA</option>
+                            <option value="info-caps-ad-iii-sao-miguel">CAPS AD III SAO MIGUEL</option>
+                            <option value="info-caps-ad-iv-redencao">CAPS AD IV REDENÇÃO</option>
+                            <option value="info-caps-adulto-ii-aricanduva-formosa">CAPS ADULTO II ARICANDUVA FORMOSA
+                            </option>
+                            <option value="info-caps-adulto-ii-butanta">CAPS ADULTO II BUTANTA</option>
+                            <option value="info-caps-adulto-ii-casa-verde">CAPS ADULTO II CASA VERDE</option>
+                            <option value="info-caps-adulto-ii-cidade-ademar">CAPS ADULTO II CIDADE ADEMAR</option>
+                            <option value="info-caps-adulto-ii-ermelino-matarazzo">CAPS ADULTO II ERMELINO MATARAZZO
+                            </option>
+                            <option value="info-caps-adulto-ii-jabaquara">CAPS ADULTO II JABAQUARA</option>
+                            <option value="info-caps-adulto-ii-jardim-lidia">CAPS ADULTO II JARDIM LÍDIA</option>
+                            <option value="info-caps-adulto-ii-vila-monumento">CAPS ADULTO II VILA MONUMENTO</option>
+                            <option value="info-caps-adulto-ii-jacana-dr-leonidio-galvao-dos-santos">CAPS ADULTO II
+                                JACANA DR LEONIDIO GALVAO DOS SANTOS</option>
+                            <option value="info-caps-adulto-ii-perdizes-manoel-munhoz">CAPS ADULTO II PERDIZES MANOEL
+                                MUNHOZ</option>
+                            <option value="info-caps-adulto-ii-perus">CAPS ADULTO II PERUS</option>
+                            <option value="info-caps-adulto-iii-freguesia-do-o-brasilandia">CAPS ADULTO III FREGUESIA DO
+                                O BRASILANDIA</option>
+                            <option value="info-caps-adulto-iii-grajau">CAPS ADULTO III GRAJAU</option>
+                            <option value="info-caps-adulto-iii-jardim-sao-luiz">CAPS ADULTO III JARDIM SÃO LUIZ
+                            </option>
+                            <option value="info-caps-adulto-iii-lapa">CAPS ADULTO III LAPA</option>
+                            <option value="info-caps-adulto-iii-largo-treze">CAPS ADULTO III LARGO TREZE</option>
+                            <option value="info-caps-adulto-iii-m-boi-mirim">CAPS ADULTO III M BOI MIRIM</option>
+                            <option value="info-caps-adulto-iii-mandaqui">CAPS ADULTO III MANDAQUI</option>
+                            <option value="info-caps-adulto-iii-mooca">CAPS ADULTO III MOOCA</option>
+                            <option value="info-caps-adulto-iii-pirituba-jaragua">CAPS ADULTO III PIRITUBA JARAGUÁ
+                            </option>
+                            <option value="info-caps-adulto-iii-sapopemba">CAPS ADULTO III SAPOPEMBA</option>
+                            <option value="info-caps-adulto-iii-sao-mateus">CAPS ADULTO III SAO MATEUS</option>
+                            <option value="info-caps-adulto-iii-se">CAPS ADULTO III SÉ</option>
+                            <option value="info-caps-adulto-iii-parelheiros">CAPS ADULTO III PARELHEIROS</option>
+                            <option value="info-caps-adulto-iii-vila-matilde">CAPS ADULTO III VILA MATILDE</option>
+                            <option value="info-caps-ij-ii-butanta">CAPS IJ II BUTANTÃ</option>
+                            <option value="info-caps-ij-ii-casa-verde">CAPS IJ II CASA VERDE</option>
+                            <option value="info-caps-ij-ii-capela-do-socorro">CAPS IJ II CAPELA DO SOCORRO</option>
+                            <option value="info-caps-ij-ii-cidade-ademar">CAPS IJ II CIDADE ADEMAR</option>
+                            <option value="info-caps-ij-ii-ermelino-matarazzo">CAPS IJ II ERMELINO MATARAZZO</option>
+                            <option value="info-caps-ij-ii-freguesia-do-o-brasilandia">CAPS IJ II FREGUESIA DO Ó
+                                BRASILANDIA</option>
+                            <option value="info-caps-ij-ii-ipiranga">CAPS IJ II IPIRANGA</option>
+                            <option value="info-caps-ij-ii-jabaquara-casinha">CAPS IJ II JABAQUARA CASINHA</option>
+                            <option value="info-caps-ij-ii-lapa">CAPS IJ II LAPA</option>
+                            <option value="info-caps-ij-ii-mboi-mirim">CAPS IJ II MBOI MIRIM</option>
+                            <option value="info-caps-ij-ii-mooca">CAPS IJ II MOOCA</option>
+                            <option value="info-caps-ij-ii-parelheiros-aquarela">CAPS IJ II PARELHEIROS AQUARELA
+                            </option>
+                            <option value="info-caps-ij-ii-perus">CAPS IJ II PERUS</option>
+                            <option value="info-caps-ij-ii-santo-amaro">CAPS IJ II SANTO AMARO</option>
+                            <option value="info-caps-ij-ii-sao-mateus">CAPS IJ II SÃO MATEUS</option>
+                            <option value="info-caps-ij-ii-sapopemba">CAPS IJ II SAPOPEMBA</option>
+                            <option value="info-caps-ij-ii-vila-mariana-quixote">CAPS IJ II VILA MARIANA QUIXOTE
+                            </option>
+                            <option value="info-caps-ij-ii-vila-prudente">CAPS IJ II VILA PRUDENTE</option>
+                            <option value="info-caps-ij-iii-aricanduva">CAPS IJ III ARICANDUVA</option>
+                            <option value="info-caps-ij-iii-cidade-dutra">CAPS IJ III CIDADE DUTRA</option>
+                            <option value="info-caps-ij-iii-jardim-sao-luiz">CAPS IJ III JARDIM SÃO LUIZ</option>
+                            <option value="info-caps-ij-iii-penha">CAPS IJ III PENHA</option>
+                            <option value="info-caps-ij-iii-pirituba-jaragua">CAPS IJ III PIRITUBA JARAGUA</option>
+                            <option value="info-caps-ij-iii-santana">CAPS IJ III SANTANA</option>
+                            <option value="info-caps-ij-iii-sao-miguel">CAPS IJ III SÃO MIGUEL</option>
+                            <option value="info-caps-ij-iii-se-amorzeira">CAPS IJ III SÉ AMORZEIRA</option>
+                            <option value="info-caps-adulto-iii-capela-do-socorro">CAPS ADULTO III CAPELA DO SOCORRO
+                            </option>
+                            <option value="info-cnr-santa-cecilia-redencao">CNR SANTA CECILIA REDENÇÃO</option>
+                            <option value="info-crst-freguesia-do-o">CRST FREGUESIA DO Ó</option>
+                            <option value="info-crst-lapa">CRST LAPA</option>
+                            <option value="info-crst-mooca">CRST MOOCA</option>
+                            <option value="info-crst-se">CRST SÉ</option>
+                            <option value="info-crst-leste">CRST LESTE</option>
+                            <option value="info-crst-santo-amaro">CRST SANTO AMARO</option>
+                            <option value="info-hm-alipio">HM ALÍPIO</option>
+                            <option value="info-hd-brasilandia">HD BRASILÂNDIA</option>
+                            <option value="info-hm-benedicto-montenegro">HM BENEDICTO MONTENEGRO</option>
+                            <option value="info-hm-cachoeirinha">HM CACHOEIRINHA</option>
+                            <option value="info-hm-campo-limpo">HM CAMPO LIMPO</option>
+                            <option value="info-hm-capela-do-socorro">HM CAPELA DO SOCORRO</option>
+                            <option value="info-h-cantareira">H CANTAREIRA</option>
+                            <option value="info-hm-hungria">HM HUNGRIA</option>
+                            <option value="info-hm-ignacio">HM IGNÁCIO</option>
+                            <option value="info-hm-mario-degni">HM MARIO DEGNI</option>
+                            <option value="info-hm-saboya">HM SABOYA</option>
+                            <option value="info-hm-sorocabana">HM SOROCABANA</option>
+                            <option value="info-hm-tatuape">HM TATUAPÉ</option>
+                            <option value="info-hm-tide">HM TIDE</option>
+                            <option value="info-hm-waldomiro">HM WALDOMIRO</option>
+                            <option value="info-hm-zaio">HM ZAIO</option>
+                            <option value="info-pa-sao-mateus">PA SÃO MATEUS</option>
+                            <option value="info-psm-balneario-sao-jose">PSM BALNEARIO SÃO JOSE</option>
+                            <option value="info-psm-barra-funda">PSM BARRA FUNDA</option>
+                            <option value="info-scp-ad-pirituba">SCP AD PIRITUBA</option>
+                            <option value="info-scp-ad-boracea">SCP AD BORACEA</option>
+                            <option value="info-upa-21-de-junho">UPA 21 DE JUNHO</option>
+                            <option value="info-upa-ipiranga-dr-augusto-gomes-de-mattos">UPA IPIRANGA DR. AUGUSTO GOMES
+                                DE MATTOS</option>
+                            <option value="info-upa-dona-maria-antoniéta">UPA DONA MARIA ANTONIETA</option>
+                            <option value="info-upa-jardim-elisa-maria">UPA JARDIM ELISA MARIA</option>
+                            <option value="info-upa-jardim-peri">UPA JARDIM PERI</option>
+                            <option value="info-upa-lapa">UPA LAPA</option>
+                            <option value="info-upa-parelheiros">UPA PARELHEIROS</option>
+                            <option value="info-upa-parque-doroteia">UPA PARQUE DOROTEIA</option>
+                            <option value="info-upa-pedreira">UPA PEDREIRA</option>
+                            <option value="info-upa-santo-amaro">UPA SANTO AMARO</option>
+                            <option value="info-upa-vergueiro">UPA VERGUEIRO</option>
+
+                        </select>
+
+                        <!-- Itens que aparecerão dinamicamente -->
+
+                        <div class="content">
+
+                            <div id="info-caps-ad-ii-cachoeirinha" class="hidden">
+                                <h3>Informações sobre CAPS AD II CACHOEIRINHA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-cangaiba" class="hidden">
+                                <h3>Informações sobre CAPS AD II CANGAIBA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-cidade-ademar" class="hidden">
+                                <h3>Informações sobre CAPS AD II CIDADE ADEMAR</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-ermelino-matarazzo" class="hidden">
+                                <h3>Informações sobre CAPS AD II ERMELINO MATARAZZO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-jabaquara" class="hidden">
+                                <h3>Informações sobre CAPS AD II JABAQUARA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-mooca" class="hidden">
+                                <h3>Informações sobre CAPS AD II MOOCA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-pinheiros" class="hidden">
+                                <h3>Informações sobre CAPS AD II PINHEIROS</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-sacoma" class="hidden">
+                                <h3>Informações sobre CAPS AD II SACOMA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-santo-amaro" class="hidden">
+                                <h3>Informações sobre CAPS AD II SANTO AMARO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-vila-madalena-prosam" class="hidden">
+                                <h3>Informações sobre CAPS AD II VILA MADALENA PROSAM</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-ii-vila-mariana" class="hidden">
+                                <h3>Informações sobre CAPS AD II VILA MARIANA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-armenia" class="hidden">
+                                <h3>Informações sobre CAPS AD III ARMENIA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-boracea" class="hidden">
+                                <h3>Informações sobre CAPS AD III BORACEA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-butanta" class="hidden">
+                                <h3>Informações sobre CAPS AD III BUTANTA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-capela-do-socorro" class="hidden">
+                                <h3>Informações sobre CAPS AD III CAPELA DO SOCORRO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-centro" class="hidden">
+                                <h3>Informações sobre CAPS AD III CENTRO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-complexo-prates" class="hidden">
+                                <h3>Informações sobre CAPS AD III COMPLEXO PRATES</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-leopoldina" class="hidden">
+                                <h3>Informações sobre CAPS AD III LEOPOLDINA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-grajau" class="hidden">
+                                <h3>Informações sobre CAPS AD III GRAJAU</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-itaquera" class="hidden">
+                                <h3>Informações sobre CAPS AD III ITAQUERA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-jardim-sao-luiz" class="hidden">
+                                <h3>Informações sobre CAPS AD III JARDIM SÃO LUIZ</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-penha" class="hidden">
+                                <h3>Informações sobre CAPS AD III PENHA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-pirituba-casa-azul" class="hidden">
+                                <h3>Informações sobre CAPS AD III PIRITUBA CASA AZUL</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-santana" class="hidden">
+                                <h3>Informações sobre CAPS AD III SANTANA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-sao-mateus-liberdade-de-escolha" class="hidden">
+                                <h3>Informações sobre CAPS AD III SAO MATEUS LIBERDADE DE ESCOLHA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-jardim-angela" class="hidden">
+                                <h3>Informações sobre CAPS AD III JARDIM ÂNGELA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iii-sao-miguel" class="hidden">
+                                <h3>Informações sobre CAPS AD III SAO MIGUEL</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-ad-iv-redencao" class="hidden">
+                                <h3>Informações sobre CAPS AD IV REDENÇÃO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-aricanduva-formosa" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II ARICANDUVA FORMOSA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-butanta" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II BUTANTA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-casa-verde" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II CASA VERDE</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-cidade-ademar" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II CIDADE ADEMAR</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-ermelino-matarazzo" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II ERMELINO MATARAZZO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-jabaquara" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II JABAQUARA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-jardim-lidia" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II JARDIM LÍDIA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-vila-monumento" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II VILA MONUMENTO</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-jacana-dr-leonidio-galvao-dos-santos" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II JACANA DR LEONIDIO GALVAO DOS SANTOS</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-perdizes-manoel-munhoz" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II PERDIZES MANOEL MUNHOZ</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-ii-perus" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO II PERUS</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-freguesia-do-o-brasilandia" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III FREGUESIA DO O BRASILANDIA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-grajau" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III GRAJAU</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-jardim-sao-luiz" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III JARDIM SÃO LUIZ</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-lapa" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III LAPA</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-largo-treze" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III LARGO TREZE</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-m-boi-mirim" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III M BOI MIRIM</h3>
+                                <p>
+                                    Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                                <p>
+                                    Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a>
+                                </p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-mandaqui" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III MANDAQUI</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-mooca" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III MOOCA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-pirituba-jaragua" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III PIRITUBA JARAGUÁ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-sapopemba" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III SAPOPEMBA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-sao-mateus" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III SÃO MATEUS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-se" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III SÉ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-parelheiros" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III PARELHEIROS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-vila-matilde" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III VILA MATILDE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-butanta" class="hidden">
+                                <h3>Informações sobre CAPS IJ II BUTANTÃ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-casa-verde" class="hidden">
+                                <h3>Informações sobre CAPS IJ II CASA VERDE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-capela-do-socorro" class="hidden">
+                                <h3>Informações sobre CAPS IJ II CAPELA DO SOCORRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-cidade-ademar" class="hidden">
+                                <h3>Informações sobre CAPS IJ II CIDADE ADEMAR</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-ermelino-matarazzo" class="hidden">
+                                <h3>Informações sobre CAPS IJ II ERMELINO MATARAZZO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-freguesia-do-o-brasilandia" class="hidden">
+                                <h3>Informações sobre CAPS IJ II FREGUESIA DO Ó BRASILANDIA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-ipiranga" class="hidden">
+                                <h3>Informações sobre CAPS IJ II IPIRANGA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-jabaquara-casinha" class="hidden">
+                                <h3>Informações sobre CAPS IJ II JABAQUARA CASINHA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-lapa" class="hidden">
+                                <h3>Informações sobre CAPS IJ II LAPA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-mboi-mirim" class="hidden">
+                                <h3>Informações sobre CAPS IJ II MBOI MIRIM</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-mooca" class="hidden">
+                                <h3>Informações sobre CAPS IJ II MOOCA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-parelheiros-aquarela" class="hidden">
+                                <h3>Informações sobre CAPS IJ II PARELHEIROS AQUARELA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-perus" class="hidden">
+                                <h3>Informações sobre CAPS IJ II PERUS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-santo-amaro" class="hidden">
+                                <h3>Informações sobre CAPS IJ II SANTO AMARO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-sao-mateus" class="hidden">
+                                <h3>Informações sobre CAPS IJ II SÃO MATEUS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-sapopemba" class="hidden">
+                                <h3>Informações sobre CAPS IJ II SAPOPEMBA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-vila-mariana-quixote" class="hidden">
+                                <h3>Informações sobre CAPS IJ II VILA MARIANA QUIXOTE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-ii-vila-prudente" class="hidden">
+                                <h3>Informações sobre CAPS IJ II VILA PRUDENTE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-aricanduva" class="hidden">
+                                <h3>Informações sobre CAPS IJ III ARICANDUVA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-cidade-dutra" class="hidden">
+                                <h3>Informações sobre CAPS IJ III CIDADE DUTRA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-jardim-sao-luiz" class="hidden">
+                                <h3>Informações sobre CAPS IJ III JARDIM SÃO LUIZ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-penha" class="hidden">
+                                <h3>Informações sobre CAPS IJ III PENHA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-pirituba-jaragua" class="hidden">
+                                <h3>Informações sobre CAPS IJ III PIRITUBA JARAGUA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-santana" class="hidden">
+                                <h3>Informações sobre CAPS IJ III SANTANA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-sao-miguel" class="hidden">
+                                <h3>Informações sobre CAPS IJ III SÃO MIGUEL</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-ij-iii-se-amorzeira" class="hidden">
+                                <h3>Informações sobre CAPS IJ III SÉ AMORZEIRA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-caps-adulto-iii-capela-do-socorro" class="hidden">
+                                <h3>Informações sobre CAPS ADULTO III CAPELA DO SOCORRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-cnr-santa-cecilia-redencao" class="hidden">
+                                <h3>Informações sobre CNR SANTA CECILIA REDENÇÃO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-freguesia-do-o" class="hidden">
+                                <h3>Informações sobre CRST FREGUESIA DO Ó</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-lapa" class="hidden">
+                                <h3>Informações sobre CRST LAPA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-mooca" class="hidden">
+                                <h3>Informações sobre CRST MOOCA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-se" class="hidden">
+                                <h3>Informações sobre CRST SÉ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-leste" class="hidden">
+                                <h3>Informações sobre CRST LESTE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-crst-santo-amaro" class="hidden">
+                                <h3>Informações sobre CRST SANTO AMARO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-alipio" class="hidden">
+                                <h3>Informações sobre HM ALÍPIO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hd-brasilandia" class="hidden">
+                                <h3>Informações sobre HD BRASILÂNDIA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-benedicto-montenegro" class="hidden">
+                                <h3>Informações sobre HM BENEDICTO MONTENEGRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-cachoeirinha" class="hidden">
+                                <h3>Informações sobre HM CACHOEIRINHA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-campo-limpo" class="hidden">
+                                <h3>Informações sobre HM CAMPO LIMPO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-capela-do-socorro" class="hidden">
+                                <h3>Informações sobre HM CAPELA DO SOCORRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-h-cantareira" class="hidden">
+                                <h3>Informações sobre H CANTAREIRA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-hungria" class="hidden">
+                                <h3>Informações sobre HM HUNGRIA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-ignacio" class="hidden">
+                                <h3>Informações sobre HM IGNÁCIO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-mario-degni" class="hidden">
+                                <h3>Informações sobre HM MARIO DEGNI</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-saboya" class="hidden">
+                                <h3>Informações sobre HM SABOYA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-sorocabana" class="hidden">
+                                <h3>Informações sobre HM SOROCABANA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-tatuape" class="hidden">
+                                <h3>Informações sobre HM TATUAPÉ</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-tide" class="hidden">
+                                <h3>Informações sobre HM TIDE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-waldomiro" class="hidden">
+                                <h3>Informações sobre HM WALDOMIRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-hm-zaio" class="hidden">
+                                <h3>Informações sobre HM ZAIO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-pa-sao-mateus" class="hidden">
+                                <h3>Informações sobre PA SÃO MATEUS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-psm-balneario-sao-jose" class="hidden">
+                                <h3>Informações sobre PSM BALNEARIO SÃO JOSE</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-psm-barra-funda" class="hidden">
+                                <h3>Informações sobre PSM BARRA FUNDA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-scp-ad-pirituba" class="hidden">
+                                <h3>Informações sobre SCP AD PIRITUBA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-scp-ad-boracea" class="hidden">
+                                <h3>Informações sobre SCP AD BORACEA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-21-de-junho" class="hidden">
+                                <h3>Informações sobre UPA 21 DE JUNHO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-ipiranga-dr-augusto-gomes-de-mattos" class="hidden">
+                                <h3>Informações sobre UPA IPIRANGA DR. AUGUSTO GOMES DE MATTOS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-dona-maria-antonieta" class="hidden">
+                                <h3>Informações sobre UPA DONA MARIA ANTONIETA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-jardim-elisa-maria" class="hidden">
+                                <h3>Informações sobre UPA JARDIM ELISA MARIA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-jardim-peri" class="hidden">
+                                <h3>Informações sobre UPA JARDIM PERI</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-lapa" class="hidden">
+                                <h3>Informações sobre UPA LAPA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-parelheiros" class="hidden">
+                                <h3>Informações sobre UPA PARELHEIROS</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-parque-doroteia" class="hidden">
+                                <h3>Informações sobre UPA PARQUE DOROTEIA</h3>
+                                <p>Link de acesso EXTERNO: <a href="http://upa-parque-doroteia.libertyti.cloud/aghu/pages/casca/casca.xhtml" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-pedreira" class="hidden">
+                                <h3>Informações sobre UPA PEDREIRA</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-santo-amaro" class="hidden">
+                                <h3>Informações sobre UPA SANTO AMARO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+                            <div id="info-upa-vergueiro" class="hidden">
+                                <h3>Informações sobre UPA VERGUEIRO</h3>
+                                <p>Link de acesso EXTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                                <p>Link de acesso INTERNO: <a href="#" target="_blank">ACESSAR</a></p>
+                            </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Ativar Select2
+    $('#unit-select').select2({
+      placeholder: "Selecione a unidade desejada...",
+      allowClear: true
+    });
+
+    // Evento ao mudar seleção
+    $('#unit-select').on('change', function () {
+      const selectedValue = $(this).val();
+
+      // Esconde todos os blocos
+      $('.content div').addClass('hidden');
+
+      // Mostra o bloco correspondente
+      if (selectedValue) {
+        $('#' + selectedValue).removeClass('hidden');
+      }
+    });
+  });
+</script>
+
+        </section>
+    </main>
+    <footer>
+        <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All
+            rights reserved.</h6>
+    </footer>
+</body>
+
+</html>

@@ -192,6 +192,245 @@ div#title-portal h1 {
 
 
 
+
+
+
+
+
+
+h4 {
+    font-family: 'Wix MadeFor Text', sans-serif;
+    font-size: 10;
+    color: #3affbc;
+}
+
+h3 {
+    font-family: 'Wix MadeFor Text', sans-serif;
+    font-size: 9px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+
+.title p {
+    margin-left: 3%;
+    font-family: 'Wix MadeFor Text', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 6px 10px 0.5px color black;
+    text-align: left;
+}
+
+.title h4 {
+    margin-left: 3%;
+    font-family: 'Wix MadeFor Text', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-shadow: 6px 6px 10px 0.5px color black;
+    text-align: left;
+
+}
+
+.container {
+    display: flex;
+    margin: 40px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background-color: #3e3454;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+/* JIRA */
+
+.jira {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.jira:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#jira-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* Vault */
+
+.vault {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.vault:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#vault-icon {
+    border-radius: 15px;
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+
+
+
+/* Email */
+
+.ToLife {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.ToLife:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#ToLife-icon {
+    border-radius: 15px;
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+
+/* Liberty */
+
+.liberty {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.liberty:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#liberty-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+/* GoTO */
+
+.glpi {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.glpi:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#glpi-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.popup-content {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3e3454;
+    padding: 20px;
+    z-index: 1001;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 10, 15, 0.7);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3affbc;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
 /* Modificação para suporte mobile */
 
 @media screen and (max-width: 955px){
