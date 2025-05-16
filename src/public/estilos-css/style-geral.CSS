@@ -27,6 +27,31 @@ header {
 
 /* FORMATAÇÃO DO BODY */
 
+h3{
+    font-family: 'Wix MadeFor Text',sans-serif;
+    color:aliceblue;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Wix MadeFor Text',sans-serif;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a{
+    color: #3affbc;
+    text-decoration: none;
+}
+
+a :hover{
+    color: #9fffdf;
+}
+
+
 body { 
     font-family: 'Wix MadeFor Text',sans-serif;
     background-color: #201b2c;

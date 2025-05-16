@@ -2,31 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
 h3{
-    font-family: 'Wix MadeFor Text',sans-serif;
-    color:aliceblue;
     font-size: 20px;
-    font-weight: 800;
 }
 
-p {
-    font-family: 'Wix MadeFor Text',sans-serif;
-    color: aliceblue;
-    font-size: 16px;
+.btn-acss {
+    background-color: #3affbc;
+    padding: 7px;
+    border-radius: 5px;
+    color: #111015 !important;
     font-weight: 700;
-    text-transform: uppercase;
+}
+.btn-acss:hover {
+    background-color: #98ffdd
 }
 
-a{
-    color: #3affbc;
-    text-decoration: none;
-}
-
-a :hover{
-    color: #9fffdf;
-}
-
-.unidades-selects{
-    font-family: 'Wix MadeFor Text',sans-serif;
+.unidades-selects {
+    font-family: 'Wix MadeFor Text', sans-serif;
     font-weight: 700;
     padding: 15px;
     background-color: #2f2841;
@@ -35,7 +26,7 @@ a :hover{
     box-shadow: 5px 5px 15px #00000079;
 }
 
-.conttent{
+.conttent {
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 100px;
@@ -49,65 +40,67 @@ a :hover{
 
 /* Seleção principal */
 .select2-container--default .select2-selection--single {
-  background-color: #111015;
-  border: 1px solid #5a4d8a;
-  color: #fff;
-  height: 40px !important; 
-  line-height: 45px !important; 
-  text-align: center !important;
-  padding: 6px 12px !important; 
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-family: 'Wix MadeFor Text',sans-serif;
-  white-space: nowrap;             /* Impede quebra de linha */
-  overflow: hidden;                /* Evita overflow */
-  text-overflow: ellipsis;        /* Coloca '...' se estiver muito longo */
+    background-color: #111015;
+    border: 1px solid #5a4d8a;
+    color: #fff;
+    height: 40px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+    padding: 6px 12px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Wix MadeFor Text', sans-serif;
+    white-space: nowrap;
+    /* Impede quebra de linha */
+    overflow: hidden;
+    /* Evita overflow */
+    text-overflow: ellipsis;
+    /* Coloca '...' se estiver muito longo */
 }
 
 /* Placeholder ("Selecione...") */
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #aaa;
-  font-weight: 500;
+    color: #aaa;
+    font-weight: 500;
 }
 
 /* Texto selecionado */
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: #fff;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
 }
 
 /* Seta do dropdown */
 .select2-container--default .select2-selection__arrow b {
-  border-color: #ccc transparent transparent transparent;
+    border-color: #ccc transparent transparent transparent;
 }
 
 /* Dropdown das opções */
-.select2-container--default .select2-results > .select2-results__options {
-  background-color: #1c1b22;
-  color: #fff;
-  font-size: 14px;
-  border-radius: 0 0 8px 8px;
+.select2-container--default .select2-results>.select2-results__options {
+    background-color: #1c1b22;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
 }
 
 /* Opções individuais */
 .select2-container--default .select2-results__option {
-  padding: 10px;
-  transition: background-color 0.2s ease;
+    padding: 10px;
+    transition: background-color 0.2s ease;
 }
 
 /* Hover nas opções */
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #6a5acd !important;
-  color: #fff !important;
+    background-color: #6a5acd !important;
+    color: #fff !important;
 }
 
 /* Opção selecionada */
 .select2-container--default .select2-results__option[aria-selected="true"] {
-  background-color: #3e3269;
-  color: #fff;
-  line-height: 30px !important; 
-  transition: 1s;
+    background-color: #3e3269;
+    color: #fff;
+    line-height: 30px !important;
+    transition: 1s;
 }
-
