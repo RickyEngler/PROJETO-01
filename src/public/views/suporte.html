@@ -4,13 +4,16 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>LILY AI</title>
+     <title>Liberty HUB - Suporte</title>
      <link rel="stylesheet" href="../estilos-css/style-geral.css">
      <link rel="stylesheet" href="../estilos-css/links-portal.css">
      <link rel="stylesheet" href="../estilos-css/suporte-style.css">
-     <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
-     <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
-
+     <link rel="icon" type="image/png" href="../assets/ícones/favicon-96x96.png" sizes="96x96" />
+     <link rel="icon" type="image/svg+xml" href="../assets/ícones/favicon.svg" />
+     <link rel="shortcut icon" href="../assets/ícones/favicon.ico" />
+     <link rel="apple-touch-icon" sizes="180x180" href="../assets/ícones/apple-touch-icon.png" />
+     <meta name="apple-mobile-web-app-title" content="Liberty HUB" />
+     <link rel="manifest" href="../assets/ícones/site.webmanifest" />
      <script src="../js/menu.js" defer></script>
      <script src="../js/chatbox.js" defer></script>
 </head>
@@ -30,7 +33,7 @@
           <ul>
                <li> <a href="home.html" class="meus-links">HOME</a></li>
                <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
-               
+
 
                <li> <a class="meus-links">PORTAL DE ACESSOS</a>
                     <ul>
@@ -56,7 +59,7 @@
                     <ul>
                          <li> <a href="home.html" class="meus-links">HOME</a></li>
                          <li> <a href="lily-ia.html" class="meus-links">EM BREVE</a></li>
-                         
+
                          <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
                          <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
                          <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
@@ -73,31 +76,34 @@
 
      <!-- CONTEÚDO DA PÁGINA -->
 
-<div class="card">
-     <div class="suporte">
-         <h3>Precisa de ajuda? Entre em contato com um de nossos desenvolvedores!</h3>     
-         <form method="get" class="suporte-form">
-             <label for="nome">Desenvolvedor responsável</label>
-             <!-- Input com lista de desenvolvedores usando datalist -->
-             <input list="desenvolvedores" id="desenvolvedor" name="nome" placeholder="Escolha um Desenvolvedor para entrar em contato." autocomplete="off" required>
-             <datalist id="desenvolvedores">
-                 <option value="augusto.engler@libertyti.com.br"> Augusto Engler </option>
-                 <option value="richard.silva@libertyti.com.br"> Richard Berto </option>
-             </datalist>
- 
-             <label for="texto">Solicitação</label>
-             <input type="text" id="texto" name="texto" placeholder="Digite em poucas palavras sua dúvida ou solicitação." required>                          
-         </form>
-         <button type="submit" class="btn-sup">Enviar</button>
+     <div class="card">
+          <div class="suporte">
+               <h3>Precisa de ajuda ou tem uma sugetão de melhoria? Entre em contato com um de nossos desenvolvedores!
+               </h3>
+               <form method="get" class="suporte-form">
+                    <label for="nome">Desenvolvedor responsável</label>
+                    <!-- Input com lista de desenvolvedores usando datalist -->
+                    <input list="desenvolvedores" id="desenvolvedor" name="nome"
+                         placeholder="Escolha um Desenvolvedor para entrar em contato." autocomplete="off" required>
+                    <datalist id="desenvolvedores">
+                         <option value="augusto.engler@libertyti.com.br"> Augusto Engler </option>
+                    </datalist>
+
+                    <label for="texto">Solicitação</label>
+                    <input type="text" id="texto" name="texto"
+                         placeholder="Digite em poucas palavras sua dúvida ou solicitação." required>
+               </form>
+               <button type="submit" class="btn-sup">Enviar</button>
+          </div>
      </div>
- </div>
 
 
-<!-- RODAPÉ -->
+     <!-- RODAPÉ -->
 
-<footer>
-    <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
-    </footer>           
-              </body>
-    
-                        </html>
+     <footer>
+          <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All
+               rights reserved.</h6>
+     </footer>
+</body>
+
+</html>

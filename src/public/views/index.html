@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos-css/links-portal.css">
     <link rel="stylesheet" href="../estilos-css/style-login.css">
     <title>LOGIN</title>
-   <link rel="icon" sizes="16x16" href="../favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="../favicon-32x32.png" type="image/png">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Liberty HUB" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 
 <body>
@@ -22,11 +27,13 @@
                 <h1>LOGIN</h1>
                 <div class="textfield">
                     <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="email" autocomplete="username" placeholder="Email" required>
+                    <input type="email" id="login-email" name="email" autocomplete="username" placeholder="Email"
+                        required>
                 </div>
                 <div class="textfield">
                     <label for="login-senha">Senha</label>
-                    <input type="password" id="login-senha" name="senha" autocomplete="current-password" placeholder="Senha" minlength="4" required>
+                    <input type="password" id="login-senha" name="senha" autocomplete="current-password"
+                        placeholder="Senha" minlength="4" required>
                 </div>
                 <div>
                     <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
@@ -37,7 +44,7 @@
                 <button type="button" id="openPopupBtn">Cadastre-se</button>
             </div>
         </div>
-    </form>     
+    </form>
 
     <!-- Pop-up de cadastro -->
     <div id="popupForm" class="popup">
@@ -46,11 +53,13 @@
             <h2>Cadastro</h2>
             <form onsubmit="cadastrarUsuario(); return false;" id="cadastro-form">
                 <label for="cadastro-nome">Nome</label>
-                <input type="text" id="cadastro-nome" name="nomeCompleto" placeholder="Primeiro e último nome..." required>
-                                    
+                <input type="text" id="cadastro-nome" name="nomeCompleto" placeholder="Primeiro e último nome..."
+                    required>
+
                 <label for="cadastro-email">Email</label>
-                <input type="email" id="cadastro-email" name="email" autocomplete="email" placeholder="Insira seu email..." required>
-                                    
+                <input type="email" id="cadastro-email" name="email" autocomplete="email"
+                    placeholder="Insira seu email..." required>
+
                 <label for="cadastro-cpf">CPF</label>
                 <input type="text" id="cadastro-cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required>
 
@@ -69,7 +78,8 @@
                 </select>
 
                 <label for="cadastro-senha">Senha</label>
-                <input type="password" id="cadastro-senha" name="senha" placeholder="Insira sua senha..." required minlength="4">
+                <input type="password" id="cadastro-senha" name="senha" placeholder="Insira sua senha..." required
+                    minlength="4">
 
                 <button type="submit">Cadastrar</button>
             </form>
@@ -77,9 +87,11 @@
     </div>
 
     <footer>
-        <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All rights reserved.</h6>
-    </footer>      
+        <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All
+            rights reserved.</h6>
+    </footer>
 
     <script src="../js/login.js"></script>
 </body>
+
 </html>
