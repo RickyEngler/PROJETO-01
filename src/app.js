@@ -2,8 +2,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { spawn } from 'child_process';
-import fetch from 'node-fetch'; // necessário para chamadas à API do Confluence
+import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -16,81 +18,93 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views', 'home.html'));
+  res.sendFile(path.join(__dirname, 'public', 'views', 'home.html'));
 });
 
-// Rota para páginas HTML
+// Rota para outros arquivos HTML
 app.get('/*.html', (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'views', req.path);
-    res.sendFile(filePath, (err) => {
-        if (err) {
-            res.status(404).send('Página não encontrada');
-        }
-    });
+  const filePath = path.join(__dirname, 'public', 'views', req.path);
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send('Página não encontrada');
+    }
+  });
 });
 
-// ✅ NOVA ROTA: IA com LLaMA + busca no Confluence
-app.post('/api/perguntar', async (req, res) => {
-    const { pergunta } = req.body;
-
-    if (!pergunta) {
-        return res.status(400).json({ error: 'Pergunta não fornecida.' });
-    }
-
-    // 🔎 Verificar se é uma busca no Confluence
-    if (/confluence|procure|buscar/i.test(pergunta)) {
-        try {
-            const results = await buscarNoConfluence(pergunta);
-            return res.json({ resposta: results });
-        } catch (err) {
-            console.error(err);
-            return res.status(500).json({ resposta: 'Erro ao buscar no Confluence.' });
-        }
-    }
-
-    // 🤖 Caso comum: conversa com o modelo LLaMA
-    const processo = spawn('ollama', ['run', 'llama3']);
-    let resposta = '';
-
-    processo.stdout.on('data', data => {
-        resposta += data.toString();
-        if (resposta.includes('\n')) {
-            processo.kill();
-            res.json({ resposta: resposta.trim() });
-        }
-    });
-
-    processo.stdin.write(pergunta + '\n');
-    processo.stdin.end();
-});
-
-// Função de busca na API do Confluence
+// Função para buscar no Confluence
 async function buscarNoConfluence(termo) {
-    const CONFLUENCE_URL = 'https://seu-domínio.atlassian.net/wiki/rest/api/content/search';
-    const USER = 'seu-email@empresa.com'; // e-mail da sua conta Atlassian
-    const TOKEN = 'SEU_TOKEN'; // token gerado em https://id.atlassian.com/manage/api-tokens
+  const baseURL = process.env.CONFLUENCE_BASE_URL;
+  const email = process.env.CONFLUENCE_EMAIL;
+  const apiToken = process.env.CONFLUENCE_API_TOKEN;
 
-    const headers = {
-        'Authorization': 'Basic ' + Buffer.from(`${USER}:${TOKEN}`).toString('base64'),
-        'Accept': 'application/json'
-    };
+  const auth = Buffer.from(`${email}:${apiToken}`).toString('base64');
 
-    const query = encodeURIComponent(termo);
-    const url = `${CONFLUENCE_URL}?cql=text~"${query}"&limit=3`;
-
-    const response = await fetch(url, { headers });
-    const json = await response.json();
-
-    if (!json.results || json.results.length === 0) return 'Nada encontrado no Confluence.';
-
-    let resposta = '🔍 Resultados encontrados no Confluence:\n\n';
-    for (const item of json.results) {
-        resposta += `- ${item.title} → https://seu-domínio.atlassian.net/wiki${item._links.webui}\n`;
+  const response = await fetch(`${baseURL}/rest/api/search?cql=text~"${encodeURIComponent(termo)}"`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Basic ${auth}`,
+      'Accept': 'application/json'
     }
+  });
 
-    return resposta;
+  if (!response.ok) {
+    console.error('Erro ao buscar no Confluence:', response.statusText);
+    return [];
+  }
+
+  const data = await response.json();
+  return data.results?.map(p => ({
+    title: p.title,
+    url: `${baseURL}${p._links.webui}`
+  })) || [];
 }
 
+// Rota de chat com IA e busca no Confluence
+app.post('/api/chat', async (req, res) => {
+  const userMessage = req.body.message;
+
+  try {
+    const buscaConfluence = await buscarNoConfluence(userMessage);
+
+    let contextoExtra = '';
+    if (buscaConfluence.length > 0) {
+      contextoExtra = buscaConfluence
+        .map(r => `• ${r.title}: ${r.url}`)
+        .join('\n');
+    }
+
+    const promptFinal = `
+Usuário perguntou: ${userMessage}
+
+Resultados do Confluence encontrados:
+${contextoExtra || 'Nenhum resultado encontrado'}
+
+Baseado nisso, gere uma resposta útil e clara.
+    `;
+
+    const response = await fetch('http://localhost:11434/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'llama3:8b',
+        messages: [
+          { role: 'system', content: 'Você é uma IA que ajuda usuários com informações da empresa, usando Confluence quando possível.' },
+          { role: 'user', content: promptFinal }
+        ],
+        stream: false
+      })
+    });
+
+    const data = await response.json();
+    const reply = data?.message?.content || 'A IA não retornou uma resposta.';
+
+    res.json({ reply });
+  } catch (err) {
+    console.error('Erro no chat:', err);
+    res.status(500).json({ reply: 'Erro ao processar a mensagem.' });
+  }
+});
+
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
