@@ -10,10 +10,6 @@ header {
     height: 8vh;
 }
 
-body.hidden > *:not(#loading-overlay) {
-  visibility: hidden;
-}
-
 #interface {
     width: 100%;
 }
