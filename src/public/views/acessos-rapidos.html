@@ -17,7 +17,11 @@
      <script src="../js/chatbox.js" defer></script>
 </head>
 
-<body>
+<body class="hidden">
+     <div id="loading-overlay">
+          <div class="spinner"></div>
+     </div>
+
      <div id="interface">
           <header id="cabecalho">
                <img id="cabecalho_1" src="../assets/images/logo-liberty.png" href="home.html" alt="logo-liberty">
@@ -74,44 +78,7 @@
 
      <!-- CONTEÚDO DA PÁGINA -->
 
-
      <main>
-
-
-
-
-
-          <!--     
-
-                              <li> <a href="https://libertyti.atlassian.net/wiki/home" target="_blank"
-                                        id="confluence">Confluence</a></li>
-
-                              <li> <a href="https://libertycomercioeservicos-my.sharepoint.com/:x:/g/personal/sarita_duarte_libertyti_com_br/EeWMcOIUduZIjUyT68wDJHkBqPWfz-p2C4216OO5_UFvvQ?e=jbEwui&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1726573419632&web=1"
-                                        target="_blank" id="contatos-emerg">Lista de Contatos</a></li>
-
-                              <li> <a href="http://10.46.118.66/" target="_blank" id="GLPI">GLPI</a></li>
-
-
-     <script>
-          // Função para alternar a exibição do menu
-          function toggleMenu() {
-               var menu = document.getElementById('profileMenu');
-               menu.classList.toggle('active');
-          }
-
-          // Fecha o menu se clicar fora dele
-          window.onclick = function (event) {
-               if (!event.target.matches('.profile-button')) {
-                    var menu = document.getElementById('profileMenu');
-                    if (menu.classList.contains('active')) {
-                         menu.classList.remove('active');
-                    }
-               }
-          }
-     </script>
-
-     -->
-
           <main>
                <section class="title">
                     <div>
@@ -158,18 +125,36 @@
                     </div>
           </main>
 
-
-
-
-
-
-
-
           <footer>
                <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>,
                     Inc. All
                     rights reserved.</h6>
           </footer>
+
+          <script>window.addEventListener('load', () => {
+                    const loader = document.getElementById('loading-overlay');
+                    loader.style.opacity = '0';
+                    loader.style.transition = 'opacity 0.5s ease';
+
+                    setTimeout(() => {
+                         loader.style.display = 'none';
+                    }, 500);
+               });
+          </script>
+          <script>
+               window.addEventListener('load', () => {
+                    // Remove o loading
+                    const loader = document.getElementById('loading-overlay');
+                    loader.style.opacity = '0';
+                    loader.style.transition = 'opacity 0.5s ease';
+
+                    setTimeout(() => {
+                         loader.style.display = 'none';
+                         // Exibe o conteúdo formatado
+                         document.body.classList.remove('hidden');
+                    }, 500);
+               });
+          </script>
 </body>
 
 </html>
