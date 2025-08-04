@@ -191,13 +191,6 @@ div#title-portal h1 {
 }
 
 
-
-
-
-
-
-
-
 h4 {
     font-family: 'Wix MadeFor Text', sans-serif;
     font-size: 10;
@@ -232,13 +225,83 @@ h3 {
 }
 
 .container {
-    display: flex;
-    margin: 40px;
+    display:flex;
+    flex-wrap: wrap; /* permite quebra de linha */
+    gap: 20px; /* espaço entre os cubos */
+    margin:50px;
     padding-top: 15px;
     padding-bottom: 30px;
     background-color: #3e3454;
     padding-left: 10px;
     border-radius: 20px;
+}
+
+.container-2 {
+    display:flex;
+    flex-wrap: wrap; /* permite quebra de linha */
+    gap: 20px; /* espaço entre os cubos */
+    margin:50px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background-color: #3e3454;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+/* JIRA */
+
+.ponto-tangerino {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.ponto-tangerino:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#ponto-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* JIRA */
+
+.email {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.email:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#email-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
 }
 
 /* JIRA */
@@ -268,6 +331,64 @@ h3 {
     width: 90%;
     padding: 10px;
 }
+
+/* Confluence */
+
+.confluence {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.confluence:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#conflu-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* Liberty */
+
+.liberty {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.liberty:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#liberty-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 
 /* Vault */
 
@@ -300,8 +421,7 @@ h3 {
 
 
 
-
-/* Email */
+/* ToLife */
 
 .ToLife {
     border-radius: 10px;
@@ -329,37 +449,6 @@ h3 {
     width: 90%;
     padding: 10px;
 }
-
-
-/* Liberty */
-
-.liberty {
-    border-radius: 10px;
-    width: 70px;
-    height: 70px;
-    margin-left: 100px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    background-color: #3affbc;
-    cursor: pointer;
-    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
-    transition: 300ms;
-}
-
-.liberty:hover {
-    width: 80px;
-    height: 80px;
-}
-
-#liberty-icon {
-    margin-top: 3px;
-    align-items: center;
-    box-sizing: border-box;
-    width: 90%;
-    padding: 10px;
-    border-radius: 20px;
-}
-
 
 
 /* GoTO */
@@ -392,6 +481,335 @@ h3 {
 }
 
 
+
+/* OBS-STUDIO */
+
+.obs-studio {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.obs-studio:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#obs-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+/* FlameShot */
+
+.PrintScreen {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.PrintScreen:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#print-icon {
+    border-radius: 15px;
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+
+
+
+/* Pentaho */
+
+.Pentaho {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.Pentaho:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#pentaho-icon {
+    border-radius: 15px;
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+}
+
+
+/* Postman */
+
+.Postman {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.Postman:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#postman-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+/* OpenVPN */
+
+.vpn {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.vpn:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#vpn-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+/* Fortinet Client VPN */
+
+.vpn-2 {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.vpn-2:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#vpn-2-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+/* Dbeaver */
+
+.dbeaver {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.dbeaver:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#dbeaver-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+/* AnyDesk */
+
+.anydesk {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.anydesk:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#anydesk-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+/* BitDefender */
+
+.bitdefender {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.bitdefender:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#bitdefender-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Moodle */
+
+.moodle {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.moodle:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#moodle-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Moodle */
+
+.adb-config {
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #3affbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.58);
+    transition: 300ms;
+}
+
+.adb-config:hover {
+    width: 80px;
+    height: 80px;
+}
+
+#adb-config-icon {
+    margin-top: 3px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .hidden {
     display: none;
 }
@@ -421,14 +839,6 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-
-
-
 
 
 /* Modificação para suporte mobile */
