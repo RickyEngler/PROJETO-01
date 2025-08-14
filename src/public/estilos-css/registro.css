@@ -1,0 +1,22 @@
+
+.form-section{
+    color: aliceblue;
+}
+
+.form-group{
+    padding: 0px;
+    margin: 5px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.form-row{
+    padding: 0px;
+    margin: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.add-row-button{
+    margin: 10px;
+}

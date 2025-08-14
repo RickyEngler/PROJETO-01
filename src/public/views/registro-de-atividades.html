@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Operações HUB - Suporte</title>
+     <link rel="stylesheet" href="../estilos-css/style-geral.css">
+     <link rel="stylesheet" href="../estilos-css/links-portal.css">
+     <link rel="stylesheet" href="../estilos-css/suporte-style.css">
+     <link rel="stylesheet" href="../estilos-css/registro.css">
+     <link rel="icon" type="image/png" href="../assets/ícones/favicon-96x96.png" sizes="96x96" />
+     <link rel="icon" type="image/svg+xml" href="../assets/ícones/favicon.svg" />
+     <link rel="shortcut icon" href="../assets/ícones/favicon.ico" />
+     <link rel="apple-touch-icon" sizes="180x180" href="../assets/ícones/apple-touch-icon.png" />
+     <meta name="apple-mobile-web-app-title" content="Operações HUB" />
+     <link rel="manifest" href="../assets/ícones/site.webmanifest" />
+     <script src="../js/menu.js" defer></script>
+     <script src="../js/chatbox.js" defer></script>
+</head>
+
+<body>
+     <div id="loading-overlay">
+          <div class="spinner"></div>
+     </div>
+
+     <div id="interface">
+          <header id="cabecalho">
+               <img id="cabecalho_1" src="../assets/images/logo-liberty.png" href="home.html" alt="logo-liberty">
+               <div class="menu-flutuante" id="btn-menu-f">
+                    <i class="bi bi-list"></i>
+               </div>
+          </header>
+     </div>
+
+     <!-- MENU DESKTOP -->
+     <NAV class="menu">
+          <ul>
+               <li> <a href="home.html" class="meus-links">HOME</a></li>
+               <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>  
+
+
+               <li> <a class="meus-links">PORTAL DE ACESSOS</a>
+                    <ul>
+                         <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
+                         <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
+
+                    </ul>
+               </li>
+               <li> <a class="meus-links">OPÇÕES</a>
+                    <ul>
+                         <li> <a href="suporte.html" class="meus-links">MELHORIAS</a></li>
+
+                    </ul>
+               </li>
+          </ul>
+     </NAV>
+     <!-- MENU MOBILE -->
+     <div class="menu-mobile" id="menu-mobile">
+          <div class="btn-fechar">
+
+               <NAV>
+                    <ul>
+                         <li> <a href="home.html" class="meus-links">HOME</a></li>
+                         <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>  
+
+                         <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
+                         <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
+                         <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
+                         <li> <a href="suporte.html">SUPORTE</a></li>
+                         <li> <a href="index.html">SAIR</a></li>
+                    </ul>
+               </NAV>
+          </div>
+     </div>
+
+     <!-- ESTILO MENU MOBILE -->
+     <div class="overlay-menu" id="menu-overlay"></div>
+
+
+     <!-- CONTEÚDO DA PÁGINA -->
+    <div class="container">
+        <h1>Registro de Atividades In Loco</h1>
+        
+        <form id="registro-form">
+            <div class="form-section">
+                <h2>Informações da Visita</h2>
+                <div class="form-group">
+                    <label for="unidade">Unidade:</label>
+                    <input type="text" id="unidade" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" id="responsavel" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Registro de Ronda</h2>
+                <div class="form-group">
+                    <label for="ponto-focal-chegada">Nome do Ponto Focal (Chegada):</label>
+                    <input type="text" id="ponto-focal-chegada" class="form-input">
+                </div>
+                 <div class="form-group">
+                    <label for="horario-chegada">Horário de Chegada do Técnico:</label>
+                    <input type="time" id="horario-chegada" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="ponto-focal-saida">Nome do Ponto Focal (Saída):</label>
+                    <input type="text" id="ponto-focal-saida" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="horario-saida">Horário de Saída do Técnico:</label>
+                    <input type="time" id="horario-saida" class="form-input">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Prioridades da Unidade</h2>
+                <p>Ao chegar na unidade o técnico deve verificar com os pontos focais se existe alguma demanda prioritária a ser tratada, todas essas ações devem ser inseridas no registro</p>
+                <div id="prioridades-container">
+                    <div class="form-row">
+                        <input type="text" name="prioridade_descricao" placeholder="Descrição" class="form-input">
+                        <input type="text" name="prioridade_status" placeholder="Status" class="form-input">
+                        <input type="text" name="prioridade_card" placeholder="Card" class="form-input">
+                        <input type="text" name="prioridade_assinatura" placeholder="Assinatura" class="form-input">
+                    </div>
+                </div>
+                <button type="button" class="add-row-button" data-target="prioridades-container">Adicionar Prioridade</button>
+            </div>
+            
+            <div class="form-section">
+                <h2>Chamados da Unidade (GLPI/JIRA)</h2>
+                <p>Ao chegar na unidade o técnico deve abrir o GLPI e o JIRA e consultar todos os chamados abertos na unidade, esses chamados devem ser repassados para o ponto focal responsável para acompanhamento</p>
+                <div id="chamados-container">
+                    <div class="form-row">
+                        <input type="text" name="chamado_glpi" placeholder="GLPI/JIRA" class="form-input">
+                        <input type="text" name="chamado_descricao" placeholder="Descrição" class="form-input">
+                        <input type="text" name="chamado_status" placeholder="Status" class="form-input">
+                        <input type="text" name="chamado_assinatura" placeholder="Assinatura" class="form-input">
+                    </div>
+                </div>
+                <button type="button" class="add-row-button" data-target="chamados-container">Adicionar Chamado</button>
+            </div>
+            
+            <div class="form-section">
+                <h2>Chamados Recebidos</h2>
+                 <p>Durante as rondas e/ou enquanto estiver na unidade o técnico receberá pedido de apoio dos profissionais da unidade, essas solicitações devem ser descritas e assinadas pelos solicitantes com uma resolução ou encaminhadas para resolução</p>
+                <div id="chamados-recebidos-container">
+                    <div class="form-row">
+                        <input type="text" name="recebido_descricao" placeholder="Descrição" class="form-input">
+                        <input type="text" name="recebido_status" placeholder="Status" class="form-input">
+                        <input type="text" name="recebido_card" placeholder="Card" class="form-input">
+                        <input type="text" name="recebido_assinatura" placeholder="Assinatura" class="form-input">
+                    </div>
+                </div>
+                <button type="button" class="add-row-button" data-target="chamados-recebidos-container">Adicionar Chamado Recebido</button>
+            </div>
+            
+            <div class="form-section">
+                <h2>Painéis</h2>
+                <p>A atualização dos painéis é de responsabilidade do técnico, durante a visita na unidade o técnico deve tirar foto dos painéis e atualizar as informações na ficha da unidade</p>
+                <div id="paineis-container">
+                    <div class="form-row">
+                        <input type="text" name="painel_modelo" placeholder="Modelo" class="form-input">
+                        <input type="text" name="painel_localizacao" placeholder="Localização" class="form-input">
+                        <input type="text" name="painel_status" placeholder="Status" class="form-input">
+                        <input type="text" name="painel_anydesk" placeholder="Anydesk" class="form-input">
+                        <input type="text" name="painel_chamador" placeholder="Local Chamador" class="form-input">
+                    </div>
+                </div>
+                <button type="button" class="add-row-button" data-target="paineis-container">Adicionar Painel</button>
+            </div>
+            
+            <button type="submit" class="submit-button">Gerar PDF</button>
+        </form>
+    </div>
+
+<script src="../js/libs/jspdf.umd.min.js"></script>
+<script src="../js/libs/jspdf-autotable.umd.min.js"></script>
+<script src="../js/registro.js"></script> 
+
+     <!-- RODAPÉ -->
+
+     <footer>
+          <h6>© 2024 <a href="https://github.com/RickyEngler" target="_blank" id="link-git">AUGUSTO ENGLER</a>, Inc. All
+               rights reserved.</h6>
+     </footer>
+               <script>window.addEventListener('load', () => {
+                    const loader = document.getElementById('loading-overlay');
+                    loader.style.opacity = '0';
+                    loader.style.transition = 'opacity 0.5s ease';
+
+                    setTimeout(() => {
+                         loader.style.display = 'none';
+                    }, 500);
+               });
+          </script>
+</body>
+
+</html>
