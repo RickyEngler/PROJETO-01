@@ -1,22 +1,72 @@
-
+body{
+    color: aliceblue;
+}
 .form-section{
     color: aliceblue;
 }
 
+.label{
+    color: aliceblue;
+}
+
 .form-group{
+    display: flex;  
     padding: 0px;
     margin: 5px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 5%;
+    padding-right: 5%;             
 }
 
 .form-row{
     padding: 0px;
     margin: 5px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .add-row-button{
     margin: 10px;
+}
+
+
+.container{
+    padding: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.add-row-button{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 50ms;
+}
+
+.add-row-button:hover{
+    color: white;
+    background-color: blueviolet;
+}
+
+.submit-button{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 50ms;
+}
+
+.submit-button:hover{
+    color: white;
+    background-color: blueviolet;
+}
+
+.form-columns {
+  display: grid;                     /* Ativa o layout em grade */
+  grid-template-columns: 1fr 1fr;    /* Cria duas colunas de larguras iguais */
+  gap: 30px;                         /* Define o espaço entre as duas colunas */              /* Adiciona um espaço abaixo das colunas, antes da próxima seção */
+}
+
+.form-row + .form-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Cria uma linha divisória branca semitransparente */
+  margin-top: 15px;    /* Cria um espaço ACIMA da linha */
+  padding-top: 15px;   /* Cria um espaço ABAIXO da linha, antes dos novos campos */
 }

@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Operações HUB - Suporte</title>
+     <title>Operações HUB - Registro de Atividades</title>
      <link rel="stylesheet" href="../estilos-css/style-geral.css">
      <link rel="stylesheet" href="../estilos-css/links-portal.css">
      <link rel="stylesheet" href="../estilos-css/suporte-style.css">
@@ -38,9 +38,12 @@
           <ul>
                <li> <a href="home.html" class="meus-links">HOME</a></li>
                <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
-               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>  
-
-
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a>
+                    <ul>
+                         <li> <a href="#" class="meus-links">DOCUMENTOS</a></li>
+                         <li> <a href="registro-de-atividades.html" class="meus-links">REGISTRO DE ATIVIDADES</a></li>
+                    </ul>
+               </li></li>  
                <li> <a class="meus-links">PORTAL DE ACESSOS</a>
                     <ul>
                          <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
@@ -64,7 +67,12 @@
                     <ul>
                          <li> <a href="home.html" class="meus-links">HOME</a></li>
                          <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
-               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>  
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a>
+                    <ul>
+                         <li> <a href="#" class="meus-links">DOCUMENTOS</a></li>
+                         <li> <a href="registro-de-atividades.html" class="meus-links">REGISTRO DE ATIVIDADES</a></li>
+                    </ul>
+               </li></li>  
 
                          <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
                          <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
@@ -81,10 +89,13 @@
 
 
      <!-- CONTEÚDO DA PÁGINA -->
-    <div class="container">
-        <h1>Registro de Atividades In Loco</h1>
+  <div class="container">
+    <h1>Registro de Atividades In Loco</h1>
+    
+    <form id="registro-form">
         
-        <form id="registro-form">
+        <div class="form-columns">
+
             <div class="form-section">
                 <h2>Informações da Visita</h2>
                 <div class="form-group">
@@ -120,8 +131,9 @@
                     <input type="time" id="horario-saida" class="form-input">
                 </div>
             </div>
-            
-            <div class="form-section">
+
+        </div>
+         <div class="form-section">
                 <h2>Prioridades da Unidade</h2>
                 <p>Ao chegar na unidade o técnico deve verificar com os pontos focais se existe alguma demanda prioritária a ser tratada, todas essas ações devem ser inseridas no registro</p>
                 <div id="prioridades-container">
@@ -129,7 +141,6 @@
                         <input type="text" name="prioridade_descricao" placeholder="Descrição" class="form-input">
                         <input type="text" name="prioridade_status" placeholder="Status" class="form-input">
                         <input type="text" name="prioridade_card" placeholder="Card" class="form-input">
-                        <input type="text" name="prioridade_assinatura" placeholder="Assinatura" class="form-input">
                     </div>
                 </div>
                 <button type="button" class="add-row-button" data-target="prioridades-container">Adicionar Prioridade</button>
@@ -143,7 +154,6 @@
                         <input type="text" name="chamado_glpi" placeholder="GLPI/JIRA" class="form-input">
                         <input type="text" name="chamado_descricao" placeholder="Descrição" class="form-input">
                         <input type="text" name="chamado_status" placeholder="Status" class="form-input">
-                        <input type="text" name="chamado_assinatura" placeholder="Assinatura" class="form-input">
                     </div>
                 </div>
                 <button type="button" class="add-row-button" data-target="chamados-container">Adicionar Chamado</button>
@@ -157,7 +167,6 @@
                         <input type="text" name="recebido_descricao" placeholder="Descrição" class="form-input">
                         <input type="text" name="recebido_status" placeholder="Status" class="form-input">
                         <input type="text" name="recebido_card" placeholder="Card" class="form-input">
-                        <input type="text" name="recebido_assinatura" placeholder="Assinatura" class="form-input">
                     </div>
                 </div>
                 <button type="button" class="add-row-button" data-target="chamados-recebidos-container">Adicionar Chamado Recebido</button>
@@ -181,6 +190,17 @@
             <button type="submit" class="submit-button">Gerar PDF</button>
         </form>
     </div>
+                 
+     <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-overlay');
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+    </script>
 
 <script src="../js/libs/jspdf.umd.min.js"></script>
 <script src="../js/libs/jspdf-autotable.umd.min.js"></script>
