@@ -36,19 +36,43 @@
      <!-- MENU DESKTOP -->
      <NAV class="menu">
           <ul>
-               <li> <a href="home.html" class="meus-links">HOME</a></li>
-               <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
-               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a>
+               <li> <a href="home.html" class="meus-links">HOME</a></li> 
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>
+               <li> <a href="#" class="meus-links">DOCUMENTOS</a>
                     <ul>
-                         <li> <a href="#" class="meus-links">DOCUMENTOS</a></li>
                          <li> <a href="registro-de-atividades.html" class="meus-links">REGISTRO DE ATIVIDADES</a></li>
                     </ul>
-               </li></li>  
+               </li>
                <li> <a class="meus-links">PORTAL DE ACESSOS</a>
                     <ul>
                          <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
                          <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
+                    </ul>
+               </li>
+               <li> <a class="meus-links">OPÇÕES</a>
+                    <ul>
+                         <li> <a href="suporte.html" class="meus-links">MELHORIAS</a></li>
+                    </ul>
+               </li>
+          </ul>
+     </NAV>
+     <!-- MENU MOBILE -->
+     <div class="menu-mobile" id="menu-mobile">
+          <div class="btn-fechar">
 
+     <NAV class="menu">
+          <ul>
+               <li> <a href="home.html" class="meus-links">HOME</a></li>
+               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a></li>
+               <li> <a href="#" class="meus-links">DOCUMENTOS</a>
+                    <ul>
+                         <li> <a href="registro-de-atividades.html" class="meus-links">REGISTRO DE ATIVIDADES</a></li>
+                    </ul>
+               </li>
+               <li> <a class="meus-links">PORTAL DE ACESSOS</a>
+                    <ul>
+                         <li> <a href="unidades-sms.html" class="meus-links">UNIDADES SMS</a></li>
+                         <li> <a href="paineis-bi.html" class="meus-links">PAINÉIS BI</a></li>
                     </ul>
                </li>
                <li> <a class="meus-links">OPÇÕES</a>
@@ -59,28 +83,6 @@
                </li>
           </ul>
      </NAV>
-     <!-- MENU MOBILE -->
-     <div class="menu-mobile" id="menu-mobile">
-          <div class="btn-fechar">
-
-               <NAV>
-                    <ul>
-                         <li> <a href="home.html" class="meus-links">HOME</a></li>
-                         <li> <a href="ai-chat.html" class="meus-links">EM BREVE</a></li>
-               <li> <a href="ferramentas.html" class="meus-links">FERRAMENTAS</a>
-                    <ul>
-                         <li> <a href="#" class="meus-links">DOCUMENTOS</a></li>
-                         <li> <a href="registro-de-atividades.html" class="meus-links">REGISTRO DE ATIVIDADES</a></li>
-                    </ul>
-               </li></li>  
-
-                         <li> <a href="links-internos.html" class="meus-links">LINKS INTERNOS</a></li>
-                         <li> <a href="links-externos.html" class="meus-links">LINKS EXTERNOS</a></li>
-                         <li> <a href="cfg-page.html">CONFIGURAÇÕES</a></li>
-                         <li> <a href="suporte.html">SUPORTE</a></li>
-                         <li> <a href="index.html">SAIR</a></li>
-                    </ul>
-               </NAV>
           </div>
      </div>
 
@@ -100,15 +102,15 @@
                 <h2>Informações da Visita</h2>
                 <div class="form-group">
                     <label for="unidade">Unidade:</label>
-                    <input type="text" id="unidade" class="form-input">
+                    <input type="text" id="unidade" class="form-input" required>
                 </div>
                 <div class="form-group">
                     <label for="responsavel">Responsável:</label>
-                    <input type="text" id="responsavel" class="form-input">
+                    <input type="text" id="responsavel" class="form-input" required>
                 </div>
                 <div class="form-group">
                     <label for="data">Data:</label>
-                    <input type="date" id="data" class="form-input">
+                    <input type="date" id="data" class="form-input" required>
                 </div>
             </div>
 
@@ -123,15 +125,10 @@
                     <input type="time" id="horario-chegada" class="form-input">
                 </div>
                 <div class="form-group">
-                    <label for="ponto-focal-saida">Nome do Ponto Focal (Saída):</label>
-                    <input type="text" id="ponto-focal-saida" class="form-input">
-                </div>
-                <div class="form-group">
                     <label for="horario-saida">Horário de Saída do Técnico:</label>
                     <input type="time" id="horario-saida" class="form-input">
                 </div>
             </div>
-
         </div>
          <div class="form-section">
                 <h2>Prioridades da Unidade</h2>

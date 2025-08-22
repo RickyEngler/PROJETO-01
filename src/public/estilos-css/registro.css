@@ -70,3 +70,12 @@ body{
   margin-top: 15px;    /* Cria um espaço ACIMA da linha */
   padding-top: 15px;   /* Cria um espaço ABAIXO da linha, antes dos novos campos */
 }
+
+h1{
+    color: #3affbc !important;
+    font-size: 50 !important;
+    font-weight: 800;
+    align-items: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
