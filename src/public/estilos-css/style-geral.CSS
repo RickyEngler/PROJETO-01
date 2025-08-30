@@ -8,6 +8,8 @@ header {
     background-color: #2f2841;
     align-items: center;
     height: 8vh;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -89,7 +91,6 @@ main {
 
 .menu ul a {
     display: block;
-    /* Torna o link clicável em toda a área */
 }
 
 .menu li {
@@ -133,13 +134,11 @@ main {
 
 .menu ul ul li {
     list-style: none;
-    /* Remove os bullets (marcadores) */
 }
 
 .menu ul ul li a {
 
     display: block;
-    /* Torna o link clicável em toda a área */
     text-decoration: none;
 }
 
@@ -164,9 +163,7 @@ main {
 
 .menu-mobile ul ul {
     display: none;
-    /* Esconde os submenus por padrão */
     position: absolute;
-    /* Para colocar os submenus como dropdowns */
 }
 
 .menu-mobile {
@@ -243,66 +240,6 @@ img {
     width: 10%;
 }
 
-/* FORMATAÇÃO DE BOTÕES*/
-
-/* Switch estilo iOS */
-/* Switch estilo iOS */
-.theme-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    z-index: 1000;
-}
-
-.theme-switch input {
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    background-color: #ccc;
-    border-radius: 34px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked+.slider {
-    background-color: #4CAF50;
-}
-
-input:checked+.slider:before {
-    transform: translateX(26px);
-}
-
-/* THEMES */
-body.theme-dark {
-    background-color: #151322;
-    color: white;
-}
-
-body.theme-light {
-    background-color: #f5f5f5;
-    color: #111;
-}
 
 /* Exemplo: cards */
 .card {
@@ -327,6 +264,11 @@ footer {
     align-items: center;
     background-color: #0e0c11;
     margin-bottom: 0px;
+    height: 7vh;
+}
+footer p{
+    font-size: 12px;
+    font-weight: 700;
 }
 
 
@@ -394,6 +336,44 @@ footer {
     border-top: 8px solid #322b44;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+}
+
+
+.open-ticket {
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    display: flex;
+    position: absolute;
+    left: 90%;
+    top: 1.5%;
+    background: #3affbc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 10, 15, 0.7);
+    transition: 0.6s;
+}
+
+.open-ticket:hover {
+    background-color: blueviolet;
+    color: white;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 955px) {
+    .open-ticket {
+        font-size: 10px;
+        font-weight: 700;
+        color: black;
+        display: flex;
+        position: fixed;
+        left: 63%;
+        top: 3.3%;
+        background: #3affbc;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 10, 15, 0.7);
+    }
 }
 
 @keyframes spin {
