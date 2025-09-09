@@ -94,20 +94,19 @@
 
      <!-- CONTEÚDO DA PÁGINA -->
   <div class="container">
-    <h1>Registro de Atividades In Loco</h1>
-    
+      <h1 class="title">Registro de Atividades In Loco</h1>
     <form id="registro-form">
-        
+            <h2>Informações da Visita</h2>
         <div class="form-columns">
 
             <div class="form-section">
-                <h2>Informações da Visita</h2>
+                
                 <div class="form-group">
                     <label for="unidade">Unidade:</label>
                     <input type="text" id="unidade" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="responsavel">Responsável:</label>
+                    <label for="responsavel">Técnico:</label>
                     <input type="text" id="responsavel" class="form-input" required>
                 </div>
                 <div class="form-group">
@@ -117,24 +116,23 @@
             </div>
 
             <div class="form-section">
-                <h2>Registro de Ronda</h2>
                 <div class="form-group">
-                    <label for="ponto-focal-chegada">Nome do Ponto Focal (Chegada):</label>
+                    <label for="ponto-focal-chegada">Nome do Ponto Focal:</label>
                     <input type="text" id="ponto-focal-chegada" class="form-input">
                 </div>
                  <div class="form-group">
-                    <label for="horario-chegada">Horário de Chegada do Técnico:</label>
+                    <label for="horario-chegada">Horário de Chegada:</label>
                     <input type="time" id="horario-chegada" class="form-input">
                 </div>
                 <div class="form-group">
-                    <label for="horario-saida">Horário de Saída do Técnico:</label>
+                    <label for="horario-saida">Horário de Saída:</label>
                     <input type="time" id="horario-saida" class="form-input">
                 </div>
             </div>
         </div>
          <div class="form-section">
                 <h2>Prioridades da Unidade</h2>
-                <p>Ao chegar na unidade o técnico deve verificar com os pontos focais se existe alguma demanda prioritária a ser tratada, todas essas ações devem ser inseridas no registro</p>
+                <p class="pragraphy">Ao chegar na unidade o técnico deve verificar com os pontos focais se existe alguma demanda prioritária a ser tratada, todas essas ações devem ser inseridas no registro</p>
                 <div id="prioridades-container">
                     <div class="form-row">
                         <input type="text" name="prioridade_descricao" placeholder="Descrição" class="form-input">
@@ -147,7 +145,7 @@
             
             <div class="form-section">
                 <h2>Chamados da Unidade (GLPI/JIRA)</h2>
-                <p>Ao chegar na unidade o técnico deve abrir o GLPI e o JIRA e consultar todos os chamados abertos na unidade, esses chamados devem ser repassados para o ponto focal responsável para acompanhamento</p>
+                <p class="pragraphy">Ao chegar na unidade o técnico deve abrir o GLPI e o JIRA e consultar todos os chamados abertos na unidade, esses chamados devem ser repassados para o ponto focal responsável para acompanhamento</p>
                 <div id="chamados-container">
                     <div class="form-row">
                         <input type="text" name="chamado_glpi" placeholder="GLPI/JIRA" class="form-input">
@@ -160,7 +158,7 @@
             
             <div class="form-section">
                 <h2>Chamados Recebidos</h2>
-                 <p>Durante as rondas e/ou enquanto estiver na unidade o técnico receberá pedido de apoio dos profissionais da unidade, essas solicitações devem ser descritas e assinadas pelos solicitantes com uma resolução ou encaminhadas para resolução</p>
+                 <p class="pragraphy">Durante as rondas e/ou enquanto estiver na unidade o técnico receberá pedido de apoio dos profissionais da unidade, essas solicitações devem ser descritas e assinadas pelos solicitantes com uma resolução ou encaminhadas para resolução</p>
                 <div id="chamados-recebidos-container">
                     <div class="form-row">
                         <input type="text" name="recebido_descricao" placeholder="Descrição" class="form-input">
@@ -173,7 +171,7 @@
             
             <div class="form-section">
                 <h2>Painéis</h2>
-                <p>A atualização dos painéis é de responsabilidade do técnico, durante a visita na unidade o técnico deve tirar foto dos painéis e atualizar as informações na ficha da unidade</p>
+                <p class="pragraphy">A atualização dos painéis é de responsabilidade do técnico, durante a visita na unidade o técnico deve tirar foto dos painéis e atualizar as informações na ficha da unidade</p>
                 <div id="paineis-container">
                     <div class="form-row">
                         <input type="text" name="painel_modelo" placeholder="Modelo" class="form-input">

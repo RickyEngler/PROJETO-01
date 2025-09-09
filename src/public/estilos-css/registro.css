@@ -3,18 +3,30 @@ body{
 }
 .form-section{
     color: aliceblue;
+    margin-bottom: 125px;
+    border: #ffffff 2px solid;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
+.paragraphy{
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    font-size: 1px; 
+}
 .label{
     color: aliceblue;
 }
 
 .form-group{
     display: flex;  
-    padding: 0px;
+    padding: 0x;
     margin: 5px;
     padding-left: 5%;
-    padding-right: 5%;             
+    padding-right: 5%;            
 }
 
 .form-row{
@@ -23,6 +35,8 @@ body{
     padding-left: 25%;
     padding-right: 25%;
 }
+
+
 
 .add-row-button{
     margin: 10px;
@@ -39,7 +53,7 @@ body{
     color: rgb(0, 0, 0);
     font-weight: 700;
     text-transform: uppercase;
-    transition: 50ms;
+    transition: 0.6s;
 }
 
 .add-row-button:hover{
@@ -51,7 +65,9 @@ body{
     color: rgb(0, 0, 0);
     font-weight: 700;
     text-transform: uppercase;
-    transition: 50ms;
+    transition: 0.6s;
+    position: relative;
+    top: -90px;
 }
 
 .submit-button:hover{
@@ -76,6 +92,24 @@ h1{
     font-size: 50 !important;
     font-weight: 800;
     align-items: center;
+    text-transform: uppercase;
+}
+
+h2{
+    color: #ffffff !important;
+    font-size: 30 !important;
+    font-weight: 800;
+    align-items: center;
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    left: 27%;
+    right: 27%;
+    top: -50px;
 }
