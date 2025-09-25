@@ -24,8 +24,6 @@ document.getElementById("hovermenu").addEventListener("click", function(event) {
     parentLi.classList.toggle("active");
   });
 
-  //POP-UP EMAIL TODOS
-
 // Seleciona o item do menu que contém o submenu
 document.getElementById("hovermenu").addEventListener("click", function(event) {
     event.preventDefault(); // Evita o comportamento padrão do link

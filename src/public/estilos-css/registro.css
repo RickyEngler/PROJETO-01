@@ -1,7 +1,8 @@
-body{
+body {
     color: aliceblue;
 }
-.form-section{
+
+.form-section {
     color: aliceblue;
     margin-bottom: 125px;
     border: #ffffff 2px solid;
@@ -10,26 +11,27 @@ body{
     text-align: center;
 }
 
-.paragraphy{
+.paragraphy {
     text-align: justify;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 20px;
-    font-size: 1px; 
+    font-size: 1px;
 }
-.label{
+
+.label {
     color: aliceblue;
 }
 
-.form-group{
-    display: flex;  
+.form-group {
+    display: flex;
     padding: 0x;
     margin: 5px;
     padding-left: 5%;
-    padding-right: 5%;            
+    padding-right: 5%;
 }
 
-.form-row{
+.form-row {
     padding: 0px;
     margin: 5px;
     padding-left: 25%;
@@ -38,30 +40,30 @@ body{
 
 
 
-.add-row-button{
+.add-row-button {
     margin: 10px;
 }
 
 
-.container{
+.container {
     padding: 100px;
     margin-left: 100px;
     margin-right: 100px;
 }
 
-.add-row-button{
+.add-row-button {
     color: rgb(0, 0, 0);
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.6s;
 }
 
-.add-row-button:hover{
+.add-row-button:hover {
     color: white;
     background-color: blueviolet;
 }
 
-.submit-button{
+.submit-button {
     color: rgb(0, 0, 0);
     font-weight: 700;
     text-transform: uppercase;
@@ -70,24 +72,29 @@ body{
     top: -90px;
 }
 
-.submit-button:hover{
+.submit-button:hover {
     color: white;
     background-color: blueviolet;
 }
 
 .form-columns {
-  display: grid;                     /* Ativa o layout em grade */
-  grid-template-columns: 1fr 1fr;    /* Cria duas colunas de larguras iguais */
-  gap: 30px;                         /* Define o espaço entre as duas colunas */              /* Adiciona um espaço abaixo das colunas, antes da próxima seção */
+    display: grid;
+    /* Ativa o layout em grade */
+    grid-template-columns: 1fr 1fr;
+    /* Cria duas colunas de larguras iguais */
+    gap: 30px;
 }
 
-.form-row + .form-row {
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Cria uma linha divisória branca semitransparente */
-  margin-top: 15px;    /* Cria um espaço ACIMA da linha */
-  padding-top: 15px;   /* Cria um espaço ABAIXO da linha, antes dos novos campos */
+.form-row+.form-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    /* Cria uma linha divisória branca semitransparente */
+    margin-top: 15px;
+    /* Cria um espaço ACIMA da linha */
+    padding-top: 15px;
+    /* Cria um espaço ABAIXO da linha, antes dos novos campos */
 }
 
-h1{
+h1 {
     color: #3affbc !important;
     font-size: 50 !important;
     font-weight: 800;
@@ -95,7 +102,7 @@ h1{
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     color: #ffffff !important;
     font-size: 30 !important;
     font-weight: 800;
@@ -105,11 +112,102 @@ h2{
     text-align: center;
 }
 
-.title{
+.title {
     text-align: center;
     position: relative;
     font-size: 30px;
     left: 27%;
     right: 27%;
     top: -50px;
+}
+
+@media screen and (max-width: 955px) {
+
+    h2 {
+        color: #ffffff !important;
+        font-size: 20 !important;
+        font-weight: 800;
+        align-items: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .form-section {
+        color: aliceblue;
+        margin-bottom: 20px;
+        border: #ffffff 2px solid;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .paragraphy {
+        text-align: justify;
+        margin: 0 10% 20px 10%;
+        font-size: 14px;
+        /* tamanho de texto melhor para leitura */
+    }
+
+    .label {
+        color: aliceblue;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        padding: 0 5%;
+    }
+
+    .form-row {
+        margin: 10px 0;
+        padding: 0 10%;
+    }
+
+    .add-row-button {
+        margin: 10px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.6s;
+    }
+
+    .add-row-button:hover {
+        color: white;
+        background-color: blueviolet;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+
+    .submit-button {
+        margin-top: 80px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.6s;
+    }
+
+    .submit-button:hover {
+        color: white;
+        background-color: blueviolet;
+    }
+
+    .form-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .title {
+        text-align: center;
+        position: relative;
+        font-size: 20px;
+        left: 0%;
+        right: 0%;
+        top: 0px;
+    }
 }

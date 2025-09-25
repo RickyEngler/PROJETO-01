@@ -272,11 +272,7 @@ footer p{
 }
 
 
-/* Modificação para suporte mobile */
-
 @media screen and (max-width: 955px) {
-
-    /* Classes gerais */
 
     .menu-mobile.abrir-menu {
 
@@ -307,7 +303,6 @@ footer p{
         min-height: 100vh;
     }
 
-    /* Cabeçalho */
     .menu,
     .profile-button {
         display: none;
@@ -366,8 +361,8 @@ footer p{
         font-weight: 700;
         color: black;
         display: flex;
-        position: fixed;
-        left: 63%;
+        position: absolute;
+        left: 55%;
         top: 3.3%;
         background: #3affbc;
         padding: 8px;

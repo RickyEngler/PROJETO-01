@@ -27,7 +27,7 @@ function logar() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.href = "../views/home.html"; // Redireciona para a página ../views/home.html se o login for bem-sucedido
+            location.href = "../views/home.html"; 
         } else {
             alert('Usuário e/ou senha incorretos');
         }
