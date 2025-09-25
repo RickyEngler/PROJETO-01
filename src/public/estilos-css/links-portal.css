@@ -252,33 +252,13 @@ button:hover {
 
 @media screen and (max-width: 955px){
 
-    /* Classes gerais */
-    
-    .portal li{
-        padding: 20px;
-    
-    }
-    .portal ul{
-        margin-top: 10%;
-        padding: 10px;
-        width: 70%;
-        margin-left: 13%;
-    }
-    
-    /* Cabeçalho */
-        .menu, .profile-button{
-            display: none;
-        }
-    
-    }
-
-    .button-icons {
+.button-icons {
     display: block;
     border-radius: 5px;
     width: 70px;
     height: 70px;
-    margin-left: 12%;
-    margin-right: 3%;
+    margin-left: 3%;
+    margin-right: 0%;
     margin-top: 10px;
     margin-bottom: 30px;
     background-color: #3affbc;
@@ -292,14 +272,4 @@ button:hover {
     height: 80px;
     background-color: blueviolet;
 }
-
-.button-icon {
-    margin-top: 3px;
-    align-items: center;
-    box-sizing: border-box;
-    width: 92%;
-    padding: 5px;
-    border-radius: 11px;
-    font-family: 'Wix MadeFor Text',sans-serif;
-
 }
